@@ -1,0 +1,16 @@
+# Ignorar pastas de compilação do Code::Blocks
+obj/
+bin/
+
+# Ignorar arquivos de configuração de usuário do Code::Blocks
+*.layout
+*.depend
+
+# Ignorar arquivos executáveis que podem ser gerados
+*.exe
+*.out
+
+# Ignorar a pasta de documentação gerada pelo Doxygen
+# (É melhor gerar localmente do que guardar no repositório)
+doxygen/html/
+doxygen/latex/
