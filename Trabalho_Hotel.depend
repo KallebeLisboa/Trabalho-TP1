@@ -1,0 +1,101 @@
+# depslib dependency file v1.0
+1740933562 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\main.cpp
+	<iostream>
+
+1760630181 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\capacidade.cpp
+	"header dominios/capacidade.hpp"
+	<stdexcept>
+
+1760628534 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\capacidade.hpp
+
+1760630323 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\cartao.cpp
+	"header dominios/cartao.hpp"
+	<stdexcept>
+	<cctype>
+
+1760630181 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\cartao.hpp
+	<string>
+
+1760630320 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\data.cpp
+	"header dominios/data.hpp"
+	<stdexcept>
+	<string>
+	<algorithm>
+	<iterator>
+
+1760630181 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\data.hpp
+	<string>
+
+1760630318 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\dinheiro.cpp
+	"header dominios/dinheiro.hpp"
+	<stdexcept>
+
+1760628964 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\dinheiro.hpp
+
+1760630331 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\email.cpp
+	"header dominios/email.hpp"
+	<stdexcept>
+	<algorithm>
+	<cctype>
+
+1760628963 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\email.hpp
+	<string>
+
+1760630324 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\endereco.cpp
+	"header dominios/endereco.hpp"
+	<stdexcept>
+	<cctype>
+
+1760629027 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\endereco.hpp
+	<string>
+
+1760630330 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\nome.cpp
+	"header dominios/nome.hpp"
+	<stdexcept>
+	<cctype>
+
+1760629187 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\nome.hpp
+	<string>
+
+1760630329 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\numero.cpp
+	"header dominios/numero.hpp"
+	<stdexcept>
+	<cctype>
+	<string>
+
+1760630181 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\numero.hpp
+	<string>
+
+1760630328 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\ramal.cpp
+	"header dominios/ramal.hpp"
+	<stdexcept>
+	<cctype>
+	<string>
+
+1760629360 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\ramal.hpp
+	<string>
+
+1760631640 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\codigo.cpp
+	"header dominios/codigo.hpp"
+	<stdexcept>
+	<cctype>
+
+1760630181 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\codigo.hpp
+	<string>
+
+1760631662 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\telefone.cpp
+	"header dominios/telefone.hpp"
+	<stdexcept>
+	<cctype>
+
+1760630181 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\telefone.hpp
+	<string>
+
+1760631726 source:c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\sources dominio\senha.cpp
+	"header dominios/senha.hpp"
+	<stdexcept>
+	<cctype>
+
+1760629398 c:\users\kalle\onedrive\Área de trabalho\aprendendo c++\tp 1 - técnicas de programaçào\trabalho_hotel\header dominios\senha.hpp
+	<string>
+

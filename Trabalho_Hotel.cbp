@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Trabalho_Hotel" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Trabalho_Hotel" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Trabalho_Hotel" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="header dominios/capacidade.hpp" />
+		<Unit filename="header dominios/cartao.hpp" />
+		<Unit filename="header dominios/codigo.hpp" />
+		<Unit filename="header dominios/data.hpp" />
+		<Unit filename="header dominios/dinheiro.hpp" />
+		<Unit filename="header dominios/email.hpp" />
+		<Unit filename="header dominios/endereco.hpp" />
+		<Unit filename="header dominios/nome.hpp" />
+		<Unit filename="header dominios/numero.hpp" />
+		<Unit filename="header dominios/ramal.hpp" />
+		<Unit filename="header dominios/senha.hpp" />
+		<Unit filename="header dominios/telefone.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="sources dominio/capacidade.cpp" />
+		<Unit filename="sources dominio/cartao.cpp" />
+		<Unit filename="sources dominio/codigo.cpp" />
+		<Unit filename="sources dominio/data.cpp" />
+		<Unit filename="sources dominio/dinheiro.cpp" />
+		<Unit filename="sources dominio/email.cpp" />
+		<Unit filename="sources dominio/endereco.cpp" />
+		<Unit filename="sources dominio/nome.cpp" />
+		<Unit filename="sources dominio/numero.cpp" />
+		<Unit filename="sources dominio/ramal.cpp" />
+		<Unit filename="sources dominio/senha.cpp" />
+		<Unit filename="sources dominio/telefone.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
