@@ -2,28 +2,24 @@
 #define CARTAO_HPP
 
 #include <string>
+#include <stdexcept>
+#include <cctype> // Para usar isdigit
 
 class Cartao {
 private:
     std::string cartao;
 
-    // Métodos privados auxiliares para o Algoritmo de Luhn
-    int pegarDigito(int numero) const;
-    int somarDigitosPares(const std::string& numeroCartao) const;
-    int somarDigitosImpares(const std::string& numeroCartao) const;
-
-    // Método de validação principal
-    void validar(const std::string& numeroCartao);
+    // Funções auxiliares (Implementadas no .cpp)
+    int pegarDigito(const int numero);
+    int somarDigitosPares(const std::string cartao);
+    int somarDigitosImpares(const std::string cartao);
+    void validar(std::string const &cartao);
 
 public:
-    // Construtor
-    Cartao(const std::string& numeroCartao);
-
-    // Método set
-    void setCartao(const std::string& numeroCartao);
-
-    // Método get
-    std::string getCartao() const;
+    // Construtor e Getters/Setters (Implementados no .cpp)
+    Cartao(std::string cartao);
+    void setCartao(std::string cartao);
+    std::string getCartao();
 };
 
-#endif
+#endif // CARTAO_HPP

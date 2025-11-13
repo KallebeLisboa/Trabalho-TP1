@@ -4,39 +4,40 @@
 #include <string>    // Para std::stoi
 
 // Implementação do m�todo de validação
-void Ramal::validar(const std::string& valorRamal) {
-    // A especificação diz que o ramal deve ter 2 dígitos (00 a 50)
-    if (valorRamal.length() != 2) {
-        throw std::invalid_argument("O ramal deve conter exatamente 2 digitos.");
+void Ramal::validar(std::string const &ramal){
+            
+    if(ramal.length() != 2){ // Primeiro, confirma que é tem 2 caracteres. Ex: 07
+        throw std::invalid_argument("O ramal deve conter exatamente 2 dígitos");
     }
 
-    // Verifica se todos os caracteres são dígitos
-    for (char caractere : valorRamal) {
-        if (!isdigit(caractere)) {
-            throw std::invalid_argument("Todos os caracteres do ramal devem ser digitos numericos.");
+    for(int i = 0;i < ramal.length();i++){ // Depois, confirmar que é um número
+        char caractere = ramal[i];
+        if(!(isdigit(caractere))){
+            throw std::invalid_argument("Todos os caracteres devem ser dígitos numéricos");
         }
     }
 
-    // Converte para inteiro para verificar a faixa de valor
-    int valorNumerico = std::stoi(valorRamal);
-    if (valorNumerico < 0 || valorNumerico > 50) {
-        throw std::invalid_argument("O valor do ramal deve ser de 00 a 50.");
+    // Faria mais sentido ver primeiro se é número, porém, otimiza o programa analisar o if primeiro, pois o erro pode vir no loop for.
+
+    int valorNumerico = std::stoi(ramal);
+    if(valorNumerico > 50){ // Por fim, vê se o número está no range (não pode ser maior que 50)
+        throw std::invalid_argument("O valor do ramal deve ser de 00 a 50");
     }
 }
 
 // Implementação do construtor
-Ramal::Ramal(const std::string& valorRamal) {
-    validar(valorRamal);
-    this->ramal = valorRamal;
-}
+Ramal::Ramal(std::string ramal){
+    validar(ramal);
+    this->ramal = ramal;
+};
 
 // Implementação do método set
-void Ramal::setRamal(const std::string& valorRamal) {
-    validar(valorRamal);
-    this->ramal = valorRamal;
+void Ramal::setRamal(std::string ramal) {
+    validar(ramal);
+    this->ramal = ramal;
 }
 
 // Implementação do método get
-std::string Ramal::getRamal() const {
+std::string Ramal::getRamal(){
     return this->ramal;
 }

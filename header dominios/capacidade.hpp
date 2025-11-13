@@ -6,7 +6,7 @@ private:
     int capacidade; // O atributo que armazena o valor da capacidade
 
     // Apenas a declaração do método de validação. A implementação ficará no .cpp
-    void validar(int capacidade);
+    void validar(int const &capacidade);
 
 public:
     // Declaração do Construtor
@@ -16,8 +16,8 @@ public:
     void setCapacidade(int capacidade);
 
     // Declaração do método get
-    // Adicionamos 'const' para indicar que este método não altera o estado do objeto
-    int getCapacidade() const;
+
+    int getCapacidade();
 };
 
 #endif

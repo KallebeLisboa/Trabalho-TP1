@@ -3,64 +3,66 @@
 #include <cctype>    // Para isalpha, isdigit, isupper, islower
 
 // Implementação do método de validação
-void Senha::validar(const std::string& valorSenha) {
-    if (valorSenha.length() != 5) { 
-        throw std::invalid_argument("Senha deve conter 5 caracteres.");
-    }
+void Senha::validar(std::string const &senha){
+    if(senha.length() != 5){
+        throw std::invalid_argument("Senha deve conter 5 caracteres");
+    };
 
-    bool temMinuscula = false;
-    bool temMaiuscula = false;
-    bool temDigito = false;
-    bool temEspecial = false;
+    int letraLower, letraUpper, digito, charEspecial;
+    letraLower = letraUpper = digito = charEspecial = 0; // Para analisar ser existe pelo menos uma letra minúscula (a-z), uma letra maiúscula (A-Z), um dígito (0-9) e um caracter especial.
 
-    for (size_t i = 0; i < valorSenha.length(); ++i) {
-        char caractere = valorSenha[i];
-        char proximo_caractere = (i + 1 < valorSenha.length()) ? valorSenha[i + 1] : '\0';
-
-        // Verifica a regra de não repetição de tipo
-        if (isalpha(caractere) && isalpha(proximo_caractere)) {
-            throw std::invalid_argument("Letra nao pode ser seguida por letra.");
+    for(int i = 0;i < senha.length();i++){
+        char caractere = senha[i];
+        if(isalpha(caractere)) {
+            if (i + 1 < senha.length()){
+                if(isalpha(senha[i + 1])){
+                    throw std::invalid_argument("Letra não pode ser seguida por letra");
+                }
+            }
+            if(isupper(caractere)){
+                letraUpper++;
+            }
+            else{
+                letraLower++;
+            }
         }
-        if (isdigit(caractere) && isdigit(proximo_caractere)) {
-            throw std::invalid_argument("Digito nao pode ser seguido por digito.");
+        else if(isdigit(caractere)) {
+            if (i + 1 < senha.length()){
+                if(isdigit(senha[i + 1])){
+                    throw std::invalid_argument("Dígito não pode ser seguida por dígito");
+                }
+            }
+            digito++;
+        }
+        else if(caractere == '!' || caractere == '"' || caractere == '#' ||
+                caractere == '$' || caractere == '%' || caractere == '&' ||
+                caractere == '?') {
+            charEspecial++;
+        }
+        else{
+            throw std::invalid_argument("Caracter pode ser letra (a-z ou A-Z), dígito (0-9) ou caracter especial ( ! \" # $ % & ? )");
         }
 
-        // Valida o caractere e conta os tipos
-        if (islower(caractere)) {
-            temMinuscula = true;
-        } else if (isupper(caractere)) {
-            temMaiuscula = true;
-        } else if (isdigit(caractere)) {
-            temDigito = true;
-        } else if (caractere == '!' || caractere == '"' || caractere == '#' ||
-                   caractere == '$' || caractere == '%' || caractere == '&' ||
-                   caractere == '?') {
-            temEspecial = true;
-        } else {
-            // Se não for nenhum dos tipos válidos
-            throw std::invalid_argument("Caracter invalido na senha. Use letras, digitos ou os especiais [! \" # $ % & ?].");
-        }
-    }
+    };
+    if (letraLower == 0 || letraUpper == 0 || digito == 0 || charEspecial == 0) { // Alguma das variáveis é 0
+        throw std::invalid_argument("Senha deve conter pelo menos uma letra minúscula (a-z), uma letra maiúscula (A-Z), um dígito (0-9) e um caracter especial");
+    };
 
-    // Verifica a regra de conter pelo menos um de cada tipo
-    if (!temMinuscula || !temMaiuscula || !temDigito || !temEspecial) {
-        throw std::invalid_argument("Senha deve conter pelo menos uma letra minuscula, uma maiuscula, um digito e um caracter especial.");
-    }
-}
+};
 
 // Implementação do construtor
-Senha::Senha(const std::string& valorSenha) {
-    validar(valorSenha);
-    this->senha = valorSenha;
-}
+Senha::Senha(std::string senha){
+    validar(senha);
+    this->senha = senha;
+};
 
 // Implementação do método set
-void Senha::setSenha(const std::string& valorSenha) {
-    validar(valorSenha);
-    this->senha = valorSenha;
+void Senha::setSenha(std::string senha) {
+    validar(senha);
+    this->senha = senha;
 }
 
 // Implementação do método get
-std::string Senha::getSenha() const {
+std::string Senha::getSenha(){
     return this->senha;
 }

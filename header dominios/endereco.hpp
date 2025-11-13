@@ -8,17 +8,17 @@ private:
     std::string endereco;
 
     // Declaração do método de validação
-    void validar(const std::string& valorEndereco);
+    void validar(std::string const &endereco);
 
 public:
     // Construtor
-    Endereco(const std::string& valorEndereco);
+    Endereco(std::string endereco);
 
     // Método set
-    void setEndereco(const std::string& valorEndereco);
+    void setEndereco(std::string endereco);
 
     // Método get
-    std::string getEndereco() const;
+    std::string getEndereco();
 };
 
 #endif

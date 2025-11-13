@@ -3,21 +3,21 @@
 
 class Dinheiro {
 private:
-    // O valor é armazenado como um inteiro de centavos para evitar erros de precisão com double.
-    int centavos;
+
+    int dinheiro; // Armazenado em centavos. R$1.99 vira 199 centavos
 
     // Valida o valor em centavos.
-    void validar(int valorEmCentavos);
+    void validar(int const &dinheiro);
 
 public:
     // Construtor que aceita um valor double (ex: 19.99)
-    Dinheiro(double valor);
+    Dinheiro(double dinheiro);
 
     // Método set que também aceita um double
-    void setDinheiro(double valor);
+    void setDinheiro(double dinheiro);
 
     // Método get que retorna o valor como double
-    double getDinheiro() const;
+    double getDinheiro();
 };
 
 #endif

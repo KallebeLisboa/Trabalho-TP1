@@ -8,17 +8,17 @@ private:
     std::string codigo;
 
     // Declaraçãoo do método de validação
-    void validar(const std::string& valorCodigo);
+    void validar(const std::string& codigo);
 
 public:
     // Construtor
-    Codigo(const std::string& valorCodigo);
+    Codigo(std::string codigo);
 
     // Método set
-    void setCodigo(const std::string& valorCodigo);
+    void setCodigo(std::string codigo);
 
     // Método get
-    std::string getCodigo() const;
+    std::string getCodigo();
 };
 
 #endif

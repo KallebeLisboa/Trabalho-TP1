@@ -3,30 +3,31 @@
 #include <cctype>    // Para isdigit e islower
 
 // Implementação do método de validação
-void Codigo::validar(const std::string& valorCodigo) {
-    if (valorCodigo.length() != 10) {
-        throw std::invalid_argument("O codigo deve ter 10 caracteres.");
-    };
-    for (char caractere : valorCodigo) {
-        if (!(isdigit(caractere)) && !(islower(caractere))) {
-            throw std::invalid_argument("Cada caractere deve ser uma letra minuscula (a-z) ou um digito (0-9).");
-        };
-    };
+void Codigo::validar(std::string const &codigo){
+
+    if(!(codigo.length() == 10)){ // Tamanho do código
+        throw std::invalid_argument("O código deve ter 10 caracteres.");
+    }
+    for (char caractere : codigo){
+        if (!(isdigit(caractere)) && !(islower(caractere))){ // Se não for dígito ou se não for letra minúscula
+            throw std::invalid_argument("Cada caractere deve ser uma letra minúscula (a-z) ou um dígito (0-9)");
+        }
+    }
 };
 
 // Implementação do construtor
-Codigo::Codigo(const std::string& valorCodigo) {
-    validar(valorCodigo);
-    this->codigo = valorCodigo;
-}
+Codigo::Codigo(std::string codigo){
+    validar(codigo);
+    this->codigo = codigo;
+};
 
 // Implementação do método set
-void Codigo::setCodigo(const std::string& valorCodigo) {
-    validar(valorCodigo);
-    this->codigo = valorCodigo;
-}
+void Codigo::setCodigo(std::string codigo){
+    validar(codigo);
+    this->codigo = codigo;
+};
 
 // Implementação do método get
-std::string Codigo::getCodigo() const {
+std::string Codigo::getCodigo(){
     return this->codigo;
-}
+};

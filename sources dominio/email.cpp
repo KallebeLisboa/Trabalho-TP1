@@ -4,78 +4,91 @@
 #include <cctype>    // Para isdigit, islower, etc.
 
 // Implementação do método de validação
-void Email::validar(const std::string& valorEmail) {
-    size_t arroba_pos = valorEmail.find('@');
+void Email::validar(std::string const &email){
 
-    if (arroba_pos == std::string::npos) {
-        throw std::invalid_argument("Formato invalido. Email deve conter um '@'.");
-    }
+    int numeroDeArrobas = std::count(email.begin(), email.end(), '@');
 
-    if (std::count(valorEmail.begin(), valorEmail.end(), '@') != 1) {
-        throw std::invalid_argument("Formato invalido. Email deve conter apenas um '@'.");
-    }
+    if(!(numeroDeArrobas == 1)){
+        throw std::invalid_argument("Formato inválido. Use o formato 'parte-local@domínio'");
+    };
 
-    std::string parteLocal = valorEmail.substr(0, arroba_pos);
-    std::string dominio = valorEmail.substr(arroba_pos + 1);
+    int arroba = email.find('@');
+
+    std::string parteLocal = email.substr(0,arroba);
+    std::string dominio = email.substr(arroba+1);
 
     // Validação da Parte Local
-    if (parteLocal.empty() || parteLocal.length() > 64) {
-        throw std::invalid_argument("Parte local do email e invalida (vazia ou > 64 caracteres).");
+    if(parteLocal.front() == '-' || parteLocal.front() == '.'){ // Hífen ou ponto no primeiro caractere
+        throw std::invalid_argument("O primeiro caractere não deve ser hífen ou ponto.");
     }
-    if (parteLocal.front() == '.' || parteLocal.front() == '-') {
-        throw std::invalid_argument("Parte local nao pode comecar com ponto ou hifen.");
-    }
-    if (parteLocal.back() == '.' || parteLocal.back() == '-') {
-        throw std::invalid_argument("Parte local nao pode terminar com ponto ou hifen.");
-    }
-    for (size_t i = 0; i < parteLocal.length(); ++i) {
-        char c = parteLocal[i];
-        if (!islower(c) && !isdigit(c) && c != '.' && c != '-') {
-            throw std::invalid_argument("Parte local contem caractere invalido.");
-        }
-        if ((c == '.' || c == '-') && i + 1 < parteLocal.length()) {
-            if (!islower(parteLocal[i + 1]) && !isdigit(parteLocal[i + 1])) {
-                 throw std::invalid_argument("Ponto ou hifen na parte local deve ser seguido por letra ou digito.");
+    if(parteLocal.back() == '-' || parteLocal.back() == '.'){// Hífen ou ponto no último caractere
+        throw std::invalid_argument("O último caractere não deve ser hífen ou ponto.");
+    };
+    
+    for (int i = 0; i < parteLocal.length(); i++){
+        char caractere = parteLocal[i];
+        if(!(isdigit(caractere) || islower(caractere) ||
+        (caractere == '.') || (caractere == '-'))){
+            throw std::invalid_argument("Parte local pode conter letra (a-z), dígito (0-9) ou ponto(.) ou hífen (-)");
+        };
+        if (i + 1 < parteLocal.length()) {
+            if(caractere == '.' || caractere == '-'){
+                if(!(isalpha(parteLocal[i+1]) || isdigit(parteLocal[i+1]))){
+                    throw std::invalid_argument("Hífen ou ponto deve ser seguido de dígito ou letra");  
+                }
             }
         }
+    }
+    if(parteLocal.length() < 1 || parteLocal.length() > 64){
+        throw std::invalid_argument("Comprimento máximo da parte local é de 64 caracteres.");
     }
 
     // Validação do Domínio
-    if (dominio.empty() || dominio.length() > 255) {
-        throw std::invalid_argument("Dominio do email e invalido (vazio ou > 255 caracteres).");
+
+    if (dominio.length() < 1|| dominio.length() > 255) {
+        throw std::invalid_argument("Domínio do e-mail é inválido (vazio ou > 255 caracteres).");
     }
     if (dominio.front() == '-' || dominio.front() == '.') {
-        throw std::invalid_argument("Dominio nao pode comecar com hifen ou ponto.");
+        throw std::invalid_argument("Domínio não pode começar com hífen ou ponto.");
     }
     if (dominio.back() == '-' || dominio.back() == '.') {
-        throw std::invalid_argument("Dominio nao pode terminar com hifen ou ponto.");
+        throw std::invalid_argument("Domínio não pode terminar com hífen ou ponto.");
     }
-    for (size_t i = 0; i < dominio.length(); ++i) {
-        char c = dominio[i];
-        if (!islower(c) && !isdigit(c) && c != '.' && c != '-') {
-            throw std::invalid_argument("Dominio contem caractere invalido.");
+
+    for (int i = 0; i < dominio.length(); i++) {
+        char caractere = dominio[i];
+        if (!(islower(caractere) || isdigit(caractere) || caractere == '.' || caractere == '-')) {
+            throw std::invalid_argument("Domínio contém caractere inválido.");
         }
-        if ((c == '.' || c == '-') && i + 1 < dominio.length()) {
-            if (dominio[i + 1] == '.' || dominio[i + 1] == '-') {
-                throw std::invalid_argument("No dominio, ponto ou hifen nao pode ser seguido por outro ponto ou hifen.");
+        
+        if (i + 1 < dominio.length()) {
+            if (caractere == '.') {
+                if (dominio[i+1] == '.' || dominio[i+1] == '-') {
+                    throw std::invalid_argument("No domínio, ponto não pode ser seguido por hífen ou ponto.");
+                }
+            }
+            if (caractere == '-') {
+                if (dominio[i+1] == '.') {
+                    throw std::invalid_argument("No domínio, hífen não pode ser seguido por ponto.");
+                }
             }
         }
     }
-}
+};
 
 // Implementação do construtor
-Email::Email(const std::string& valorEmail) {
-    validar(valorEmail);
-    this->email = valorEmail;
-}
+Email::Email(std::string email){
+    validar(email);
+    this->email = email;
+};
 
 // Implementação do método set
-void Email::setEmail(const std::string& valorEmail) {
-    validar(valorEmail);
-    this->email = valorEmail;
-}
+void Email::setEmail(std::string email){
+    validar(email);
+    this->email = email;
+};
 
 // Implementação do método get
-std::string Email::getEmail() const {
+std::string Email::getEmail(){
     return this->email;
-}
+};

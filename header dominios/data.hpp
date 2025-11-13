@@ -8,20 +8,20 @@ private:
     std::string data; // Armazena a data no formato "dia-mês-ano"
 
     // Método auxiliar para verificar se um ano é bissexto
-    bool anoBissexto(int ano) const;
+    bool anoBissexto(int ano);
 
     // Método principal de validação
-    void validar(const std::string& dataCompleta);
+    void validar(std::string const &data);
 
 public:
     // Construtor
-    Data(const std::string& dataCompleta);
+    Data(std::string data);
 
     // Método set
-    void setData(const std::string& dataCompleta);
+    void setData(std::string data);
 
     // Método get
-    std::string getData() const;
+    std::string getData();
 };
 
 #endif // DATA_HPP

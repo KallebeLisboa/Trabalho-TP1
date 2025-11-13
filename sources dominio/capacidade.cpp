@@ -2,15 +2,13 @@
 #include <stdexcept>      // Necessário para usar a exceção std::invalid_argument
 
 // Implementação do método de validação
-void Capacidade::validar(int capacidade) {
+void Capacidade::validar(int const &capacidade) {
     if (capacidade < 1 || capacidade > 4) {
-        // Lança a exceção se o valor for inválido
         throw std::invalid_argument("Capacidade invalida. Deve ser 1, 2, 3 ou 4.");
     }
 }
-
 // Implementação do Construtor
-Capacidade::Capacidade(int capacidade) {
+Capacidade::Capacidade(int capacidade){
     validar(capacidade);
     this->capacidade = capacidade;
 }
@@ -22,6 +20,6 @@ void Capacidade::setCapacidade(int capacidade) {
 }
 
 // Implementação do método get
-int Capacidade::getCapacidade() const {
+int Capacidade::getCapacidade() {
     return this->capacidade;
 }

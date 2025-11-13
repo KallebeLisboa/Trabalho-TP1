@@ -8,17 +8,17 @@ private:
     std::string email;
 
     // Declaração do método de validação
-    void validar(const std::string& valorEmail);
+    void validar(std::string const &email);
 
 public:
     // Construtor
-    Email(const std::string& valorEmail);
+    Email(std::string email);
 
     // Método set
-    void setEmail(const std::string& valorEmail);
+    void setEmail(std::string email);
 
     // Método get
-    std::string getEmail() const;
+    std::string getEmail();
 };
 
 #endif

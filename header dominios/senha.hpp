@@ -8,17 +8,16 @@ private:
     std::string senha;
 
     // Declaração do método de validação
-    void validar(const std::string& valorSenha);
+    void validar(std::string const &senha);
 
 public:
     // Construtor
-    Senha(const std::string& valorSenha);
-
+    Senha(std::string senha);
     // Método set
-    void setSenha(const std::string& valorSenha);
+    void setSenha(std::string senha);
 
     // Método get
-    std::string getSenha() const;
+    std::string getSenha();
 };
 
 #endif

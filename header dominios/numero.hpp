@@ -8,17 +8,16 @@ private:
     std::string numero;
 
     // Declaração do método de validação
-    void validar(const std::string& valorNumero);
+    void validar(std::string const &numero);
 
 public:
     // Construtor
-    Numero(const std::string& valorNumero);
-
+    Numero(std::string numero);
     // Método set
-    void setNumero(const std::string& valorNumero);
+    void setNumero(std::string numero);
 
     // Método get
-    std::string getNumero() const;
+    std::string getNumero();
 };
 
 #endif

@@ -3,33 +3,32 @@
 #include <cctype>    // Para isdigit
 
 // Implementação do método de validação
-void Telefone::validar(const std::string& valorTelefone) {
-    // Isso resulta em 15 caracteres: 1 sinal de '+' e 14 dígitos.
-    if (valorTelefone.length() != 15 || valorTelefone.front() != '+') {
-        throw std::invalid_argument("Formato invalido. Use o formato '+DDDDDDDDDDDDDD', onde D e um digito de 0 a 9.");
+void Telefone::validar(std::string const &telefone){
+
+    if(telefone.length() != 15 || telefone.front() != '+'){
+        throw std::invalid_argument("Formato inválido. Use o formato de telefone '+DDDDDDDDDDDDDD', onde D é um dígito de 0 a 9");
     }
 
-    // Verifica se todos os caracteres após o '+' são dígitos
-    for (size_t i = 1; i < valorTelefone.length(); ++i) {
-        if (!isdigit(valorTelefone[i])) {
-            throw std::invalid_argument("Formato invalido. Apenas o primeiro caractere pode ser '+' e os demais devem ser digitos.");
-        }
-    }
-}
+    for(int i = 1;i < telefone.length();i++){
+        if(!(isdigit(telefone[i]))){
+            throw std::invalid_argument("Formato inválido. Use o formato de telefone '+DDDDDDDDDDDDDD', onde D é um dígito de 0 a 9");
+        };
+    };
+};
 
 // Implementação do construtor
-Telefone::Telefone(const std::string& valorTelefone) {
-    validar(valorTelefone);
-    this->telefone = valorTelefone;
+Telefone::Telefone(std::string telefone) {
+    validar(telefone);
+    this->telefone = telefone;
 }
 
 // Implementação do método set
-void Telefone::setTelefone(const std::string& valorTelefone) {
-    validar(valorTelefone);
-    this->telefone = valorTelefone;
+void Telefone::setTelefone(std::string telefone) {
+    validar(telefone);
+    this->telefone = telefone;
 }
 
 // Implementação do método get
-std::string Telefone::getTelefone() const {
+std::string Telefone::getTelefone(){
     return this->telefone;
 }

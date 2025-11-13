@@ -8,17 +8,16 @@ private:
     std::string ramal;
 
     // Declaração do método de validação
-    void validar(const std::string& valorRamal);
+    void validar(std::string const &ramal);
 
 public:
     // Construtor
-    Ramal(const std::string& valorRamal);
-
+    Ramal(std::string ramal);
     // Método set
-    void setRamal(const std::string& valorRamal);
+    void setRamal(std::string ramal);
 
     // Método get
-    std::string getRamal() const;
+    std::string getRamal();
 };
 
 #endif
