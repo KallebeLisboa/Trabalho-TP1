@@ -18,7 +18,7 @@ public:
     void setCodigo(std::string codigo);
 
     // Método get
-    std::string getCodigo();
+    std::string getCodigo() const;
 };
 
 #endif

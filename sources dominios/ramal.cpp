@@ -3,7 +3,7 @@
 #include <cctype>    // Para isdigit
 #include <string>    // Para std::stoi
 
-// Implementação do m�todo de validação
+// Implementação do método de validação
 void Ramal::validar(std::string const &ramal){
             
     if(ramal.length() != 2){ // Primeiro, confirma que é tem 2 caracteres. Ex: 07
