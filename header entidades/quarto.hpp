@@ -2,11 +2,11 @@
 #define QUARTO_HPP
 
 // Inclusão das classes de Domínio necessárias (assumindo o caminho 'header dominios/')
-#include "header dominios/codigo.hpp"      // Para o codigoHotel (FK do Hotel)
-#include "header dominios/numero.hpp"      // Para o atributo número
-#include "header dominios/capacidade.hpp"  // Para o atributo capacidade
-#include "header dominios/dinheiro.hpp"    // Para o atributo diaria
-#include "header dominios/ramal.hpp"       // Para o atributo ramal
+#include "header dominios/codigo.hpp"
+#include "header dominios/numero.hpp"
+#include "header dominios/capacidade.hpp"
+#include "header dominios/dinheiro.hpp"
+#include "header dominios/ramal.hpp"
 
 class Quarto {
 private:
