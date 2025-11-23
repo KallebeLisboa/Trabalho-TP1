@@ -2,11 +2,11 @@
 #define RESERVA_HPP
 
 // Inclusão das classes de domínio que serão atributos
-#include "header dominios/data.hpp"
-#include "header dominios/dinheiro.hpp"
-#include "header dominios/codigo.hpp"
-#include "header dominios/numero.hpp" // PK do Quarto
-#include "header dominios/email.hpp" // PK do Hóspede
+#include "../header dominios/data.hpp"
+#include "../header dominios/dinheiro.hpp"
+#include "../header dominios/codigo.hpp"
+#include "../header dominios/email.hpp"
+#include "../header dominios/numero.hpp"
 
 
 class Reserva {
@@ -32,7 +32,7 @@ public:
     Email getEmailHospede() const;
     Numero getNumeroQuarto() const;
     Codigo getCodigoHotel() const;
-    
+
 
     // Métodos Set (Para modificar os atributos)
     // Não é possível editar dado que identifica registro (chave primária).

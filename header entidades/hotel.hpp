@@ -2,10 +2,10 @@
 #define HOTEL_HPP
 
 // Inclusão das classes de domínio que serão atributos
-#include "header dominios/nome.hpp"
-#include "header dominios/endereco.hpp"
-#include "header dominios/telefone.hpp"
-#include "header dominios/codigo.hpp"
+#include "../header dominios/nome.hpp"
+#include "../header dominios/endereco.hpp"
+#include "../header dominios/telefone.hpp"
+#include "../header dominios/codigo.hpp"
 
 
 class Hotel {
@@ -14,7 +14,7 @@ private:
     Nome nome;
     Endereco endereco;
     Telefone telefone;
-    Codigo codigo; // <<PK>> - Chave Primária 
+    Codigo codigo; // <<PK>> - Chave Primária
 
 public:
     // Construtor

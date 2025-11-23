@@ -4,6 +4,9 @@
 #include <map>
 #include <string>
 #include "header entidades/quarto.hpp"
+#include "../header interface/IServicoQuarto.hpp"
+
+// Includes dos domínios necessários para instanciar no .cpp
 #include "header dominios/numero.hpp"
 #include "header dominios/capacidade.hpp"
 #include "header dominios/dinheiro.hpp"
@@ -12,11 +15,8 @@
 
 using namespace std;
 
-class ContainerQuarto {
+class ContainerQuarto : public IServicoQuarto {
 private:
-    /*Não é definido uma chave única global para o quarto (só "número", que se repete entre hotéis),então
-    eu usei uma chave composta no map: CODIGOHOTEL_NUMEROQUARTO (ex: "HOTEL1_101")*/
-
     // Chave: "CODIGOHOTEL_NUMERO"
     map<string, Quarto*> bancoDeQuartos;
 
@@ -28,13 +28,13 @@ private:
 public:
     ~ContainerQuarto();
 
-    // Parâmetros primitivos para facilitar a camada de apresentação
     void criarQuarto(string codigoHotel, string numero, int capacidade, double valorDiaria, string ramal);
-    
+
+    // --- NOVO MÉTODO DECLARADO ---
+    Quarto* pesquisarQuarto(string codigoHotel, string numero);
+
     map<string, Quarto*> listarQuartosDoHotel(string codigoHotel);
-    
     void atualizarQuarto(string codigoHotel, string numero, int novaCapacidade, double novoValor, string novoRamal);
-    
     void excluirQuarto(string codigoHotel, string numero);
 };
 

@@ -39,15 +39,31 @@ map<string, Quarto*> ContainerQuarto::listarQuartosDoHotel(string codigoHotel) {
 
 void ContainerQuarto::atualizarQuarto(string codigoHotel, string numero, int novaCapacidade, double novoValor, string novoRamal) {
     string chave = gerarChave(codigoHotel, numero);
-    if (bancoDeQuartos.count(chave) == 0) throw runtime_error("Erro: Quarto nao encontrado.");
+
+    if (bancoDeQuartos.count(chave) == 0) {
+        throw runtime_error("Erro: Quarto nao encontrado.");
+    }
 
     Quarto* q = bancoDeQuartos[chave];
-    
-    q->setCapacidade(Capacidade(novaCapacidade));
-    q->setDiaria(Dinheiro(novoValor));
-    q->setRamal(Ramal(novoRamal));
-    
-    cout << " > Sucesso: Quarto atualizado." << endl;
+
+    // Lógica de atualização parcial:
+
+    // 1. Capacidade (Só atualiza se for diferente de -1)
+    if (novaCapacidade != -1) {
+        q->setCapacidade(Capacidade(novaCapacidade));
+    }
+
+    // 2. Valor Diária (Só atualiza se for diferente de -1.0)
+    if (novoValor != -1.0) {
+        q->setDiaria(Dinheiro(novoValor));
+    }
+
+    // 3. Ramal (Só atualiza se não for vazio)
+    if (!novoRamal.empty()) {
+        q->setRamal(Ramal(novoRamal));
+    }
+
+    cout << " > Sucesso: Dados do quarto atualizados." << endl;
 }
 
 void ContainerQuarto::excluirQuarto(string codigoHotel, string numero) {
@@ -59,4 +75,16 @@ void ContainerQuarto::excluirQuarto(string codigoHotel, string numero) {
     } else {
         throw runtime_error("Erro: Quarto nao encontrado.");
     }
+}
+
+// Implementação da busca
+Quarto* ContainerQuarto::pesquisarQuarto(string codigoHotel, string numero) {
+    // Recria a chave composta
+    string chave = gerarChave(codigoHotel, numero);
+
+    // Verifica se existe no mapa
+    if (bancoDeQuartos.count(chave) > 0) {
+        return bancoDeQuartos[chave];
+    }
+    return nullptr; // Retorna nulo se não achar
 }

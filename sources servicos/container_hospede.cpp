@@ -1,4 +1,4 @@
-#include "header servicos\container_hospede.hpp"
+#include "../header servicos/container_hospede.hpp"
 #include <stdexcept>
 #include <iostream>
 
@@ -20,7 +20,7 @@ void ContainerHospede::criarHospede(string nome, string email, string endereco, 
 
     Hospede* novoHospede = new Hospede(domNome, domEmail, domEndereco, domCartao);
     bancoDeHospedes[email] = novoHospede;
-    
+
     cout << " > Sucesso: Hospede cadastrado." << endl;
 }
 
@@ -34,15 +34,29 @@ map<string, Hospede*> ContainerHospede::listarHospedes() {
 }
 
 void ContainerHospede::atualizarHospede(string email, string novoNome, string novoEndereco, string novoCartao) {
-    if (bancoDeHospedes.count(email) == 0) throw runtime_error("Erro: Hospede nao encontrado.");
+    // 1. Verifica se o hóspede existe
+    if (bancoDeHospedes.count(email) == 0) {
+        throw runtime_error("Erro: Hospede nao encontrado.");
+    }
 
-    Hospede* hospede = bancoDeHospedes[email];
-    
-    hospede->setNome(Nome(novoNome));
-    hospede->setEndereco(Endereco(novoEndereco));
-    hospede->setCartao(Cartao(novoCartao));
+    Hospede* h = bancoDeHospedes[email];
 
-    cout << " > Sucesso: Hospede atualizado." << endl;
+    // 2. Atualiza Nome (Se não for vazio)
+    if (!novoNome.empty()) {
+        h->setNome(Nome(novoNome));
+    }
+
+    // 3. Atualiza Endereço
+    if (!novoEndereco.empty()) {
+        h->setEndereco(Endereco(novoEndereco));
+    }
+
+    // 4. Atualiza Cartão
+    if (!novoCartao.empty()) {
+        h->setCartao(Cartao(novoCartao));
+    }
+
+    cout << " > Sucesso: Dados do hospede atualizados." << endl;
 }
 
 void ContainerHospede::excluirHospede(string email) {

@@ -26,18 +26,48 @@ void ContainerReserva::criarReserva(string codigo, string dataEntrada, string da
     cout << " > Sucesso: Reserva realizada." << endl;
 }
 
-map<string, Reserva*> ContainerReserva::listarReservas() {
-    return bancoDeReservas;
+// Implementação: Listar Reservas FILTRADAS por Hotel
+map<string, Reserva*> ContainerReserva::listarReservasDoHotel(string codigoHotel) {
+    map<string, Reserva*> filtro;
+
+    // Itera sobre todas as reservas do banco
+    for (auto const& par : bancoDeReservas) {
+        Reserva* r = par.second;
+
+        // Verifica se a reserva pertence ao hotel solicitado
+        if (r->getCodigoHotel().getCodigo() == codigoHotel) {
+            filtro[par.first] = r; // Adiciona ao mapa de filtro
+        }
+    }
+    return filtro;
 }
 
-void ContainerReserva::atualizarReserva(string codigo, string novaDataEntrada, string novaDataSaida, double novoValor) {
-    if (bancoDeReservas.count(codigo) == 0) throw runtime_error("Erro: Reserva nao encontrada.");
+void ContainerReserva::atualizarReserva(string codigo, string novaDataEntrada, string novaDataSaida, double novoValor, string novoNumeroQuarto) {
+    if (bancoDeReservas.count(codigo) == 0) {
+        throw runtime_error("Erro: Reserva nao encontrada.");
+    }
 
     Reserva* r = bancoDeReservas[codigo];
-    
-    r->setChegada(Data(novaDataEntrada));
-    r->setPartida(Data(novaDataSaida));
-    r->setValor(Dinheiro(novoValor));
+
+    // 1. Atualiza Chegada
+    if (!novaDataEntrada.empty()) {
+        r->setChegada(Data(novaDataEntrada));
+    }
+
+    // 2. Atualiza Partida
+    if (!novaDataSaida.empty()) {
+        r->setPartida(Data(novaDataSaida));
+    }
+
+    // 3. Atualiza Valor (Se for diferente de -1.0)
+    if (novoValor != -1.0) {
+        r->setValor(Dinheiro(novoValor));
+    }
+
+    // 4. Atualiza Quarto
+    if (!novoNumeroQuarto.empty()) {
+        r->setNumeroQuarto(Numero(novoNumeroQuarto));
+    }
 
     cout << " > Sucesso: Reserva atualizada." << endl;
 }
@@ -50,4 +80,12 @@ void ContainerReserva::excluirReserva(string codigo) {
     } else {
         throw runtime_error("Erro: Reserva nao encontrada.");
     }
+}
+
+Reserva* ContainerReserva::pesquisarReserva(string codigo) {
+    // Verifica se o código existe no mapa
+    if (bancoDeReservas.count(codigo) > 0) {
+        return bancoDeReservas[codigo];
+    }
+    return nullptr; // Retorna nulo se não encontrar
 }

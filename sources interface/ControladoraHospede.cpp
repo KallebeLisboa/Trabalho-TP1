@@ -1,14 +1,13 @@
-#include "header interface/ControladoraHospede.hpp" // Ajuste o caminho se necessário
+#include "../header interface/ControladoraHospede.hpp" // Ajuste o caminho se necessário
 #include <iostream>
 #include <string>
 #include <stdexcept> // Para capturar as exceções
 
 // INCLUDES DOS DOMÍNIOS NECESSÁRIOS
-#include "header dominios/nome.hpp"
-#include "header dominios/email.hpp"
-#include "header dominios/endereco.hpp"
-#include "header dominios/cartao.hpp"
-
+#include "../header dominios/nome.hpp"
+#include "../header dominios/email.hpp"
+#include "../header dominios/endereco.hpp"
+#include "../header dominios/cartao.hpp"
 using namespace std;
 
 // Implementacao do metodo principal
@@ -102,20 +101,34 @@ void ControladoraHospede::criarHospede() {
         }
     }
 
-    // **INTEGRAÇÃO FUTURA:**
-    // Hospede hospede(nome, email, endereco, cartao);
-    // servicoHospede->criar(hospede);
+    // **INTEGRAÇÃO REAL**
+    cout << "Salvando novo hospede..." << endl;
+    try {
+        // Verificação de segurança
+        if (servicoHospede == nullptr) {
+            cout << "ERRO CRITICO: Servico de hospede nao conectado." << endl;
+            return;
+        }
 
-    cout << "Hospede criado e validado com sucesso! (Simulacao)" << endl;
+        // Chama o serviço
+        servicoHospede->criarHospede(textoNome, textoEmail, textoEndereco, textoCartao);
+
+        cout << "SUCESSO: Hospede cadastrado no sistema!" << endl;
+
+    } catch (const runtime_error& e) {
+        cout << "ERRO AO SALVAR: " << e.what() << endl;
+    }
 }
 
 // Implementacao: Ler Dados de um Hospede
 void ControladoraHospede::lerHospede() {
     string textoEmail;
     cout << "\n--- LER HOSPEDE ---" << endl;
+    cout << "Informe o Email do Hospede (PK) para buscar." << endl;
 
+    // 1. Validação do Email
     while (true) {
-        cout << "Digite o Email do Hospede (PK): ";
+        cout << "Email: ";
         getline(cin, textoEmail);
         try {
             Email email(textoEmail);
@@ -125,10 +138,31 @@ void ControladoraHospede::lerHospede() {
         }
     }
 
-    // **INTEGRAÇÃO FUTURA:**
-    // Hospede h = servicoHospede->ler(textoEmail);
+    cout << "Buscando no sistema..." << endl;
 
-    cout << "Busca por Hospede " << textoEmail << " realizada." << endl;
+    // 2. Verificação de Segurança
+    if (servicoHospede == nullptr) {
+        cout << "ERRO CRITICO: Servico de hospede nao conectado." << endl;
+        return;
+    }
+
+    // 3. Busca no Serviço
+    Hospede* h = servicoHospede->pesquisarHospede(textoEmail);
+
+    // 4. Exibe os resultados
+    if (h != nullptr) {
+        cout << "-----------------------------" << endl;
+        cout << "HOSPEDE ENCONTRADO:" << endl;
+        cout << "Nome:     " << h->getNome().getNome() << endl;
+        cout << "Email:    " << h->getEmail().getEmail() << endl;
+        cout << "Endereco: " << h->getEndereco().getEndereco() << endl;
+        // Mostra apenas os últimos 4 dígitos do cartão por segurança (opcional, mas boa prática)
+        string cartao = h->getCartao().getCartao();
+        cout << "Cartao:   XXXX-XXXX-XXXX-" << cartao.substr(12, 4) << endl;
+        cout << "-----------------------------" << endl;
+    } else {
+        cout << "AVISO: Nenhum hospede encontrado com este email." << endl;
+    }
 }
 
 // Implementacao: Editar Hospede
@@ -136,10 +170,11 @@ void ControladoraHospede::editarHospede() {
     string textoEmail, novoNome, novoEndereco, novoCartao;
 
     cout << "\n--- EDITAR HOSPEDE ---" << endl;
+    cout << "Informe o Email do Hospede para editar (PK):" << endl;
 
     // 1. Identificar PK
     while (true) {
-        cout << "Digite o Email do Hospede a editar (PK): ";
+        cout << "Email: ";
         getline(cin, textoEmail);
         try {
             Email email(textoEmail);
@@ -149,17 +184,30 @@ void ControladoraHospede::editarHospede() {
         }
     }
 
-    cout << "Preencha os novos dados (Deixe vazio para manter o atual):" << endl;
+    // Segurança
+    if (servicoHospede == nullptr) {
+        cout << "ERRO CRITICO: Servico nao conectado." << endl;
+        return;
+    }
+
+    // Verifica existência
+    if (servicoHospede->pesquisarHospede(textoEmail) == nullptr) {
+        cout << "AVISO: Hospede nao encontrado." << endl;
+        return;
+    }
+
+    cout << "Preencha os novos dados (Pressione ENTER para manter o atual):" << endl;
 
     // 2. Novo Nome
     cout << "Novo Nome: ";
     getline(cin, novoNome);
     if (!novoNome.empty()) {
         try {
-            Nome nome(novoNome);
+            Nome nome(novoNome); // Apenas valida
             cout << " - Nome validado." << endl;
         } catch (const invalid_argument& e) {
             cout << "ERRO: " << e.what() << ". Ignorado." << endl;
+            novoNome = "";
         }
     }
 
@@ -168,10 +216,11 @@ void ControladoraHospede::editarHospede() {
     getline(cin, novoEndereco);
     if (!novoEndereco.empty()) {
         try {
-            Endereco endereco(novoEndereco);
+            Endereco endereco(novoEndereco); // Apenas valida
             cout << " - Endereco validado." << endl;
         } catch (const invalid_argument& e) {
             cout << "ERRO: " << e.what() << ". Ignorado." << endl;
+            novoEndereco = "";
         }
     }
 
@@ -180,26 +229,31 @@ void ControladoraHospede::editarHospede() {
     getline(cin, novoCartao);
     if (!novoCartao.empty()) {
         try {
-            Cartao cartao(novoCartao);
+            Cartao cartao(novoCartao); // Apenas valida
             cout << " - Cartao validado." << endl;
         } catch (const invalid_argument& e) {
             cout << "ERRO: " << e.what() << ". Ignorado." << endl;
+            novoCartao = "";
         }
     }
 
-    // **INTEGRAÇÃO FUTURA:**
-    // servicoHospede->editar(...);
-
-    cout << "Solicitacao de edicao enviada." << endl;
+    // **INTEGRAÇÃO REAL**
+    try {
+        servicoHospede->atualizarHospede(textoEmail, novoNome, novoEndereco, novoCartao);
+    } catch (const runtime_error& e) {
+        cout << "FALHA NA EDICAO: " << e.what() << endl;
+    }
 }
 
 // Implementacao: Excluir Hospede
 void ControladoraHospede::excluirHospede() {
     string textoEmail;
     cout << "\n--- EXCLUIR HOSPEDE ---" << endl;
+    cout << "ATENCAO: Esta acao nao pode ser desfeita." << endl;
 
+    // 1. Validação do Email (PK)
     while (true) {
-        cout << "Digite o Email do Hospede a excluir (PK): ";
+        cout << "Digite o Email do Hospede a excluir: ";
         getline(cin, textoEmail);
         try {
             Email email(textoEmail);
@@ -209,18 +263,58 @@ void ControladoraHospede::excluirHospede() {
         }
     }
 
-    // **INTEGRAÇÃO FUTURA:**
-    // servicoHospede->excluir(textoEmail);
+    // 2. Verificação de Segurança
+    if (servicoHospede == nullptr) {
+        cout << "ERRO CRITICO: Servico de hospede nao conectado." << endl;
+        return;
+    }
 
-    cout << "Hospede " << textoEmail << " enviado para exclusao." << endl;
+    // 3. Integração com o Serviço
+    cout << "Tentando excluir..." << endl;
+    try {
+        servicoHospede->excluirHospede(textoEmail);
+        cout << "SUCESSO: Hospede " << textoEmail << " removido do sistema." << endl;
+    } catch (const runtime_error& e) {
+        // Captura o erro se o hóspede não existir
+        cout << "FALHA NA EXCLUSAO: " << e.what() << endl;
+    }
 }
 
 // Implementacao: Listar Todos os Hospedes
 void ControladoraHospede::listarHospedes() {
-    cout << "\n--- LISTA DE HOSPEDES ---" << endl;
+    cout << "\n--- LISTA GLOBAL DE HOSPEDES ---" << endl;
 
-    // **INTEGRAÇÃO FUTURA:**
-    // servicoHospede->listarTodos();
+    // 1. Verificação de Segurança
+    if (servicoHospede == nullptr) {
+        cout << "ERRO CRITICO: Servico de hospede nao conectado." << endl;
+        return;
+    }
 
-    cout << "Listagem solicitada." << endl;
+    // 2. Busca os dados no Serviço
+    // Nota: Listamos todos porque Hóspedes são clientes globais do sistema,
+    // não pertencem a um hotel específico (diferente de Quartos).
+    map<string, Hospede*> lista = servicoHospede->listarHospedes();
+
+    // 3. Verifica se está vazio
+    if (lista.empty()) {
+        cout << "Nenhum hospede cadastrado no sistema." << endl;
+        return;
+    }
+
+    // 4. Itera sobre o mapa e imprime
+    cout << "Total de Hospedes: " << lista.size() << endl;
+    cout << "---------------------------------" << endl;
+
+    for (auto const& par : lista) {
+        Hospede* h = par.second;
+
+        cout << "Nome:     " << h->getNome().getNome() << endl;
+        cout << "Email:    " << h->getEmail().getEmail() << endl;
+        cout << "Endereco: " << h->getEndereco().getEndereco() << endl;
+
+        // Exibe cartão mascarado por segurança
+        string cartao = h->getCartao().getCartao();
+        cout << "Cartao:   ****-****-****-" << cartao.substr(12, 4) << endl;
+        cout << "---------------------------------" << endl;
+    }
 }

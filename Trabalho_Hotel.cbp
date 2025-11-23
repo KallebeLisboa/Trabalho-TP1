@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="../Trabalho-TP1-Arthur-Martins" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -33,18 +34,6 @@
 			<Add option="-fexceptions" />
 			<Add directory="Headers" />
 		</Compiler>
-		<Unit filename="Headers/header dominios/capacidade.hpp" />
-		<Unit filename="Headers/header dominios/cartao.hpp" />
-		<Unit filename="Headers/header dominios/codigo.hpp" />
-		<Unit filename="Headers/header dominios/data.hpp" />
-		<Unit filename="Headers/header dominios/dinheiro.hpp" />
-		<Unit filename="Headers/header dominios/email.hpp" />
-		<Unit filename="Headers/header dominios/endereco.hpp" />
-		<Unit filename="Headers/header dominios/nome.hpp" />
-		<Unit filename="Headers/header dominios/numero.hpp" />
-		<Unit filename="Headers/header dominios/ramal.hpp" />
-		<Unit filename="Headers/header dominios/senha.hpp" />
-		<Unit filename="Headers/header dominios/telefone.hpp" />
 		<Unit filename="header dominios/capacidade.hpp" />
 		<Unit filename="header dominios/cartao.hpp" />
 		<Unit filename="header dominios/codigo.hpp" />
@@ -69,6 +58,11 @@
 		<Unit filename="header interface/ControladoraQuarto.hpp" />
 		<Unit filename="header interface/ControladoraReserva.hpp" />
 		<Unit filename="header interface/ControladoraUsuario.hpp" />
+		<Unit filename="header interface/IServicoHospede.hpp" />
+		<Unit filename="header interface/IServicoHotel.hpp" />
+		<Unit filename="header interface/IServicoQuarto.hpp" />
+		<Unit filename="header interface/IServicoReserva.hpp" />
+		<Unit filename="header interface/IServicoUsuario.hpp" />
 		<Unit filename="header servicos/container_gerente.hpp" />
 		<Unit filename="header servicos/container_hospede.hpp" />
 		<Unit filename="header servicos/container_hotel.hpp" />
