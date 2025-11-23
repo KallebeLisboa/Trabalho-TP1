@@ -1,0 +1,34 @@
+\doxysection{Controladora\+Hotel.\+hpp}
+\hypertarget{_controladora_hotel_8hpp_source}{}\label{_controladora_hotel_8hpp_source}\index{header interface/ControladoraHotel.hpp@{header interface/ControladoraHotel.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTROLADORAHOTEL\_HPP\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTROLADORAHOTEL\_HPP\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}IServicoHotel.hpp"{}}\ \textcolor{comment}{//\ <-\/-\/-\/\ ADICIONE\ O\ INCLUDE}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_controladora_hotel}{ControladoraHotel}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_i_servico_hotel}{IServicoHotel}}*\ servicoHotel;\ \textcolor{comment}{//\ <-\/-\/-\/\ ADICIONE\ O\ PONTEIRO}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ exibirOpcoes();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ criarHotel();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ lerHotel();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ editarHotel();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ excluirHotel();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ listarHoteis();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Adicione\ o\ Setter}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ setServicoHotel(\mbox{\hyperlink{class_i_servico_hotel}{IServicoHotel}}*\ s)\ \{\ servicoHotel\ =\ s;\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ executar();}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONTROLADORAHOTEL\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

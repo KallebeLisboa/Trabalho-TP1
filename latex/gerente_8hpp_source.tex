@@ -1,0 +1,41 @@
+\doxysection{gerente.\+hpp}
+\hypertarget{gerente_8hpp_source}{}\label{gerente_8hpp_source}\index{header entidades/gerente.hpp@{header entidades/gerente.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GERENTE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GERENTE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Pessoa.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/ramal.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/senha.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_gerente_ad9bafb371b12f123a47ede412197074d}{Gerente}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_pessoa_a8fd24888a05bec10fec9f49d026782bb}{Pessoa}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Atributos\ são\ instâncias\ das\ classes\ de\ Domínio\ específicas}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_ramal}{Ramal}}\ ramal;}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_senha}{Senha}}\ senha;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Construtor}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_gerente_ad9bafb371b12f123a47ede412197074d}{Gerente}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_nome}{Nome}}\&\ nome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_email}{Email}}\&\ email,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_ramal}{Ramal}}\&\ ramal,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_senha}{Senha}}\&\ senha);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Get\ para\ atributos\ específicos}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_ramal}{Ramal}}\ \mbox{\hyperlink{class_gerente_a5e36df4b2e51e534d9b7815ca2d98c1b}{getRamal}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_senha}{Senha}}\ \mbox{\hyperlink{class_gerente_a0beb079518dff07f85924f4ae8517d92}{getSenha}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Set\ para\ atributos\ específicos}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gerente_a1efe66758f8881912793c659f6ec5525}{setRamal}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ramal}{Ramal}}\&\ ramal);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gerente_ab7102d9eb45554909cfaf19c630eef57}{setSenha}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_senha}{Senha}}\&\ senha);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GERENTE\_HPP}}
+
+\end{DoxyCode}

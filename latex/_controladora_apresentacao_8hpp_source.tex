@@ -1,0 +1,75 @@
+\doxysection{Controladora\+Apresentacao.\+hpp}
+\hypertarget{_controladora_apresentacao_8hpp_source}{}\label{_controladora_apresentacao_8hpp_source}\index{header interface/ControladoraApresentacao.hpp@{header interface/ControladoraApresentacao.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTROLADORAAPRESENTACAO\_HPP\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTROLADORAAPRESENTACAO\_HPP\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Includes\ das\ controladoras}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}ControladoraHotel.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}ControladoraQuarto.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}ControladoraReserva.hpp"{}}\ \textcolor{comment}{//\ Certifique-\/se\ que\ este\ arquivo\ existe}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}ControladoraHospede.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}ControladoraUsuario.hpp"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ INCLUDES\ DAS\ INTERFACES\ DE\ SERVIÇO}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}IServicoUsuario.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}IServicoHotel.hpp"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}IServicoQuarto.hpp"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}IServicoReserva.hpp"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}IServicoHospede.hpp"{}}\ \textcolor{comment}{//\ <-\/-\/-\/\ ADICIONADO\ PARA\ O\ COMPILADOR\ RECONHECER}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }ControladoraApresentacao\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_i_servico_usuario}{IServicoUsuario}}*\ servicoUsuario;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_controladora_hotel}{ControladoraHotel}}\ controladoraHotel;}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_controladora_quarto}{ControladoraQuarto}}\ controladoraQuarto;}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_controladora_reserva}{ControladoraReserva}}\ controladoraReserva;}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_controladora_hospede}{ControladoraHospede}}\ controladoraHospede;}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_controladora_usuario}{ControladoraUsuario}}\ controladoraUsuario;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ criarConta();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ autenticar();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarMenuPrincipal();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ ControladoraApresentacao()\ :\ servicoUsuario(\textcolor{keyword}{nullptr})\ \{\}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ 1.\ Configura\ Serviço de\ Usuário}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ configurarServicos(\mbox{\hyperlink{class_i_servico_usuario}{IServicoUsuario}}*\ srvUsuario)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ this-\/>servicoUsuario\ =\ srvUsuario;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ controladoraUsuario.setServicoUsuario(srvUsuario);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ 2.\ Configura\ Serviço de\ Hotel}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ configurarServicosHotel(\mbox{\hyperlink{class_i_servico_hotel}{IServicoHotel}}*\ srvHotel)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ controladoraHotel.setServicoHotel(srvHotel);}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ 3.\ Configura\ Serviço de\ Quarto}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ configurarServicosQuarto(\mbox{\hyperlink{class_i_servico_quarto}{IServicoQuarto}}*\ srvQuarto)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ controladoraQuarto.setServicoQuarto(srvQuarto);}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ 4.\ Configura\ Serviço de\ Reserva\ (O\ QUE\ ESTAVA\ FALTANDO)}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ configurarServicosReserva(\mbox{\hyperlink{class_i_servico_reserva}{IServicoReserva}}*\ srvReserva)\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ controladoraReserva.setServicoReserva(srvReserva);}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ 5.\ Configura\ Serviço de\ Hospede\ (NOVO\ -\/\ PASSO\ 5)}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ configurarServicosHospede(\mbox{\hyperlink{class_i_servico_hospede}{IServicoHospede}}*\ srvHospede)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ controladoraHospede.setServicoHospede(srvHospede);}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ executar();}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONTROLADORAAPRESENTACAO\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

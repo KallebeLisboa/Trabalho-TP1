@@ -1,0 +1,72 @@
+\doxysection{IServico\+Reserva Class Reference}
+\hypertarget{class_i_servico_reserva}{}\label{class_i_servico_reserva}\index{IServicoReserva@{IServicoReserva}}
+Inheritance diagram for IServico\+Reserva\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_servico_reserva}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_reserva_aed66ac3cc201ac624b7c94acb2509962}{criar\+Reserva}} (string codigo, string data\+Entrada, string data\+Saida, double valor, string email\+Hospede, string codigo\+Hotel, string numero\+Quarto)=0
+\item 
+\Hypertarget{class_i_servico_reserva_a81d8d59a009727418c67a63fc3b55314}\label{class_i_servico_reserva_a81d8d59a009727418c67a63fc3b55314} 
+virtual \mbox{\hyperlink{class_reserva}{Reserva}} \texorpdfstring{$\ast$}{*} {\bfseries pesquisar\+Reserva} (string codigo)=0
+\item 
+virtual map$<$ string, \mbox{\hyperlink{class_reserva}{Reserva}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_i_servico_reserva_a249e2efdd7fb9447f502e2e013f5f707}{listar\+Reservas\+Do\+Hotel}} (string codigo\+Hotel)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_reserva_a448e922229c91ecfd41ceebdf43776f3}{atualizar\+Reserva}} (string codigo, string nova\+Data\+Entrada, string nova\+Data\+Saida, double novo\+Valor, string novo\+Numero\+Quarto)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_reserva_adf422cc5aa51b8bdeffdbbe0773c0444}{excluir\+Reserva}} (string codigo)=0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_i_servico_reserva_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_servico_reserva_a448e922229c91ecfd41ceebdf43776f3}\index{IServicoReserva@{IServicoReserva}!atualizarReserva@{atualizarReserva}}
+\index{atualizarReserva@{atualizarReserva}!IServicoReserva@{IServicoReserva}}
+\doxysubsubsection{\texorpdfstring{atualizarReserva()}{atualizarReserva()}}
+{\footnotesize\ttfamily \label{class_i_servico_reserva_a448e922229c91ecfd41ceebdf43776f3} 
+virtual void IServico\+Reserva\+::atualizar\+Reserva (\begin{DoxyParamCaption}\item[{string}]{codigo}{, }\item[{string}]{nova\+Data\+Entrada}{, }\item[{string}]{nova\+Data\+Saida}{, }\item[{double}]{novo\+Valor}{, }\item[{string}]{novo\+Numero\+Quarto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_reserva_a263d7d67afc76531f44f6eeb5570d21a}{Container\+Reserva}}.
+
+\Hypertarget{class_i_servico_reserva_aed66ac3cc201ac624b7c94acb2509962}\index{IServicoReserva@{IServicoReserva}!criarReserva@{criarReserva}}
+\index{criarReserva@{criarReserva}!IServicoReserva@{IServicoReserva}}
+\doxysubsubsection{\texorpdfstring{criarReserva()}{criarReserva()}}
+{\footnotesize\ttfamily \label{class_i_servico_reserva_aed66ac3cc201ac624b7c94acb2509962} 
+virtual void IServico\+Reserva\+::criar\+Reserva (\begin{DoxyParamCaption}\item[{string}]{codigo}{, }\item[{string}]{data\+Entrada}{, }\item[{string}]{data\+Saida}{, }\item[{double}]{valor}{, }\item[{string}]{email\+Hospede}{, }\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero\+Quarto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_reserva_a91cd5a5f96da82a985102e4292ac4cca}{Container\+Reserva}}.
+
+\Hypertarget{class_i_servico_reserva_adf422cc5aa51b8bdeffdbbe0773c0444}\index{IServicoReserva@{IServicoReserva}!excluirReserva@{excluirReserva}}
+\index{excluirReserva@{excluirReserva}!IServicoReserva@{IServicoReserva}}
+\doxysubsubsection{\texorpdfstring{excluirReserva()}{excluirReserva()}}
+{\footnotesize\ttfamily \label{class_i_servico_reserva_adf422cc5aa51b8bdeffdbbe0773c0444} 
+virtual void IServico\+Reserva\+::excluir\+Reserva (\begin{DoxyParamCaption}\item[{string}]{codigo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_reserva_a4b482ffee28cf20eaafa7e3caf6a63f4}{Container\+Reserva}}.
+
+\Hypertarget{class_i_servico_reserva_a249e2efdd7fb9447f502e2e013f5f707}\index{IServicoReserva@{IServicoReserva}!listarReservasDoHotel@{listarReservasDoHotel}}
+\index{listarReservasDoHotel@{listarReservasDoHotel}!IServicoReserva@{IServicoReserva}}
+\doxysubsubsection{\texorpdfstring{listarReservasDoHotel()}{listarReservasDoHotel()}}
+{\footnotesize\ttfamily \label{class_i_servico_reserva_a249e2efdd7fb9447f502e2e013f5f707} 
+virtual map$<$ string, \mbox{\hyperlink{class_reserva}{Reserva}} \texorpdfstring{$\ast$}{*} $>$ IServico\+Reserva\+::listar\+Reservas\+Do\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_reserva_abec738ee55c1bc0f73786e963598e7e5}{Container\+Reserva}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+header interface/IServico\+Reserva.\+hpp\end{DoxyCompactItemize}

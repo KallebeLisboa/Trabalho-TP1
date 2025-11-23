@@ -1,0 +1,36 @@
+\doxysection{cartao.\+hpp}
+\hypertarget{cartao_8hpp_source}{}\label{cartao_8hpp_source}\index{header dominios/cartao.hpp@{header dominios/cartao.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CARTAO\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CARTAO\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cctype>}\ \textcolor{comment}{//\ Para\ usar\ isdigit}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cartao_a422c447e888a7a6c03fe264d4bb374a2}{Cartao}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ cartao;\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Funções\ auxiliares\ para\ o\ algoritmo\ de\ Luhn}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ pegarDigito(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ numero);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ somarDigitosPares(\textcolor{keyword}{const}\ std::string\ cartao);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ somarDigitosImpares(\textcolor{keyword}{const}\ std::string\ cartao);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ validar(std::string\ \textcolor{keyword}{const}\ \&cartao);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_cartao_a422c447e888a7a6c03fe264d4bb374a2}{Cartao}}(std::string\ cartao);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cartao_a6e531ba05af4c6c3a57b10ba4e894cf3}{setCartao}}(std::string\ cartao);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ std::string\ \mbox{\hyperlink{class_cartao_aed289eb1774885d08f3ac11a565e8f41}{getCartao}}();}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CARTAO\_HPP}}
+
+\end{DoxyCode}

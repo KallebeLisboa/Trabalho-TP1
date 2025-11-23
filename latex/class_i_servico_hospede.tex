@@ -1,0 +1,81 @@
+\doxysection{IServico\+Hospede Class Reference}
+\hypertarget{class_i_servico_hospede}{}\label{class_i_servico_hospede}\index{IServicoHospede@{IServicoHospede}}
+Inheritance diagram for IServico\+Hospede\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_servico_hospede}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_hospede_a7def832719a9cca96a6a0cea4c27e1f3}{criar\+Hospede}} (string nome, string email, string endereco, string cartao)=0
+\item 
+virtual \mbox{\hyperlink{class_hospede}{Hospede}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_servico_hospede_a818bb256fc10963849a477da17817b54}{pesquisar\+Hospede}} (string email)=0
+\item 
+virtual map$<$ string, \mbox{\hyperlink{class_hospede}{Hospede}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_i_servico_hospede_ad193020c55d57be275091a7af79e6045}{listar\+Hospedes}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_hospede_a60ed61f4111f962e0686111946dcf895}{atualizar\+Hospede}} (string email, string novo\+Nome, string novo\+Endereco, string novo\+Cartao)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_hospede_a96cd23ac511ecb4bcb9705a89938aa77}{excluir\+Hospede}} (string email)=0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_i_servico_hospede_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_servico_hospede_a60ed61f4111f962e0686111946dcf895}\index{IServicoHospede@{IServicoHospede}!atualizarHospede@{atualizarHospede}}
+\index{atualizarHospede@{atualizarHospede}!IServicoHospede@{IServicoHospede}}
+\doxysubsubsection{\texorpdfstring{atualizarHospede()}{atualizarHospede()}}
+{\footnotesize\ttfamily \label{class_i_servico_hospede_a60ed61f4111f962e0686111946dcf895} 
+virtual void IServico\+Hospede\+::atualizar\+Hospede (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{novo\+Nome}{, }\item[{string}]{novo\+Endereco}{, }\item[{string}]{novo\+Cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hospede_a46fa70475647390990d4724e09dfeed9}{Container\+Hospede}}.
+
+\Hypertarget{class_i_servico_hospede_a7def832719a9cca96a6a0cea4c27e1f3}\index{IServicoHospede@{IServicoHospede}!criarHospede@{criarHospede}}
+\index{criarHospede@{criarHospede}!IServicoHospede@{IServicoHospede}}
+\doxysubsubsection{\texorpdfstring{criarHospede()}{criarHospede()}}
+{\footnotesize\ttfamily \label{class_i_servico_hospede_a7def832719a9cca96a6a0cea4c27e1f3} 
+virtual void IServico\+Hospede\+::criar\+Hospede (\begin{DoxyParamCaption}\item[{string}]{nome}{, }\item[{string}]{email}{, }\item[{string}]{endereco}{, }\item[{string}]{cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hospede_a0a7fa7018b7cb3669cb8768f936c2c87}{Container\+Hospede}}.
+
+\Hypertarget{class_i_servico_hospede_a96cd23ac511ecb4bcb9705a89938aa77}\index{IServicoHospede@{IServicoHospede}!excluirHospede@{excluirHospede}}
+\index{excluirHospede@{excluirHospede}!IServicoHospede@{IServicoHospede}}
+\doxysubsubsection{\texorpdfstring{excluirHospede()}{excluirHospede()}}
+{\footnotesize\ttfamily \label{class_i_servico_hospede_a96cd23ac511ecb4bcb9705a89938aa77} 
+virtual void IServico\+Hospede\+::excluir\+Hospede (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hospede_ad4e6b49320f2fa6045028ef1f0dc18a2}{Container\+Hospede}}.
+
+\Hypertarget{class_i_servico_hospede_ad193020c55d57be275091a7af79e6045}\index{IServicoHospede@{IServicoHospede}!listarHospedes@{listarHospedes}}
+\index{listarHospedes@{listarHospedes}!IServicoHospede@{IServicoHospede}}
+\doxysubsubsection{\texorpdfstring{listarHospedes()}{listarHospedes()}}
+{\footnotesize\ttfamily \label{class_i_servico_hospede_ad193020c55d57be275091a7af79e6045} 
+virtual map$<$ string, \mbox{\hyperlink{class_hospede}{Hospede}} \texorpdfstring{$\ast$}{*} $>$ IServico\+Hospede\+::listar\+Hospedes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hospede_aaad9ba52159109e4135c0ab51dbfa5ba}{Container\+Hospede}}.
+
+\Hypertarget{class_i_servico_hospede_a818bb256fc10963849a477da17817b54}\index{IServicoHospede@{IServicoHospede}!pesquisarHospede@{pesquisarHospede}}
+\index{pesquisarHospede@{pesquisarHospede}!IServicoHospede@{IServicoHospede}}
+\doxysubsubsection{\texorpdfstring{pesquisarHospede()}{pesquisarHospede()}}
+{\footnotesize\ttfamily \label{class_i_servico_hospede_a818bb256fc10963849a477da17817b54} 
+virtual \mbox{\hyperlink{class_hospede}{Hospede}} \texorpdfstring{$\ast$}{*} IServico\+Hospede\+::pesquisar\+Hospede (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hospede_ad3ca7d815a2fa3f55b1efb7fdb7f75bb}{Container\+Hospede}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+header interface/IServico\+Hospede.\+hpp\end{DoxyCompactItemize}

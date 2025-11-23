@@ -1,0 +1,100 @@
+\doxysection{Data Class Reference}
+\hypertarget{class_data}{}\label{class_data}\index{Data@{Data}}
+
+
+Representa o domínio de \doxylink{class_data}{Data} no sistema.  
+
+
+
+
+{\ttfamily \#include $<$data.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_a972911ca68256147a714d91bba1e4da2}{Data}} (std\+::string data)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa a data com um valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_a0873f88749f2edc0488ee452dfb39662}{set\+Data}} (std\+::string data)
+\begin{DoxyCompactList}\small\item\em Define uma nova data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_data_a76ac4ac268da92dc15f7e69e8601b2ae}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Recupera a data armazenada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de \doxylink{class_data}{Data} no sistema. 
+
+Esta classe armazena e valida uma data no formato "{}\+DD-\/\+MMM-\/\+AAAA"{}. Regras de validação\+:
+\begin{DoxyEnumerate}
+\item Dia\+: 1 a 31 (considerando o mês e ano bissexto).
+\item Mês\+: JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV ou DEZ.
+\item Ano\+: 2000 a 2999.
+\item Deve considerar anos bissextos para validação de dias. 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_data_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_data_a972911ca68256147a714d91bba1e4da2}\index{Data@{Data}!Data@{Data}}
+\index{Data@{Data}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{Data()}{Data()}}
+{\footnotesize\ttfamily \label{class_data_a972911ca68256147a714d91bba1e4da2} 
+Data\+::\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa a data com um valor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & String contendo a data (ex\+: "{}01-\/\+JAN-\/2024"{}). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a data fornecida for inválida. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_data_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_a76ac4ac268da92dc15f7e69e8601b2ae}\index{Data@{Data}!getData@{getData}}
+\index{getData@{getData}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily \label{class_data_a76ac4ac268da92dc15f7e69e8601b2ae} 
+std\+::string Data\+::get\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera a data armazenada. 
+
+\begin{DoxyReturn}{Returns}
+A string contendo a data no formato "{}\+DD-\/\+MMM-\/\+AAAA"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_data_a0873f88749f2edc0488ee452dfb39662}\index{Data@{Data}!setData@{setData}}
+\index{setData@{setData}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily \label{class_data_a0873f88749f2edc0488ee452dfb39662} 
+void Data\+::set\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Define uma nova data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A nova string de data. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a data for inválida ou estiver fora do intervalo permitido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/data.\+hpp\item 
+sources dominios/data.\+cpp\end{DoxyCompactItemize}

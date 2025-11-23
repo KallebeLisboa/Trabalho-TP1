@@ -1,0 +1,34 @@
+\doxysection{IServico\+Usuario.\+hpp}
+\hypertarget{_i_servico_usuario_8hpp_source}{}\label{_i_servico_usuario_8hpp_source}\index{header interface/IServicoUsuario.hpp@{header interface/IServicoUsuario.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ISERVICOUSUARIO\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ISERVICOUSUARIO\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ 1.\ Includes\ fundamentais}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ 2.\ Include\ da\ Entidade\ Gerente\ (Para\ o\ compilador\ saber\ o\ que\ é "{}Gerente"{})}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../header\ entidades/gerente.hpp"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Interface\ que\ define\ quais\ métodos\ o\ Container\ deve\ ter}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_servico_usuario}{IServicoUsuario}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_servico_usuario}{\string~IServicoUsuario}}()\ \{\}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Métodos\ virtuais\ puros\ (=\ 0)}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ criarGerente(\textcolor{keywordtype}{string}\ nome,\ \textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ ramal,\ \textcolor{keywordtype}{string}\ senha)\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ autenticar(\textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ senha)\ =\ 0;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Aqui\ usamos\ o\ tipo\ 'Gerente*',\ por\ isso\ o\ include\ acima\ é obrigatório}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_gerente}{Gerente}}*\ pesquisarGerente(\textcolor{keywordtype}{string}\ email)\ =\ 0;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ atualizarGerente(\textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ novoNome,\ \textcolor{keywordtype}{string}\ novoRamal,\ \textcolor{keywordtype}{string}\ novaSenha)\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ excluirGerente(\textcolor{keywordtype}{string}\ email)\ =\ 0;}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ISERVICOUSUARIO\_HPP}}
+
+\end{DoxyCode}

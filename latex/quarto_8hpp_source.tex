@@ -1,0 +1,57 @@
+\doxysection{quarto.\+hpp}
+\hypertarget{quarto_8hpp_source}{}\label{quarto_8hpp_source}\index{header entidades/quarto.hpp@{header entidades/quarto.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ QUARTO\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ QUARTO\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Inclusão\ das\ classes\ de\ Domínio\ necessárias\ (assumindo\ o\ caminho\ 'header\ dominios/')}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/numero.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/capacidade.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/dinheiro.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/ramal.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/codigo.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_quarto_ad1ed2b4fed30a9e0bd2b5088a0ec54b2}{Quarto}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_numero}{Numero}}\ numero;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_capacidade}{Capacidade}}\ capacidade;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}\ diaria;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_ramal}{Ramal}}\ ramal;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_codigo}{Codigo}}\ codigoHotel;\ \ \ \ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Construtor\ completo}}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_quarto_ad1ed2b4fed30a9e0bd2b5088a0ec54b2}{Quarto}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_codigo}{Codigo}}\&\ codigoHotel,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_numero}{Numero}}\&\ numero,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_capacidade}{Capacidade}}\&\ capacidade,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}\&\ diaria,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_ramal}{Ramal}}\&\ ramal);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Get}}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_codigo}{Codigo}}\ \mbox{\hyperlink{class_quarto_afe56ef7b33c878df6577b021b738dfa3}{getCodigoHotel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_numero}{Numero}}\ \mbox{\hyperlink{class_quarto_a6880bfb90f67de8ff0ca5a768f544a23}{getNumero}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_capacidade}{Capacidade}}\ \mbox{\hyperlink{class_quarto_a16adce70f7036ef2ce1aeec1d85fb1ea}{getCapacidade}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}\ \mbox{\hyperlink{class_quarto_a5650e35fb3797aea46a302f854bec3e7}{getDiaria}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_ramal}{Ramal}}\ \mbox{\hyperlink{class_quarto_aed3bbb13ee80fe3fef760f3afc674383}{getRamal}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Set}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quarto_a679c44a8d815199e187b6e09df2793ba}{setCodigoHotel}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_codigo}{Codigo}}\&\ codigoHotel);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quarto_a4a26a36ceeb51a0eebaac5924bb18536}{setNumero}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_numero}{Numero}}\&\ numero);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quarto_a8ba5b25dd41611916a053e9e23502245}{setCapacidade}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_capacidade}{Capacidade}}\&\ capacidade);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quarto_a39fe8a5d205066ae1eb9d78be6362231}{setDiaria}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}\&\ diaria);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quarto_a56dfd60f46f402d2c96ef69d839de8ba}{setRamal}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ramal}{Ramal}}\&\ ramal);}
+\DoxyCodeLine{00105\ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ QUARTO\_HPP}}
+
+\end{DoxyCode}

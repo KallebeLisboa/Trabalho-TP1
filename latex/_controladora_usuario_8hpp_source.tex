@@ -1,0 +1,33 @@
+\doxysection{Controladora\+Usuario.\+hpp}
+\hypertarget{_controladora_usuario_8hpp_source}{}\label{_controladora_usuario_8hpp_source}\index{header interface/ControladoraUsuario.hpp@{header interface/ControladoraUsuario.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTROLADORAUSUARIO\_HPP\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTROLADORAUSUARIO\_HPP\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}IServicoUsuario.hpp"{}}\ \textcolor{comment}{//\ <-\/-\/-\/\ ADICIONADO:\ Inclui\ a\ interface}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_controladora_usuario}{ControladoraUsuario}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Ponteiro\ para\ a\ interface\ do\ serviço}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_i_servico_usuario}{IServicoUsuario}}*\ servicoUsuario;\ \textcolor{comment}{//\ <-\/-\/-\/\ ADICIONADO}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ exibirOpcoes();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ lerConta();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ editarConta();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ excluirConta();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Método\ para\ "{}ligar"{}\ o\ serviço ao\ controlador}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ setServicoUsuario(\mbox{\hyperlink{class_i_servico_usuario}{IServicoUsuario}}*\ s)\ \{\ servicoUsuario\ =\ s;\ \}\ \textcolor{comment}{//\ <-\/-\/-\/\ ADICIONADO}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ executar();}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONTROLADORAUSUARIO\_HPP\_INCLUDED}}
+
+\end{DoxyCode}

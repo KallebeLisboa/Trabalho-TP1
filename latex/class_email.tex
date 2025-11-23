@@ -1,0 +1,98 @@
+\doxysection{Email Class Reference}
+\hypertarget{class_email}{}\label{class_email}\index{Email@{Email}}
+
+
+Representa o domínio de endereço de E-\/mail.  
+
+
+
+
+{\ttfamily \#include $<$email.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_email_add6daec5f0936cf8e6f74dbbf0be79d6}{Email}} (std\+::string email)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o e-\/mail com um valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_email_a26277e233a6770d03fda5e3d7542e3fd}{set\+Email}} (std\+::string email)
+\begin{DoxyCompactList}\small\item\em Define um novo endereço de e-\/mail. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_email_a48df6c63569a364ebdf517c8f4546e5b}{get\+Email}} ()
+\begin{DoxyCompactList}\small\item\em Recupera o endereço de e-\/mail armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de endereço de E-\/mail. 
+
+Esta classe armazena e valida endereços de e-\/mail no formato "{}parte-\/local@domínio"{}. Regras de validação\+:
+\begin{DoxyEnumerate}
+\item Parte local\+: até 64 caracteres. Permite letras (a-\/z), dígitos (0-\/9), ponto (.) e hífen (-\/). Não pode começar ou terminar com ponto ou hífen. Ponto ou hífen deve ser seguido por letra ou dígito.
+\item Domínio\+: até 255 caracteres. Composto por partes separadas por ponto. Permite letras (a-\/z), dígitos (0-\/9) e hífen (-\/). Não pode começar ou terminar com hífen. 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_email_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_email_add6daec5f0936cf8e6f74dbbf0be79d6}\index{Email@{Email}!Email@{Email}}
+\index{Email@{Email}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{Email()}{Email()}}
+{\footnotesize\ttfamily \label{class_email_add6daec5f0936cf8e6f74dbbf0be79d6} 
+Email\+::\+Email (\begin{DoxyParamCaption}\item[{std\+::string}]{email}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa o e-\/mail com um valor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & String contendo o endereço de e-\/mail. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o e-\/mail fornecido for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_email_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_email_a48df6c63569a364ebdf517c8f4546e5b}\index{Email@{Email}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily \label{class_email_a48df6c63569a364ebdf517c8f4546e5b} 
+std\+::string Email\+::get\+Email (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera o endereço de e-\/mail armazenado. 
+
+\begin{DoxyReturn}{Returns}
+A string contendo o e-\/mail. 
+\end{DoxyReturn}
+\Hypertarget{class_email_a26277e233a6770d03fda5e3d7542e3fd}\index{Email@{Email}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}}
+{\footnotesize\ttfamily \label{class_email_a26277e233a6770d03fda5e3d7542e3fd} 
+void Email\+::set\+Email (\begin{DoxyParamCaption}\item[{std\+::string}]{email}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo endereço de e-\/mail. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & A nova string de e-\/mail. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato do e-\/mail for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/email.\+hpp\item 
+sources dominios/email.\+cpp\end{DoxyCompactItemize}

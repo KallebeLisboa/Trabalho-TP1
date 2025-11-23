@@ -1,0 +1,165 @@
+\doxysection{Container\+Reserva Class Reference}
+\hypertarget{class_container_reserva}{}\label{class_container_reserva}\index{ContainerReserva@{ContainerReserva}}
+
+
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_reserva}{Reserva}.  
+
+
+
+
+{\ttfamily \#include $<$container\+\_\+reserva.\+hpp$>$}
+
+Inheritance diagram for Container\+Reserva\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_container_reserva}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_container_reserva_ade6d805fdd120600ab042d0d388156b6}{\texorpdfstring{$\sim$}{\string~}\+Container\+Reserva}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_reserva_a91cd5a5f96da82a985102e4292ac4cca}{criar\+Reserva}} (string codigo, string data\+Entrada, string data\+Saida, double valor, string email\+Hospede, string codigo\+Hotel, string numero\+Quarto)
+\begin{DoxyCompactList}\small\item\em Cria uma nova reserva e a armazena no container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_reserva}{Reserva}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_container_reserva_a6e3810dfa75b9aa5a115cbf6c16d87ab}{pesquisar\+Reserva}} (string codigo)
+\item 
+map$<$ string, \mbox{\hyperlink{class_reserva}{Reserva}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_container_reserva_abec738ee55c1bc0f73786e963598e7e5}{listar\+Reservas\+Do\+Hotel}} (string codigo\+Hotel)
+\begin{DoxyCompactList}\small\item\em Retorna a lista completa de reservas cadastradas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_reserva_a263d7d67afc76531f44f6eeb5570d21a}{atualizar\+Reserva}} (string codigo, string nova\+Data\+Entrada, string nova\+Data\+Saida, double novo\+Valor, string novo\+Numero\+Quarto)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados mutáveis de uma reserva. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_reserva_a4b482ffee28cf20eaafa7e3caf6a63f4}{excluir\+Reserva}} (string codigo)
+\begin{DoxyCompactList}\small\item\em Remove uma reserva do container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_reserva}{Reserva}. 
+
+Esta classe implementa o padrão Container para a entidade \doxylink{class_reserva}{Reserva}. Atua como um banco de dados em memória, permitindo criar, listar, atualizar e excluir reservas, mantendo a integridade dos dados e as referências para Hóspedes e Quartos. 
+
+\label{doc-constructors}
+\Hypertarget{class_container_reserva_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_container_reserva_ade6d805fdd120600ab042d0d388156b6}\index{ContainerReserva@{ContainerReserva}!````~ContainerReserva@{\texorpdfstring{$\sim$}{\string~}ContainerReserva}}
+\index{````~ContainerReserva@{\texorpdfstring{$\sim$}{\string~}ContainerReserva}!ContainerReserva@{ContainerReserva}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ContainerReserva()}{\string~ContainerReserva()}}
+{\footnotesize\ttfamily \label{class_container_reserva_ade6d805fdd120600ab042d0d388156b6} 
+Container\+Reserva\+::\texorpdfstring{$\sim$}{\string~}\+Container\+Reserva (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe. 
+
+Libera a memória alocada para os objetos \doxylink{class_reserva}{Reserva} armazenados. 
+
+\label{doc-func-members}
+\Hypertarget{class_container_reserva_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_container_reserva_a263d7d67afc76531f44f6eeb5570d21a}\index{ContainerReserva@{ContainerReserva}!atualizarReserva@{atualizarReserva}}
+\index{atualizarReserva@{atualizarReserva}!ContainerReserva@{ContainerReserva}}
+\doxysubsubsection{\texorpdfstring{atualizarReserva()}{atualizarReserva()}}
+{\footnotesize\ttfamily \label{class_container_reserva_a263d7d67afc76531f44f6eeb5570d21a} 
+void Container\+Reserva\+::atualizar\+Reserva (\begin{DoxyParamCaption}\item[{string}]{codigo}{, }\item[{string}]{nova\+Data\+Entrada}{, }\item[{string}]{nova\+Data\+Saida}{, }\item[{double}]{novo\+Valor}{, }\item[{string}]{novo\+Numero\+Quarto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Atualiza os dados mutáveis de uma reserva. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & O código da reserva a ser atualizada (usado para busca). \\
+\hline
+{\em nova\+Data\+Entrada} & Nova data de check-\/in. \\
+\hline
+{\em nova\+Data\+Saida} & Nova data de check-\/out. \\
+\hline
+{\em novo\+Valor} & Novo valor total. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_reserva}{IServico\+Reserva}}.
+
+\Hypertarget{class_container_reserva_a91cd5a5f96da82a985102e4292ac4cca}\index{ContainerReserva@{ContainerReserva}!criarReserva@{criarReserva}}
+\index{criarReserva@{criarReserva}!ContainerReserva@{ContainerReserva}}
+\doxysubsubsection{\texorpdfstring{criarReserva()}{criarReserva()}}
+{\footnotesize\ttfamily \label{class_container_reserva_a91cd5a5f96da82a985102e4292ac4cca} 
+void Container\+Reserva\+::criar\+Reserva (\begin{DoxyParamCaption}\item[{string}]{codigo}{, }\item[{string}]{data\+Entrada}{, }\item[{string}]{data\+Saida}{, }\item[{double}]{valor}{, }\item[{string}]{email\+Hospede}{, }\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero\+Quarto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cria uma nova reserva e a armazena no container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & Código único da reserva (PK). \\
+\hline
+{\em data\+Entrada} & \doxylink{class_data}{Data} de check-\/in. \\
+\hline
+{\em data\+Saida} & \doxylink{class_data}{Data} de check-\/out. \\
+\hline
+{\em valor} & Valor total da reserva. \\
+\hline
+{\em email\+Hospede} & \doxylink{class_email}{Email} do hóspede titular (FK). \\
+\hline
+{\em codigo\+Hotel} & Código do hotel (FK). \\
+\hline
+{\em numero\+Quarto} & Número do quarto reservado (FK). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_reserva}{IServico\+Reserva}}.
+
+\Hypertarget{class_container_reserva_a4b482ffee28cf20eaafa7e3caf6a63f4}\index{ContainerReserva@{ContainerReserva}!excluirReserva@{excluirReserva}}
+\index{excluirReserva@{excluirReserva}!ContainerReserva@{ContainerReserva}}
+\doxysubsubsection{\texorpdfstring{excluirReserva()}{excluirReserva()}}
+{\footnotesize\ttfamily \label{class_container_reserva_a4b482ffee28cf20eaafa7e3caf6a63f4} 
+void Container\+Reserva\+::excluir\+Reserva (\begin{DoxyParamCaption}\item[{string}]{codigo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove uma reserva do container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & O código da reserva a ser removida. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_reserva}{IServico\+Reserva}}.
+
+\Hypertarget{class_container_reserva_abec738ee55c1bc0f73786e963598e7e5}\index{ContainerReserva@{ContainerReserva}!listarReservasDoHotel@{listarReservasDoHotel}}
+\index{listarReservasDoHotel@{listarReservasDoHotel}!ContainerReserva@{ContainerReserva}}
+\doxysubsubsection{\texorpdfstring{listarReservasDoHotel()}{listarReservasDoHotel()}}
+{\footnotesize\ttfamily \label{class_container_reserva_abec738ee55c1bc0f73786e963598e7e5} 
+map$<$ string, \mbox{\hyperlink{class_reserva}{Reserva}} \texorpdfstring{$\ast$}{*} $>$ Container\+Reserva\+::listar\+Reservas\+Do\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retorna a lista completa de reservas cadastradas. 
+
+\begin{DoxyReturn}{Returns}
+Um mapa contendo todas as reservas (chave\+: código, valor\+: objeto \doxylink{class_reserva}{Reserva}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_servico_reserva}{IServico\+Reserva}}.
+
+\Hypertarget{class_container_reserva_a6e3810dfa75b9aa5a115cbf6c16d87ab}\index{ContainerReserva@{ContainerReserva}!pesquisarReserva@{pesquisarReserva}}
+\index{pesquisarReserva@{pesquisarReserva}!ContainerReserva@{ContainerReserva}}
+\doxysubsubsection{\texorpdfstring{pesquisarReserva()}{pesquisarReserva()}}
+{\footnotesize\ttfamily \label{class_container_reserva_a6e3810dfa75b9aa5a115cbf6c16d87ab} 
+\mbox{\hyperlink{class_reserva}{Reserva}} \texorpdfstring{$\ast$}{*} Container\+Reserva\+::pesquisar\+Reserva (\begin{DoxyParamCaption}\item[{string}]{codigo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_servico_reserva}{IServico\+Reserva}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header servicos/container\+\_\+reserva.\+hpp\item 
+sources servicos/container\+\_\+reserva.\+cpp\end{DoxyCompactItemize}

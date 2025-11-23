@@ -1,0 +1,98 @@
+\doxysection{Numero Class Reference}
+\hypertarget{class_numero}{}\label{class_numero}\index{Numero@{Numero}}
+
+
+Representa o domínio de Número (geralmente associado a um quarto).  
+
+
+
+
+{\ttfamily \#include $<$numero.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_numero_a5ef6b0d73404deeb215e2c33167d335c}{Numero}} (std\+::string numero)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o domínio com um valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_numero_a22d5b9bf7a624acfef8e61915259989f}{set\+Numero}} (std\+::string numero)
+\begin{DoxyCompactList}\small\item\em Define um novo número. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_numero_a44b455d621fd4d89bde0d5a442aeb1cc}{get\+Numero}} ()
+\begin{DoxyCompactList}\small\item\em Recupera o número armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de Número (geralmente associado a um quarto). 
+
+Esta classe armazena e valida uma string numérica que representa um número. Regras de validação\+:
+\begin{DoxyEnumerate}
+\item O valor deve representar um número inteiro.
+\item O intervalo válido é de 001 a 999. 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_numero_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_numero_a5ef6b0d73404deeb215e2c33167d335c}\index{Numero@{Numero}!Numero@{Numero}}
+\index{Numero@{Numero}!Numero@{Numero}}
+\doxysubsubsection{\texorpdfstring{Numero()}{Numero()}}
+{\footnotesize\ttfamily \label{class_numero_a5ef6b0d73404deeb215e2c33167d335c} 
+Numero\+::\+Numero (\begin{DoxyParamCaption}\item[{std\+::string}]{numero}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa o domínio com um valor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & String contendo o número (ex\+: "{}104"{}). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o número inicial for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_numero_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numero_a44b455d621fd4d89bde0d5a442aeb1cc}\index{Numero@{Numero}!getNumero@{getNumero}}
+\index{getNumero@{getNumero}!Numero@{Numero}}
+\doxysubsubsection{\texorpdfstring{getNumero()}{getNumero()}}
+{\footnotesize\ttfamily \label{class_numero_a44b455d621fd4d89bde0d5a442aeb1cc} 
+std\+::string Numero\+::get\+Numero (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera o número armazenado. 
+
+\begin{DoxyReturn}{Returns}
+A string contendo o número. 
+\end{DoxyReturn}
+\Hypertarget{class_numero_a22d5b9bf7a624acfef8e61915259989f}\index{Numero@{Numero}!setNumero@{setNumero}}
+\index{setNumero@{setNumero}!Numero@{Numero}}
+\doxysubsubsection{\texorpdfstring{setNumero()}{setNumero()}}
+{\footnotesize\ttfamily \label{class_numero_a22d5b9bf7a624acfef8e61915259989f} 
+void Numero\+::set\+Numero (\begin{DoxyParamCaption}\item[{std\+::string}]{numero}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo número. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & A nova string numérica. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato ou intervalo do número for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/numero.\+hpp\item 
+sources dominios/numero.\+cpp\end{DoxyCompactItemize}

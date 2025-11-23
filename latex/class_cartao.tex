@@ -1,0 +1,98 @@
+\doxysection{Cartao Class Reference}
+\hypertarget{class_cartao}{}\label{class_cartao}\index{Cartao@{Cartao}}
+
+
+Representa o domínio de número de Cartão de Crédito.  
+
+
+
+
+{\ttfamily \#include $<$cartao.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cartao_a422c447e888a7a6c03fe264d4bb374a2}{Cartao}} (std\+::string cartao)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o cartão com um número. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cartao_a6e531ba05af4c6c3a57b10ba4e894cf3}{set\+Cartao}} (std\+::string cartao)
+\begin{DoxyCompactList}\small\item\em Define um novo número de cartão. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cartao_aed289eb1774885d08f3ac11a565e8f41}{get\+Cartao}} ()
+\begin{DoxyCompactList}\small\item\em Recupera o número do cartão armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de número de Cartão de Crédito. 
+
+Esta classe é responsável por armazenar e validar números de cartão de crédito. As regras de validação aplicadas são\+:
+\begin{DoxyEnumerate}
+\item O número deve conter exatamente 16 dígitos numéricos.
+\item O número deve ser válido segundo o algoritmo de Luhn (dígito verificador). 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_cartao_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cartao_a422c447e888a7a6c03fe264d4bb374a2}\index{Cartao@{Cartao}!Cartao@{Cartao}}
+\index{Cartao@{Cartao}!Cartao@{Cartao}}
+\doxysubsubsection{\texorpdfstring{Cartao()}{Cartao()}}
+{\footnotesize\ttfamily \label{class_cartao_a422c447e888a7a6c03fe264d4bb374a2} 
+Cartao\+::\+Cartao (\begin{DoxyParamCaption}\item[{std\+::string}]{cartao}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa o cartão com um número. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cartao} & String contendo o número do cartão. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o cartão fornecido for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_cartao_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cartao_aed289eb1774885d08f3ac11a565e8f41}\index{Cartao@{Cartao}!getCartao@{getCartao}}
+\index{getCartao@{getCartao}!Cartao@{Cartao}}
+\doxysubsubsection{\texorpdfstring{getCartao()}{getCartao()}}
+{\footnotesize\ttfamily \label{class_cartao_aed289eb1774885d08f3ac11a565e8f41} 
+std\+::string Cartao\+::get\+Cartao (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera o número do cartão armazenado. 
+
+\begin{DoxyReturn}{Returns}
+A string com os 16 dígitos do cartão. 
+\end{DoxyReturn}
+\Hypertarget{class_cartao_a6e531ba05af4c6c3a57b10ba4e894cf3}\index{Cartao@{Cartao}!setCartao@{setCartao}}
+\index{setCartao@{setCartao}!Cartao@{Cartao}}
+\doxysubsubsection{\texorpdfstring{setCartao()}{setCartao()}}
+{\footnotesize\ttfamily \label{class_cartao_a6e531ba05af4c6c3a57b10ba4e894cf3} 
+void Cartao\+::set\+Cartao (\begin{DoxyParamCaption}\item[{std\+::string}]{cartao}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo número de cartão. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cartao} & A string contendo o novo número. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato for inválido (não numérico, tamanho errado) ou inválido por Luhn. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/cartao.\+hpp\item 
+sources dominios/cartao.\+cpp\end{DoxyCompactItemize}

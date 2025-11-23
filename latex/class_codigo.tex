@@ -1,0 +1,98 @@
+\doxysection{Codigo Class Reference}
+\hypertarget{class_codigo}{}\label{class_codigo}\index{Codigo@{Codigo}}
+
+
+Representa o domínio de Código identificador no sistema.  
+
+
+
+
+{\ttfamily \#include $<$codigo.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_codigo_a87c0193af1efcbb01a4fc7423be5b9f2}{Codigo}} (std\+::string codigo)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o código com um valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_codigo_a43412ea8505faefe73e467788ec0bfd7}{set\+Codigo}} (std\+::string codigo)
+\begin{DoxyCompactList}\small\item\em Define um novo valor para o código. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_codigo_a2c19930fb343131616eb97fe622b1bbb}{get\+Codigo}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o valor do código armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de Código identificador no sistema. 
+
+Esta classe armazena e valida uma string que representa um código único. Regras de formato\+:
+\begin{DoxyEnumerate}
+\item Deve conter exatamente 10 caracteres.
+\item Cada caractere deve ser uma letra (a-\/z) ou um dígito (0-\/9). 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_codigo_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_codigo_a87c0193af1efcbb01a4fc7423be5b9f2}\index{Codigo@{Codigo}!Codigo@{Codigo}}
+\index{Codigo@{Codigo}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{Codigo()}{Codigo()}}
+{\footnotesize\ttfamily \label{class_codigo_a87c0193af1efcbb01a4fc7423be5b9f2} 
+Codigo\+::\+Codigo (\begin{DoxyParamCaption}\item[{std\+::string}]{codigo}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa o código com um valor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & String contendo o código inicial. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato do código for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_codigo_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_codigo_a2c19930fb343131616eb97fe622b1bbb}\index{Codigo@{Codigo}!getCodigo@{getCodigo}}
+\index{getCodigo@{getCodigo}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{getCodigo()}{getCodigo()}}
+{\footnotesize\ttfamily \label{class_codigo_a2c19930fb343131616eb97fe622b1bbb} 
+std\+::string Codigo\+::get\+Codigo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o valor do código armazenado. 
+
+\begin{DoxyReturn}{Returns}
+A string contendo o código. 
+\end{DoxyReturn}
+\Hypertarget{class_codigo_a43412ea8505faefe73e467788ec0bfd7}\index{Codigo@{Codigo}!setCodigo@{setCodigo}}
+\index{setCodigo@{setCodigo}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{setCodigo()}{setCodigo()}}
+{\footnotesize\ttfamily \label{class_codigo_a43412ea8505faefe73e467788ec0bfd7} 
+void Codigo\+::set\+Codigo (\begin{DoxyParamCaption}\item[{std\+::string}]{codigo}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo valor para o código. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & A nova string de código. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato do código fornecido for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/codigo.\+hpp\item 
+sources dominios/codigo.\+cpp\end{DoxyCompactItemize}

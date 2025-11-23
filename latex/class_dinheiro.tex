@@ -1,0 +1,94 @@
+\doxysection{Dinheiro Class Reference}
+\hypertarget{class_dinheiro}{}\label{class_dinheiro}\index{Dinheiro@{Dinheiro}}
+
+
+Representa o domínio de \doxylink{class_dinheiro}{Dinheiro} (valor monetário).  
+
+
+
+
+{\ttfamily \#include $<$dinheiro.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dinheiro_a1e86289694f6d8c10503a750240c7a1e}{Dinheiro}} (double dinheiro)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o objeto com um valor monetário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dinheiro_a211fb2f1507a0e8202391435219e412c}{set\+Dinheiro}} (double dinheiro)
+\begin{DoxyCompactList}\small\item\em Define um novo valor monetário. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dinheiro_aea774881a66b40026747e3d4754639a3}{get\+Dinheiro}} ()
+\begin{DoxyCompactList}\small\item\em Recupera o valor monetário armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de \doxylink{class_dinheiro}{Dinheiro} (valor monetário). 
+
+Esta classe armazena valores monetários. Para evitar erros de arredondamento típicos de ponto flutuante, o valor é armazenado internamente como um inteiro representando centavos. O intervalo válido é de 0,00 a 1.\+000.\+000,00. 
+
+\label{doc-constructors}
+\Hypertarget{class_dinheiro_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_dinheiro_a1e86289694f6d8c10503a750240c7a1e}\index{Dinheiro@{Dinheiro}!Dinheiro@{Dinheiro}}
+\index{Dinheiro@{Dinheiro}!Dinheiro@{Dinheiro}}
+\doxysubsubsection{\texorpdfstring{Dinheiro()}{Dinheiro()}}
+{\footnotesize\ttfamily \label{class_dinheiro_a1e86289694f6d8c10503a750240c7a1e} 
+Dinheiro\+::\+Dinheiro (\begin{DoxyParamCaption}\item[{double}]{dinheiro}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa o objeto com um valor monetário. 
+
+Converte o valor double para centavos antes de armazenar. 
+\begin{DoxyParams}{Parameters}
+{\em dinheiro} & Valor em formato double (ex\+: 19.\+99). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o valor estiver fora do intervalo permitido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_dinheiro_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dinheiro_aea774881a66b40026747e3d4754639a3}\index{Dinheiro@{Dinheiro}!getDinheiro@{getDinheiro}}
+\index{getDinheiro@{getDinheiro}!Dinheiro@{Dinheiro}}
+\doxysubsubsection{\texorpdfstring{getDinheiro()}{getDinheiro()}}
+{\footnotesize\ttfamily \label{class_dinheiro_aea774881a66b40026747e3d4754639a3} 
+double Dinheiro\+::get\+Dinheiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera o valor monetário armazenado. 
+
+Converte o valor interno de centavos de volta para double. \begin{DoxyReturn}{Returns}
+O valor em formato double (ex\+: 19.\+99). 
+\end{DoxyReturn}
+\Hypertarget{class_dinheiro_a211fb2f1507a0e8202391435219e412c}\index{Dinheiro@{Dinheiro}!setDinheiro@{setDinheiro}}
+\index{setDinheiro@{setDinheiro}!Dinheiro@{Dinheiro}}
+\doxysubsubsection{\texorpdfstring{setDinheiro()}{setDinheiro()}}
+{\footnotesize\ttfamily \label{class_dinheiro_a211fb2f1507a0e8202391435219e412c} 
+void Dinheiro\+::set\+Dinheiro (\begin{DoxyParamCaption}\item[{double}]{dinheiro}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo valor monetário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dinheiro} & Novo valor em formato double. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o valor estiver fora do intervalo permitido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/dinheiro.\+hpp\item 
+sources dominios/dinheiro.\+cpp\end{DoxyCompactItemize}

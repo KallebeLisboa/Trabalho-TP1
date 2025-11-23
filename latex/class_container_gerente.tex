@@ -1,0 +1,193 @@
+\doxysection{Container\+Gerente Class Reference}
+\hypertarget{class_container_gerente}{}\label{class_container_gerente}\index{ContainerGerente@{ContainerGerente}}
+
+
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_gerente}{Gerente}.  
+
+
+
+
+{\ttfamily \#include $<$container\+\_\+gerente.\+hpp$>$}
+
+Inheritance diagram for Container\+Gerente\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_container_gerente}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_container_gerente_ae4dc8b5383069b76ac01a9931059b4d8}{\texorpdfstring{$\sim$}{\string~}\+Container\+Gerente}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_gerente_af037cff2989979fad2a5e5d0b178b5a2}{criar\+Gerente}} (string nome, string email, string ramal, string senha)
+\begin{DoxyCompactList}\small\item\em Cria um novo gerente e o armazena no container. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_container_gerente_a849dfb339c7ad36db2dcfec56a2801ca}{autenticar}} (string email, string senha)
+\begin{DoxyCompactList}\small\item\em Verifica as credenciais de um gerente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gerente}{Gerente}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_container_gerente_a141a6daf4cde0acb340139d06f859a74}{pesquisar\+Gerente}} (string email)
+\begin{DoxyCompactList}\small\item\em Pesquisa um gerente no container pelo email. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_gerente_a025ae9849eb6a987a70361d7661e2732}{atualizar\+Gerente}} (string email, string novo\+Nome, string novo\+Ramal, string nova\+Senha)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um gerente existente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_gerente_a7e9141bdaae7a0cf56736b252c3b3337}{excluir\+Gerente}} (string email)
+\begin{DoxyCompactList}\small\item\em Remove um gerente do container. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{class_gerente}{Gerente}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_container_gerente_a7249cefc9a08eee97a13fb48d25ddb36}{listar\+Gerentes}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a lista completa de gerentes armazenados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_gerente}{Gerente}. 
+
+Esta classe implementa o padrão Container, atuando como um banco de dados em memória (usando std\+::map). Ela é responsável por criar, recuperar, atualizar, remover e autenticar instâncias da entidade \doxylink{class_gerente}{Gerente}. 
+
+\label{doc-constructors}
+\Hypertarget{class_container_gerente_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_container_gerente_ae4dc8b5383069b76ac01a9931059b4d8}\index{ContainerGerente@{ContainerGerente}!````~ContainerGerente@{\texorpdfstring{$\sim$}{\string~}ContainerGerente}}
+\index{````~ContainerGerente@{\texorpdfstring{$\sim$}{\string~}ContainerGerente}!ContainerGerente@{ContainerGerente}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ContainerGerente()}{\string~ContainerGerente()}}
+{\footnotesize\ttfamily \label{class_container_gerente_ae4dc8b5383069b76ac01a9931059b4d8} 
+Container\+Gerente\+::\texorpdfstring{$\sim$}{\string~}\+Container\+Gerente (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe. 
+
+Responsável por liberar a memória alocada para os objetos \doxylink{class_gerente}{Gerente} armazenados no mapa. 
+
+\label{doc-func-members}
+\Hypertarget{class_container_gerente_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_container_gerente_a025ae9849eb6a987a70361d7661e2732}\index{ContainerGerente@{ContainerGerente}!atualizarGerente@{atualizarGerente}}
+\index{atualizarGerente@{atualizarGerente}!ContainerGerente@{ContainerGerente}}
+\doxysubsubsection{\texorpdfstring{atualizarGerente()}{atualizarGerente()}}
+{\footnotesize\ttfamily \label{class_container_gerente_a025ae9849eb6a987a70361d7661e2732} 
+void Container\+Gerente\+::atualizar\+Gerente (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{novo\+Nome}{, }\item[{string}]{novo\+Ramal}{, }\item[{string}]{nova\+Senha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Atualiza os dados de um gerente existente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & O email do gerente a ser atualizado (busca). \\
+\hline
+{\em novo\+Nome} & O novo nome a ser definido. \\
+\hline
+{\em novo\+Ramal} & O novo ramal a ser definido. \\
+\hline
+{\em nova\+Senha} & A nova senha a ser definida. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_usuario}{IServico\+Usuario}}.
+
+\Hypertarget{class_container_gerente_a849dfb339c7ad36db2dcfec56a2801ca}\index{ContainerGerente@{ContainerGerente}!autenticar@{autenticar}}
+\index{autenticar@{autenticar}!ContainerGerente@{ContainerGerente}}
+\doxysubsubsection{\texorpdfstring{autenticar()}{autenticar()}}
+{\footnotesize\ttfamily \label{class_container_gerente_a849dfb339c7ad36db2dcfec56a2801ca} 
+bool Container\+Gerente\+::autenticar (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{senha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Verifica as credenciais de um gerente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & O email fornecido para login. \\
+\hline
+{\em senha} & A senha fornecida para login. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se as credenciais estiverem corretas, false caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_servico_usuario}{IServico\+Usuario}}.
+
+\Hypertarget{class_container_gerente_af037cff2989979fad2a5e5d0b178b5a2}\index{ContainerGerente@{ContainerGerente}!criarGerente@{criarGerente}}
+\index{criarGerente@{criarGerente}!ContainerGerente@{ContainerGerente}}
+\doxysubsubsection{\texorpdfstring{criarGerente()}{criarGerente()}}
+{\footnotesize\ttfamily \label{class_container_gerente_af037cff2989979fad2a5e5d0b178b5a2} 
+void Container\+Gerente\+::criar\+Gerente (\begin{DoxyParamCaption}\item[{string}]{nome}{, }\item[{string}]{email}{, }\item[{string}]{ramal}{, }\item[{string}]{senha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cria um novo gerente e o armazena no container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & String representando o nome do gerente. \\
+\hline
+{\em email} & String representando o email (chave primária). \\
+\hline
+{\em ramal} & String representando o ramal. \\
+\hline
+{\em senha} & String representando a senha. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_usuario}{IServico\+Usuario}}.
+
+\Hypertarget{class_container_gerente_a7e9141bdaae7a0cf56736b252c3b3337}\index{ContainerGerente@{ContainerGerente}!excluirGerente@{excluirGerente}}
+\index{excluirGerente@{excluirGerente}!ContainerGerente@{ContainerGerente}}
+\doxysubsubsection{\texorpdfstring{excluirGerente()}{excluirGerente()}}
+{\footnotesize\ttfamily \label{class_container_gerente_a7e9141bdaae7a0cf56736b252c3b3337} 
+void Container\+Gerente\+::excluir\+Gerente (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove um gerente do container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & O email do gerente a ser removido. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_usuario}{IServico\+Usuario}}.
+
+\Hypertarget{class_container_gerente_a7249cefc9a08eee97a13fb48d25ddb36}\index{ContainerGerente@{ContainerGerente}!listarGerentes@{listarGerentes}}
+\index{listarGerentes@{listarGerentes}!ContainerGerente@{ContainerGerente}}
+\doxysubsubsection{\texorpdfstring{listarGerentes()}{listarGerentes()}}
+{\footnotesize\ttfamily \label{class_container_gerente_a7249cefc9a08eee97a13fb48d25ddb36} 
+map$<$ string, \mbox{\hyperlink{class_gerente}{Gerente}} \texorpdfstring{$\ast$}{*} $>$ Container\+Gerente\+::listar\+Gerentes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna a lista completa de gerentes armazenados. 
+
+\begin{DoxyReturn}{Returns}
+Um mapa contendo todos os gerentes (chave\+: email, valor\+: objeto \doxylink{class_gerente}{Gerente}). 
+\end{DoxyReturn}
+\Hypertarget{class_container_gerente_a141a6daf4cde0acb340139d06f859a74}\index{ContainerGerente@{ContainerGerente}!pesquisarGerente@{pesquisarGerente}}
+\index{pesquisarGerente@{pesquisarGerente}!ContainerGerente@{ContainerGerente}}
+\doxysubsubsection{\texorpdfstring{pesquisarGerente()}{pesquisarGerente()}}
+{\footnotesize\ttfamily \label{class_container_gerente_a141a6daf4cde0acb340139d06f859a74} 
+\mbox{\hyperlink{class_gerente}{Gerente}} \texorpdfstring{$\ast$}{*} Container\+Gerente\+::pesquisar\+Gerente (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pesquisa um gerente no container pelo email. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & O email do gerente a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o objeto \doxylink{class_gerente}{Gerente} encontrado, ou nullptr/exceção se não existir. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_servico_usuario}{IServico\+Usuario}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header servicos/container\+\_\+gerente.\+hpp\item 
+sources servicos/container\+\_\+gerente.\+cpp\end{DoxyCompactItemize}

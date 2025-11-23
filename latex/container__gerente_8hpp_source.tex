@@ -1,0 +1,55 @@
+\doxysection{container\+\_\+gerente.\+hpp}
+\hypertarget{container__gerente_8hpp_source}{}\label{container__gerente_8hpp_source}\index{header servicos/container\_gerente.hpp@{header servicos/container\_gerente.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTAINER\_GERENTE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTAINER\_GERENTE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}header\ entidades/gerente.hpp"{}}\ \textcolor{comment}{//\ Caminho\ relativo\ pode\ variar,\ mas\ deve\ achar\ o\ arquivo}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../header\ interface/IServicoUsuario.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/nome.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/email.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/senha.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/ramal.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_container_gerente}{ContainerGerente}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_servico_usuario}{IServicoUsuario}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Chave:\ Email\ (Login)}}
+\DoxyCodeLine{00032\ \ \ \ \ map<string,\ Gerente*>\ bancoDeGerentes;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_container_gerente_ae4dc8b5383069b76ac01a9931059b4d8}{\string~ContainerGerente}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_gerente_af037cff2989979fad2a5e5d0b178b5a2}{criarGerente}}(\textcolor{keywordtype}{string}\ nome,\ \textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ ramal,\ \textcolor{keywordtype}{string}\ senha);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_container_gerente_a849dfb339c7ad36db2dcfec56a2801ca}{autenticar}}(\textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ senha);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_gerente}{Gerente}}*\ \mbox{\hyperlink{class_container_gerente_a141a6daf4cde0acb340139d06f859a74}{pesquisarGerente}}(\textcolor{keywordtype}{string}\ email);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_gerente_a025ae9849eb6a987a70361d7661e2732}{atualizarGerente}}(\textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ novoNome,\ \textcolor{keywordtype}{string}\ novoRamal,\ \textcolor{keywordtype}{string}\ novaSenha);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_gerente_a7e9141bdaae7a0cf56736b252c3b3337}{excluirGerente}}(\textcolor{keywordtype}{string}\ email);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ map<string,\ Gerente*>\ \mbox{\hyperlink{class_container_gerente_a7249cefc9a08eee97a13fb48d25ddb36}{listarGerentes}}();}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

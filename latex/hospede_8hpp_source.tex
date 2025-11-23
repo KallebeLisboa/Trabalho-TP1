@@ -1,0 +1,46 @@
+\doxysection{hospede.\+hpp}
+\hypertarget{hospede_8hpp_source}{}\label{hospede_8hpp_source}\index{header entidades/hospede.hpp@{header entidades/hospede.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HOSPEDE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HOSPEDE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Pessoa.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/endereco.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/cartao.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_hospede_aa43fc018fb498e1180397b3e82a125af}{Hospede}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_pessoa_a8fd24888a05bec10fec9f49d026782bb}{Pessoa}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Atributos\ são\ instâncias\ das\ classes\ de\ Domínio\ específicas}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_endereco}{Endereco}}\ endereco;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_cartao}{Cartao}}\ cartao;\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Construtor}}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_hospede_aa43fc018fb498e1180397b3e82a125af}{Hospede}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_nome}{Nome}}\&\ nome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_email}{Email}}\&\ email,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_endereco}{Endereco}}\&\ endereco,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_cartao}{Cartao}}\&\ cartao);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Get\ para\ atributos\ específicos}}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_endereco}{Endereco}}\ \mbox{\hyperlink{class_hospede_a2220085147fac5f1bf00a1d3afedf3a4}{getEndereco}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_cartao}{Cartao}}\ \mbox{\hyperlink{class_hospede_ab438db2528da9fed95539e1baf7371b5}{getCartao}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Set\ para\ atributos\ específicos}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_hospede_a850a70b10f043139fd416817be615dd4}{setEndereco}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_endereco}{Endereco}}\&\ endereco);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_hospede_a7b05de5ed3d2152e125019dd8f4de68c}{setCartao}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_cartao}{Cartao}}\&\ cartao);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HOSPEDE\_HPP}}
+
+\end{DoxyCode}

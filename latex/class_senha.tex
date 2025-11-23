@@ -1,0 +1,100 @@
+\doxysection{Senha Class Reference}
+\hypertarget{class_senha}{}\label{class_senha}\index{Senha@{Senha}}
+
+
+Representa o domínio de \doxylink{class_senha}{Senha} de usuário.  
+
+
+
+
+{\ttfamily \#include $<$senha.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_senha_a84733dabc7c91c63b330cf4cd890fb08}{Senha}} (std\+::string senha)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa a senha com um valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_senha_ae9cee5952a6a602a71849b593dd25c99}{set\+Senha}} (std\+::string senha)
+\begin{DoxyCompactList}\small\item\em Define uma nova senha. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_senha_a766f97ce6f851cd1c3939f270351c2d5}{get\+Senha}} ()
+\begin{DoxyCompactList}\small\item\em Recupera a senha armazenada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de \doxylink{class_senha}{Senha} de usuário. 
+
+Esta classe armazena e valida uma string de senha. Regras complexas de validação definidas no projeto\+:
+\begin{DoxyEnumerate}
+\item Tamanho\+: Exatamente 5 caracteres.
+\item Caracteres permitidos\+: Letras (A-\/Z, a-\/z), dígitos (0-\/9) e caracteres especiais (!, @, \#, \$, \%, \&).
+\item Requisito de composição\+: Deve conter pelo menos uma letra maiúscula, uma minúscula, um dígito e um caractere especial.
+\item Regra de não-\/repetição de tipo\+: Letra não pode ser seguida de letra, e dígito não pode ser seguido de dígito. 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_senha_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_senha_a84733dabc7c91c63b330cf4cd890fb08}\index{Senha@{Senha}!Senha@{Senha}}
+\index{Senha@{Senha}!Senha@{Senha}}
+\doxysubsubsection{\texorpdfstring{Senha()}{Senha()}}
+{\footnotesize\ttfamily \label{class_senha_a84733dabc7c91c63b330cf4cd890fb08} 
+Senha\+::\+Senha (\begin{DoxyParamCaption}\item[{std\+::string}]{senha}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa a senha com um valor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em senha} & String contendo a senha. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a senha inicial for inválida. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_senha_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_senha_a766f97ce6f851cd1c3939f270351c2d5}\index{Senha@{Senha}!getSenha@{getSenha}}
+\index{getSenha@{getSenha}!Senha@{Senha}}
+\doxysubsubsection{\texorpdfstring{getSenha()}{getSenha()}}
+{\footnotesize\ttfamily \label{class_senha_a766f97ce6f851cd1c3939f270351c2d5} 
+std\+::string Senha\+::get\+Senha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera a senha armazenada. 
+
+\begin{DoxyReturn}{Returns}
+A string contendo a senha. 
+\end{DoxyReturn}
+\Hypertarget{class_senha_ae9cee5952a6a602a71849b593dd25c99}\index{Senha@{Senha}!setSenha@{setSenha}}
+\index{setSenha@{setSenha}!Senha@{Senha}}
+\doxysubsubsection{\texorpdfstring{setSenha()}{setSenha()}}
+{\footnotesize\ttfamily \label{class_senha_ae9cee5952a6a602a71849b593dd25c99} 
+void Senha\+::set\+Senha (\begin{DoxyParamCaption}\item[{std\+::string}]{senha}{}\end{DoxyParamCaption})}
+
+
+
+Define uma nova senha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em senha} & A nova string de senha. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato da nova senha for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/senha.\+hpp\item 
+sources dominios/senha.\+cpp\end{DoxyCompactItemize}

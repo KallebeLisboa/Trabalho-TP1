@@ -1,0 +1,81 @@
+\doxysection{IServico\+Hotel Class Reference}
+\hypertarget{class_i_servico_hotel}{}\label{class_i_servico_hotel}\index{IServicoHotel@{IServicoHotel}}
+Inheritance diagram for IServico\+Hotel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_servico_hotel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_hotel_a46c5fe489acc3cde21f71fd7872aca47}{criar\+Hotel}} (string codigo, string nome, string endereco, string telefone)=0
+\item 
+virtual \mbox{\hyperlink{class_hotel}{Hotel}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_servico_hotel_a856ca0b627a84865c87562ef7a30ee8e}{pesquisar\+Hotel}} (string codigo)=0
+\item 
+virtual map$<$ string, \mbox{\hyperlink{class_hotel}{Hotel}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_i_servico_hotel_a0d8d74cb7b5a6af686e29631a73a9016}{listar\+Hoteis}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_hotel_a6d557089771fdf601b75b9264eac8cae}{atualizar\+Hotel}} (string codigo, string novo\+Nome, string novo\+Endereco, string novo\+Telefone)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_hotel_a30f5ccdf3d3c6a904912e03547a7f813}{excluir\+Hotel}} (string codigo)=0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_i_servico_hotel_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_servico_hotel_a6d557089771fdf601b75b9264eac8cae}\index{IServicoHotel@{IServicoHotel}!atualizarHotel@{atualizarHotel}}
+\index{atualizarHotel@{atualizarHotel}!IServicoHotel@{IServicoHotel}}
+\doxysubsubsection{\texorpdfstring{atualizarHotel()}{atualizarHotel()}}
+{\footnotesize\ttfamily \label{class_i_servico_hotel_a6d557089771fdf601b75b9264eac8cae} 
+virtual void IServico\+Hotel\+::atualizar\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo}{, }\item[{string}]{novo\+Nome}{, }\item[{string}]{novo\+Endereco}{, }\item[{string}]{novo\+Telefone}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hotel_aa4841f7ae7c5dfe5c9b189b764b4a149}{Container\+Hotel}}.
+
+\Hypertarget{class_i_servico_hotel_a46c5fe489acc3cde21f71fd7872aca47}\index{IServicoHotel@{IServicoHotel}!criarHotel@{criarHotel}}
+\index{criarHotel@{criarHotel}!IServicoHotel@{IServicoHotel}}
+\doxysubsubsection{\texorpdfstring{criarHotel()}{criarHotel()}}
+{\footnotesize\ttfamily \label{class_i_servico_hotel_a46c5fe489acc3cde21f71fd7872aca47} 
+virtual void IServico\+Hotel\+::criar\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo}{, }\item[{string}]{nome}{, }\item[{string}]{endereco}{, }\item[{string}]{telefone}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hotel_a59e9b0938bb5e67e8623ba6ec42a6811}{Container\+Hotel}}.
+
+\Hypertarget{class_i_servico_hotel_a30f5ccdf3d3c6a904912e03547a7f813}\index{IServicoHotel@{IServicoHotel}!excluirHotel@{excluirHotel}}
+\index{excluirHotel@{excluirHotel}!IServicoHotel@{IServicoHotel}}
+\doxysubsubsection{\texorpdfstring{excluirHotel()}{excluirHotel()}}
+{\footnotesize\ttfamily \label{class_i_servico_hotel_a30f5ccdf3d3c6a904912e03547a7f813} 
+virtual void IServico\+Hotel\+::excluir\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hotel_a14cee8c4544f99296f35eb7585f8e598}{Container\+Hotel}}.
+
+\Hypertarget{class_i_servico_hotel_a0d8d74cb7b5a6af686e29631a73a9016}\index{IServicoHotel@{IServicoHotel}!listarHoteis@{listarHoteis}}
+\index{listarHoteis@{listarHoteis}!IServicoHotel@{IServicoHotel}}
+\doxysubsubsection{\texorpdfstring{listarHoteis()}{listarHoteis()}}
+{\footnotesize\ttfamily \label{class_i_servico_hotel_a0d8d74cb7b5a6af686e29631a73a9016} 
+virtual map$<$ string, \mbox{\hyperlink{class_hotel}{Hotel}} \texorpdfstring{$\ast$}{*} $>$ IServico\+Hotel\+::listar\+Hoteis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hotel_a2d5ba3509d71dc462fe13a0f3db2a60f}{Container\+Hotel}}.
+
+\Hypertarget{class_i_servico_hotel_a856ca0b627a84865c87562ef7a30ee8e}\index{IServicoHotel@{IServicoHotel}!pesquisarHotel@{pesquisarHotel}}
+\index{pesquisarHotel@{pesquisarHotel}!IServicoHotel@{IServicoHotel}}
+\doxysubsubsection{\texorpdfstring{pesquisarHotel()}{pesquisarHotel()}}
+{\footnotesize\ttfamily \label{class_i_servico_hotel_a856ca0b627a84865c87562ef7a30ee8e} 
+virtual \mbox{\hyperlink{class_hotel}{Hotel}} \texorpdfstring{$\ast$}{*} IServico\+Hotel\+::pesquisar\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_hotel_ab2452e6a9622824f7cbbea3c58cac648}{Container\+Hotel}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+header interface/IServico\+Hotel.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\doxysection{container\+\_\+hotel.\+hpp}
+\hypertarget{container__hotel_8hpp_source}{}\label{container__hotel_8hpp_source}\index{header servicos/container\_hotel.hpp@{header servicos/container\_hotel.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTAINER\_HOTEL\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTAINER\_HOTEL\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Inclusão\ das\ Entidades\ e\ Domínios\ necessários}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}header\ entidades/hotel.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/codigo.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/nome.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/endereco.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/telefone.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Interface}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}../header\ interface/IServicoHotel.hpp"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_container_hotel}{ContainerHotel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_servico_hotel}{IServicoHotel}}\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Armazena\ os\ hotéis}}
+\DoxyCodeLine{00039\ \ \ \ \ map<string,\ Hotel*>\ bancoDeHoteis;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Destrutor}}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_container_hotel_a06091fa4e6174d1695776b5b507fa480}{\string~ContainerHotel}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Métodos\ CRUD\ (Apenas\ declaração,\ sem\ código\ aqui)}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_hotel_a59e9b0938bb5e67e8623ba6ec42a6811}{criarHotel}}(\textcolor{keywordtype}{string}\ codigo,\ \textcolor{keywordtype}{string}\ nome,\ \textcolor{keywordtype}{string}\ endereco,\ \textcolor{keywordtype}{string}\ telefone);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_hotel}{Hotel}}*\ \mbox{\hyperlink{class_container_hotel_ab2452e6a9622824f7cbbea3c58cac648}{pesquisarHotel}}(\textcolor{keywordtype}{string}\ codigo);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ map<string,\ Hotel*>\ \mbox{\hyperlink{class_container_hotel_a2d5ba3509d71dc462fe13a0f3db2a60f}{listarHoteis}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_hotel_aa4841f7ae7c5dfe5c9b189b764b4a149}{atualizarHotel}}(\textcolor{keywordtype}{string}\ codigo,\ \textcolor{keywordtype}{string}\ novoNome,\ \textcolor{keywordtype}{string}\ novoEndereco,\ \textcolor{keywordtype}{string}\ novoTelefone);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_hotel_a14cee8c4544f99296f35eb7585f8e598}{excluirHotel}}(\textcolor{keywordtype}{string}\ codigo);}
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

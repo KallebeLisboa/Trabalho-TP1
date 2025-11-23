@@ -1,0 +1,170 @@
+\doxysection{Container\+Quarto Class Reference}
+\hypertarget{class_container_quarto}{}\label{class_container_quarto}\index{ContainerQuarto@{ContainerQuarto}}
+
+
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_quarto}{Quarto}.  
+
+
+
+
+{\ttfamily \#include $<$container\+\_\+quarto.\+hpp$>$}
+
+Inheritance diagram for Container\+Quarto\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_container_quarto}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_container_quarto_ab418053430ad301ffe7631910eb867ce}{\texorpdfstring{$\sim$}{\string~}\+Container\+Quarto}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_quarto_a15dec4e3a27acdd7267c0c2c72da4c11}{criar\+Quarto}} (string codigo\+Hotel, string numero, int capacidade, double valor\+Diaria, string ramal)
+\begin{DoxyCompactList}\small\item\em Cria um novo quarto e o armazena no container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_quarto}{Quarto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_container_quarto_a2c1bfdb92da616d5f465d3098f960978}{pesquisar\+Quarto}} (string codigo\+Hotel, string numero)
+\begin{DoxyCompactList}\small\item\em Lista apenas os quartos pertencentes a um hotel específico. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{class_quarto}{Quarto}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_container_quarto_a8f2e5304fbdea93d1622d40b970ecdd5}{listar\+Quartos\+Do\+Hotel}} (string codigo\+Hotel)
+\item 
+void \mbox{\hyperlink{class_container_quarto_a9ca3a4dc2c2cdeba9f1cab93a24fd0df}{atualizar\+Quarto}} (string codigo\+Hotel, string numero, int nova\+Capacidade, double novo\+Valor, string novo\+Ramal)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um quarto existente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_quarto_a58840249da6737ff4032dd572a59e5b0}{excluir\+Quarto}} (string codigo\+Hotel, string numero)
+\begin{DoxyCompactList}\small\item\em Remove um quarto do container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_quarto}{Quarto}. 
+
+Esta classe implementa o padrão Container para a entidade \doxylink{class_quarto}{Quarto}. Diferente de outras entidades, o \doxylink{class_quarto}{Quarto} não possui uma chave única global (vários hotéis podem ter o quarto "{}101"{}). Por isso, este container implementa uma lógica de chave composta (Código do \doxylink{class_hotel}{Hotel} + Número do \doxylink{class_quarto}{Quarto}) para garantir a unicidade no mapa. 
+
+\label{doc-constructors}
+\Hypertarget{class_container_quarto_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_container_quarto_ab418053430ad301ffe7631910eb867ce}\index{ContainerQuarto@{ContainerQuarto}!````~ContainerQuarto@{\texorpdfstring{$\sim$}{\string~}ContainerQuarto}}
+\index{````~ContainerQuarto@{\texorpdfstring{$\sim$}{\string~}ContainerQuarto}!ContainerQuarto@{ContainerQuarto}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ContainerQuarto()}{\string~ContainerQuarto()}}
+{\footnotesize\ttfamily \label{class_container_quarto_ab418053430ad301ffe7631910eb867ce} 
+Container\+Quarto\+::\texorpdfstring{$\sim$}{\string~}\+Container\+Quarto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe. 
+
+Libera a memória dos objetos \doxylink{class_quarto}{Quarto} armazenados. 
+
+\label{doc-func-members}
+\Hypertarget{class_container_quarto_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_container_quarto_a9ca3a4dc2c2cdeba9f1cab93a24fd0df}\index{ContainerQuarto@{ContainerQuarto}!atualizarQuarto@{atualizarQuarto}}
+\index{atualizarQuarto@{atualizarQuarto}!ContainerQuarto@{ContainerQuarto}}
+\doxysubsubsection{\texorpdfstring{atualizarQuarto()}{atualizarQuarto()}}
+{\footnotesize\ttfamily \label{class_container_quarto_a9ca3a4dc2c2cdeba9f1cab93a24fd0df} 
+void Container\+Quarto\+::atualizar\+Quarto (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero}{, }\item[{int}]{nova\+Capacidade}{, }\item[{double}]{novo\+Valor}{, }\item[{string}]{novo\+Ramal}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Atualiza os dados de um quarto existente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo\+Hotel} & Código do hotel (parte da chave primária composta). \\
+\hline
+{\em numero} & Número do quarto (parte da chave primária composta). \\
+\hline
+{\em nova\+Capacidade} & Nova capacidade a ser definida. \\
+\hline
+{\em novo\+Valor} & Novo valor da diária. \\
+\hline
+{\em novo\+Ramal} & Novo ramal. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_quarto}{IServico\+Quarto}}.
+
+\Hypertarget{class_container_quarto_a15dec4e3a27acdd7267c0c2c72da4c11}\index{ContainerQuarto@{ContainerQuarto}!criarQuarto@{criarQuarto}}
+\index{criarQuarto@{criarQuarto}!ContainerQuarto@{ContainerQuarto}}
+\doxysubsubsection{\texorpdfstring{criarQuarto()}{criarQuarto()}}
+{\footnotesize\ttfamily \label{class_container_quarto_a15dec4e3a27acdd7267c0c2c72da4c11} 
+void Container\+Quarto\+::criar\+Quarto (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero}{, }\item[{int}]{capacidade}{, }\item[{double}]{valor\+Diaria}{, }\item[{string}]{ramal}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cria um novo quarto e o armazena no container. 
+
+Recebe tipos primitivos para facilitar a integração com a camada de apresentação, instanciando os Domínios internamente. 
+\begin{DoxyParams}{Parameters}
+{\em codigo\+Hotel} & Código do hotel ao qual o quarto pertence. \\
+\hline
+{\em numero} & Número do quarto. \\
+\hline
+{\em capacidade} & \doxylink{class_capacidade}{Capacidade} de pessoas (int). \\
+\hline
+{\em valor\+Diaria} & Valor da diária (double). \\
+\hline
+{\em ramal} & \doxylink{class_ramal}{Ramal} telefônico. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_quarto}{IServico\+Quarto}}.
+
+\Hypertarget{class_container_quarto_a58840249da6737ff4032dd572a59e5b0}\index{ContainerQuarto@{ContainerQuarto}!excluirQuarto@{excluirQuarto}}
+\index{excluirQuarto@{excluirQuarto}!ContainerQuarto@{ContainerQuarto}}
+\doxysubsubsection{\texorpdfstring{excluirQuarto()}{excluirQuarto()}}
+{\footnotesize\ttfamily \label{class_container_quarto_a58840249da6737ff4032dd572a59e5b0} 
+void Container\+Quarto\+::excluir\+Quarto (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove um quarto do container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo\+Hotel} & Código do hotel. \\
+\hline
+{\em numero} & Número do quarto. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_quarto}{IServico\+Quarto}}.
+
+\Hypertarget{class_container_quarto_a8f2e5304fbdea93d1622d40b970ecdd5}\index{ContainerQuarto@{ContainerQuarto}!listarQuartosDoHotel@{listarQuartosDoHotel}}
+\index{listarQuartosDoHotel@{listarQuartosDoHotel}!ContainerQuarto@{ContainerQuarto}}
+\doxysubsubsection{\texorpdfstring{listarQuartosDoHotel()}{listarQuartosDoHotel()}}
+{\footnotesize\ttfamily \label{class_container_quarto_a8f2e5304fbdea93d1622d40b970ecdd5} 
+map$<$ string, \mbox{\hyperlink{class_quarto}{Quarto}} \texorpdfstring{$\ast$}{*} $>$ Container\+Quarto\+::listar\+Quartos\+Do\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_servico_quarto}{IServico\+Quarto}}.
+
+\Hypertarget{class_container_quarto_a2c1bfdb92da616d5f465d3098f960978}\index{ContainerQuarto@{ContainerQuarto}!pesquisarQuarto@{pesquisarQuarto}}
+\index{pesquisarQuarto@{pesquisarQuarto}!ContainerQuarto@{ContainerQuarto}}
+\doxysubsubsection{\texorpdfstring{pesquisarQuarto()}{pesquisarQuarto()}}
+{\footnotesize\ttfamily \label{class_container_quarto_a2c1bfdb92da616d5f465d3098f960978} 
+\mbox{\hyperlink{class_quarto}{Quarto}} \texorpdfstring{$\ast$}{*} Container\+Quarto\+::pesquisar\+Quarto (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Lista apenas os quartos pertencentes a um hotel específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo\+Hotel} & O código do hotel para filtrar a busca. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um mapa contendo os quartos encontrados. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_servico_quarto}{IServico\+Quarto}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header servicos/container\+\_\+quarto.\+hpp\item 
+sources servicos/container\+\_\+quarto.\+cpp\end{DoxyCompactItemize}

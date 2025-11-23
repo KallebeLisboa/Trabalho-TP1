@@ -1,0 +1,69 @@
+\doxysection{reserva.\+hpp}
+\hypertarget{reserva_8hpp_source}{}\label{reserva_8hpp_source}\index{header entidades/reserva.hpp@{header entidades/reserva.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RESERVA\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RESERVA\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Inclusão\ das\ classes\ de\ domínio\ que\ serão\ atributos}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/data.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/dinheiro.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/codigo.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/email.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/numero.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reserva_af5df2e5269dec303ec01dda9316d5941}{Reserva}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_data}{Data}}\ chegada;\ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_data}{Data}}\ partida;\ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}\ valor;\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_codigo}{Codigo}}\ codigo;\ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_numero}{Numero}}\ numeroQuarto;\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_email}{Email}}\ emailHospede;\ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_codigo}{Codigo}}\ codigoHotel;\ \ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Construtor}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_reserva_af5df2e5269dec303ec01dda9316d5941}{Reserva}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_data}{Data}}\&\ chegada,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_data}{Data}}\&\ partida,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}\&\ valor,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_codigo}{Codigo}}\&\ codigo,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_email}{Email}}\&\ emailHospede,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_numero}{Numero}}\&\ numeroQuarto,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_codigo}{Codigo}}\&\ codigoHotel);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Get\ (Para\ acesso\ aos\ atributos)}}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_data}{Data}}\ \mbox{\hyperlink{class_reserva_ab96dfd41e5b4ca147e96823c90ed6bec}{getChegada}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_data}{Data}}\ \mbox{\hyperlink{class_reserva_a05963c2846cd197fae4d4fb5f4f619d8}{getPartida}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}\ \mbox{\hyperlink{class_reserva_a0b363cbcb3d270f4a46b7c01335bd75f}{getValor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_codigo}{Codigo}}\ \mbox{\hyperlink{class_reserva_a52478720a38b71f6d04cc154c7dbd5e4}{getCodigo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{class_email}{Email}}\ \mbox{\hyperlink{class_reserva_a0e51e70b8e54cdf58e1592c89f0a8f6f}{getEmailHospede}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_numero}{Numero}}\ \mbox{\hyperlink{class_reserva_af46274d27ca74315854df73f5ce5c60c}{getNumeroQuarto}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_codigo}{Codigo}}\ \mbox{\hyperlink{class_reserva_a1df2c3bbaea9651b86e5d789f9212a18}{getCodigoHotel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Set\ (Para\ modificar\ os\ atributos)}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//\ Não\ é\ possível\ editar\ dado\ que\ identifica\ registro\ (chave\ primária).}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reserva_a41d1ef1f231c05eef6a0f0a89630fac1}{setChegada}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_data}{Data}}\&\ chegada);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reserva_a232027478d6dc5701c27a93e585e27cd}{setPartida}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_data}{Data}}\&\ partida);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reserva_a2225385e126526bfcf89f58827d1ff79}{setValor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}\&\ valor);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reserva_ae61167253128a29a237e60ebeb9941e9}{setEmailHospede}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_email}{Email}}\&\ emailHospede);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reserva_a9a34b4f9d47730b53ae60aeba7534f9b}{setNumeroQuarto}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_numero}{Numero}}\&\ numeroQuarto);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reserva_ac98a39626663a6e87d2335ad79e52ad9}{setCodigoHotel}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_codigo}{Codigo}}\&\ codigoHotel);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RESERVA\_HPP}}
+
+\end{DoxyCode}

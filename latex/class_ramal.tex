@@ -1,0 +1,98 @@
+\doxysection{Ramal Class Reference}
+\hypertarget{class_ramal}{}\label{class_ramal}\index{Ramal@{Ramal}}
+
+
+Representa o domínio de \doxylink{class_ramal}{Ramal} telefônico.  
+
+
+
+
+{\ttfamily \#include $<$ramal.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ramal_a1313e40b22904ce5c9edaa1bf11dfc0e}{Ramal}} (std\+::string ramal)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o domínio com um valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ramal_a64c7330af703769438fc896fff17bcdc}{set\+Ramal}} (std\+::string ramal)
+\begin{DoxyCompactList}\small\item\em Define um novo número de ramal. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_ramal_a81d9a3f40b7e373315f46d5df3e23684}{get\+Ramal}} ()
+\begin{DoxyCompactList}\small\item\em Recupera o número do ramal armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de \doxylink{class_ramal}{Ramal} telefônico. 
+
+Esta classe armazena e valida uma string numérica que representa um ramal. Regras de validação\+:
+\begin{DoxyEnumerate}
+\item O valor deve representar um número inteiro.
+\item O intervalo válido é de 00 a 50. 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_ramal_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ramal_a1313e40b22904ce5c9edaa1bf11dfc0e}\index{Ramal@{Ramal}!Ramal@{Ramal}}
+\index{Ramal@{Ramal}!Ramal@{Ramal}}
+\doxysubsubsection{\texorpdfstring{Ramal()}{Ramal()}}
+{\footnotesize\ttfamily \label{class_ramal_a1313e40b22904ce5c9edaa1bf11dfc0e} 
+Ramal\+::\+Ramal (\begin{DoxyParamCaption}\item[{std\+::string}]{ramal}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa o domínio com um valor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ramal} & String contendo o ramal (ex\+: "{}12"{}). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o ramal inicial for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ramal_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ramal_a81d9a3f40b7e373315f46d5df3e23684}\index{Ramal@{Ramal}!getRamal@{getRamal}}
+\index{getRamal@{getRamal}!Ramal@{Ramal}}
+\doxysubsubsection{\texorpdfstring{getRamal()}{getRamal()}}
+{\footnotesize\ttfamily \label{class_ramal_a81d9a3f40b7e373315f46d5df3e23684} 
+std\+::string Ramal\+::get\+Ramal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera o número do ramal armazenado. 
+
+\begin{DoxyReturn}{Returns}
+A string contendo o ramal. 
+\end{DoxyReturn}
+\Hypertarget{class_ramal_a64c7330af703769438fc896fff17bcdc}\index{Ramal@{Ramal}!setRamal@{setRamal}}
+\index{setRamal@{setRamal}!Ramal@{Ramal}}
+\doxysubsubsection{\texorpdfstring{setRamal()}{setRamal()}}
+{\footnotesize\ttfamily \label{class_ramal_a64c7330af703769438fc896fff17bcdc} 
+void Ramal\+::set\+Ramal (\begin{DoxyParamCaption}\item[{std\+::string}]{ramal}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo número de ramal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ramal} & A nova string numérica. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato ou intervalo do ramal for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/ramal.\+hpp\item 
+sources dominios/ramal.\+cpp\end{DoxyCompactItemize}

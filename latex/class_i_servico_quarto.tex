@@ -1,0 +1,72 @@
+\doxysection{IServico\+Quarto Class Reference}
+\hypertarget{class_i_servico_quarto}{}\label{class_i_servico_quarto}\index{IServicoQuarto@{IServicoQuarto}}
+Inheritance diagram for IServico\+Quarto\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_servico_quarto}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_quarto_a88032502ea79428ba71c496213ca0462}{criar\+Quarto}} (string codigo\+Hotel, string numero, int capacidade, double valor\+Diaria, string ramal)=0
+\item 
+virtual \mbox{\hyperlink{class_quarto}{Quarto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_servico_quarto_a64a687aadcd42729fa63c82e5143b11a}{pesquisar\+Quarto}} (string codigo\+Hotel, string numero)=0
+\item 
+\Hypertarget{class_i_servico_quarto_a0ec44642c55f56177ba5710d8e4deb5c}\label{class_i_servico_quarto_a0ec44642c55f56177ba5710d8e4deb5c} 
+virtual map$<$ string, \mbox{\hyperlink{class_quarto}{Quarto}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries listar\+Quartos\+Do\+Hotel} (string codigo\+Hotel)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_quarto_aff5af32422afedcf55b639a2a807b411}{atualizar\+Quarto}} (string codigo\+Hotel, string numero, int nova\+Capacidade, double novo\+Valor, string novo\+Ramal)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_quarto_ace5a674ee9f6b0c86f49d10c32d88b28}{excluir\+Quarto}} (string codigo\+Hotel, string numero)=0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_i_servico_quarto_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_servico_quarto_aff5af32422afedcf55b639a2a807b411}\index{IServicoQuarto@{IServicoQuarto}!atualizarQuarto@{atualizarQuarto}}
+\index{atualizarQuarto@{atualizarQuarto}!IServicoQuarto@{IServicoQuarto}}
+\doxysubsubsection{\texorpdfstring{atualizarQuarto()}{atualizarQuarto()}}
+{\footnotesize\ttfamily \label{class_i_servico_quarto_aff5af32422afedcf55b639a2a807b411} 
+virtual void IServico\+Quarto\+::atualizar\+Quarto (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero}{, }\item[{int}]{nova\+Capacidade}{, }\item[{double}]{novo\+Valor}{, }\item[{string}]{novo\+Ramal}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_quarto_a9ca3a4dc2c2cdeba9f1cab93a24fd0df}{Container\+Quarto}}.
+
+\Hypertarget{class_i_servico_quarto_a88032502ea79428ba71c496213ca0462}\index{IServicoQuarto@{IServicoQuarto}!criarQuarto@{criarQuarto}}
+\index{criarQuarto@{criarQuarto}!IServicoQuarto@{IServicoQuarto}}
+\doxysubsubsection{\texorpdfstring{criarQuarto()}{criarQuarto()}}
+{\footnotesize\ttfamily \label{class_i_servico_quarto_a88032502ea79428ba71c496213ca0462} 
+virtual void IServico\+Quarto\+::criar\+Quarto (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero}{, }\item[{int}]{capacidade}{, }\item[{double}]{valor\+Diaria}{, }\item[{string}]{ramal}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_quarto_a15dec4e3a27acdd7267c0c2c72da4c11}{Container\+Quarto}}.
+
+\Hypertarget{class_i_servico_quarto_ace5a674ee9f6b0c86f49d10c32d88b28}\index{IServicoQuarto@{IServicoQuarto}!excluirQuarto@{excluirQuarto}}
+\index{excluirQuarto@{excluirQuarto}!IServicoQuarto@{IServicoQuarto}}
+\doxysubsubsection{\texorpdfstring{excluirQuarto()}{excluirQuarto()}}
+{\footnotesize\ttfamily \label{class_i_servico_quarto_ace5a674ee9f6b0c86f49d10c32d88b28} 
+virtual void IServico\+Quarto\+::excluir\+Quarto (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_quarto_a58840249da6737ff4032dd572a59e5b0}{Container\+Quarto}}.
+
+\Hypertarget{class_i_servico_quarto_a64a687aadcd42729fa63c82e5143b11a}\index{IServicoQuarto@{IServicoQuarto}!pesquisarQuarto@{pesquisarQuarto}}
+\index{pesquisarQuarto@{pesquisarQuarto}!IServicoQuarto@{IServicoQuarto}}
+\doxysubsubsection{\texorpdfstring{pesquisarQuarto()}{pesquisarQuarto()}}
+{\footnotesize\ttfamily \label{class_i_servico_quarto_a64a687aadcd42729fa63c82e5143b11a} 
+virtual \mbox{\hyperlink{class_quarto}{Quarto}} \texorpdfstring{$\ast$}{*} IServico\+Quarto\+::pesquisar\+Quarto (\begin{DoxyParamCaption}\item[{string}]{codigo\+Hotel}{, }\item[{string}]{numero}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_quarto_a2c1bfdb92da616d5f465d3098f960978}{Container\+Quarto}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+header interface/IServico\+Quarto.\+hpp\end{DoxyCompactItemize}

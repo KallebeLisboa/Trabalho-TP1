@@ -1,0 +1,99 @@
+\doxysection{Telefone Class Reference}
+\hypertarget{class_telefone}{}\label{class_telefone}\index{Telefone@{Telefone}}
+
+
+Representa o domínio de \doxylink{class_telefone}{Telefone}.  
+
+
+
+
+{\ttfamily \#include $<$telefone.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_telefone_a2a865226fe19da456e733c5a3b0addd1}{Telefone}} (std\+::string telefone)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o telefone com um valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_telefone_a2edee9723aabce6d9bdc8860d52574c2}{set\+Telefone}} (std\+::string telefone)
+\begin{DoxyCompactList}\small\item\em Define um novo número de telefone. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_telefone_a366cd131648f700bcdabf33496e5eb9e}{get\+Telefone}} ()
+\begin{DoxyCompactList}\small\item\em Recupera o número de telefone armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de \doxylink{class_telefone}{Telefone}. 
+
+Esta classe armazena e valida uma string representando um número de telefone. Regras de validação\+:
+\begin{DoxyEnumerate}
+\item Formato\+: "{}+\+DDDDDDDDDDDDDD"{} (sinal de mais seguido por 14 dígitos).
+\item Total de 15 caracteres.
+\item Cada caractere após o \textquotesingle{}+\textquotesingle{} deve ser um dígito (0-\/9). 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_telefone_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_telefone_a2a865226fe19da456e733c5a3b0addd1}\index{Telefone@{Telefone}!Telefone@{Telefone}}
+\index{Telefone@{Telefone}!Telefone@{Telefone}}
+\doxysubsubsection{\texorpdfstring{Telefone()}{Telefone()}}
+{\footnotesize\ttfamily \label{class_telefone_a2a865226fe19da456e733c5a3b0addd1} 
+Telefone\+::\+Telefone (\begin{DoxyParamCaption}\item[{std\+::string}]{telefone}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa o telefone com um valor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em telefone} & String contendo o número de telefone. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o telefone inicial for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_telefone_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_telefone_a366cd131648f700bcdabf33496e5eb9e}\index{Telefone@{Telefone}!getTelefone@{getTelefone}}
+\index{getTelefone@{getTelefone}!Telefone@{Telefone}}
+\doxysubsubsection{\texorpdfstring{getTelefone()}{getTelefone()}}
+{\footnotesize\ttfamily \label{class_telefone_a366cd131648f700bcdabf33496e5eb9e} 
+std\+::string Telefone\+::get\+Telefone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera o número de telefone armazenado. 
+
+\begin{DoxyReturn}{Returns}
+A string contendo o telefone. 
+\end{DoxyReturn}
+\Hypertarget{class_telefone_a2edee9723aabce6d9bdc8860d52574c2}\index{Telefone@{Telefone}!setTelefone@{setTelefone}}
+\index{setTelefone@{setTelefone}!Telefone@{Telefone}}
+\doxysubsubsection{\texorpdfstring{setTelefone()}{setTelefone()}}
+{\footnotesize\ttfamily \label{class_telefone_a2edee9723aabce6d9bdc8860d52574c2} 
+void Telefone\+::set\+Telefone (\begin{DoxyParamCaption}\item[{std\+::string}]{telefone}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo número de telefone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em telefone} & A nova string de telefone. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato do novo telefone for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/telefone.\+hpp\item 
+sources dominios/telefone.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\doxysection{IServico\+Usuario Class Reference}
+\hypertarget{class_i_servico_usuario}{}\label{class_i_servico_usuario}\index{IServicoUsuario@{IServicoUsuario}}
+Inheritance diagram for IServico\+Usuario\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_servico_usuario}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_usuario_a116822db568fdb40f12195f1b8e4f6bd}{criar\+Gerente}} (string nome, string email, string ramal, string senha)=0
+\item 
+virtual bool \mbox{\hyperlink{class_i_servico_usuario_a211640457137e698bb50b6094e5fa8ae}{autenticar}} (string email, string senha)=0
+\item 
+virtual \mbox{\hyperlink{class_gerente}{Gerente}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_servico_usuario_a1f017dd60198f9188871d69b4fad9012}{pesquisar\+Gerente}} (string email)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_usuario_ad3538dcd0d98cc72320a4fb9344ea7c8}{atualizar\+Gerente}} (string email, string novo\+Nome, string novo\+Ramal, string nova\+Senha)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_servico_usuario_a582cd8bfefae298deabe6295210e8d7d}{excluir\+Gerente}} (string email)=0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_i_servico_usuario_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_servico_usuario_ad3538dcd0d98cc72320a4fb9344ea7c8}\index{IServicoUsuario@{IServicoUsuario}!atualizarGerente@{atualizarGerente}}
+\index{atualizarGerente@{atualizarGerente}!IServicoUsuario@{IServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{atualizarGerente()}{atualizarGerente()}}
+{\footnotesize\ttfamily \label{class_i_servico_usuario_ad3538dcd0d98cc72320a4fb9344ea7c8} 
+virtual void IServico\+Usuario\+::atualizar\+Gerente (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{novo\+Nome}{, }\item[{string}]{novo\+Ramal}{, }\item[{string}]{nova\+Senha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_gerente_a025ae9849eb6a987a70361d7661e2732}{Container\+Gerente}}.
+
+\Hypertarget{class_i_servico_usuario_a211640457137e698bb50b6094e5fa8ae}\index{IServicoUsuario@{IServicoUsuario}!autenticar@{autenticar}}
+\index{autenticar@{autenticar}!IServicoUsuario@{IServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{autenticar()}{autenticar()}}
+{\footnotesize\ttfamily \label{class_i_servico_usuario_a211640457137e698bb50b6094e5fa8ae} 
+virtual bool IServico\+Usuario\+::autenticar (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{senha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_gerente_a849dfb339c7ad36db2dcfec56a2801ca}{Container\+Gerente}}.
+
+\Hypertarget{class_i_servico_usuario_a116822db568fdb40f12195f1b8e4f6bd}\index{IServicoUsuario@{IServicoUsuario}!criarGerente@{criarGerente}}
+\index{criarGerente@{criarGerente}!IServicoUsuario@{IServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{criarGerente()}{criarGerente()}}
+{\footnotesize\ttfamily \label{class_i_servico_usuario_a116822db568fdb40f12195f1b8e4f6bd} 
+virtual void IServico\+Usuario\+::criar\+Gerente (\begin{DoxyParamCaption}\item[{string}]{nome}{, }\item[{string}]{email}{, }\item[{string}]{ramal}{, }\item[{string}]{senha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_gerente_af037cff2989979fad2a5e5d0b178b5a2}{Container\+Gerente}}.
+
+\Hypertarget{class_i_servico_usuario_a582cd8bfefae298deabe6295210e8d7d}\index{IServicoUsuario@{IServicoUsuario}!excluirGerente@{excluirGerente}}
+\index{excluirGerente@{excluirGerente}!IServicoUsuario@{IServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{excluirGerente()}{excluirGerente()}}
+{\footnotesize\ttfamily \label{class_i_servico_usuario_a582cd8bfefae298deabe6295210e8d7d} 
+virtual void IServico\+Usuario\+::excluir\+Gerente (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_gerente_a7e9141bdaae7a0cf56736b252c3b3337}{Container\+Gerente}}.
+
+\Hypertarget{class_i_servico_usuario_a1f017dd60198f9188871d69b4fad9012}\index{IServicoUsuario@{IServicoUsuario}!pesquisarGerente@{pesquisarGerente}}
+\index{pesquisarGerente@{pesquisarGerente}!IServicoUsuario@{IServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{pesquisarGerente()}{pesquisarGerente()}}
+{\footnotesize\ttfamily \label{class_i_servico_usuario_a1f017dd60198f9188871d69b4fad9012} 
+virtual \mbox{\hyperlink{class_gerente}{Gerente}} \texorpdfstring{$\ast$}{*} IServico\+Usuario\+::pesquisar\+Gerente (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_container_gerente_a141a6daf4cde0acb340139d06f859a74}{Container\+Gerente}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+header interface/IServico\+Usuario.\+hpp\end{DoxyCompactItemize}

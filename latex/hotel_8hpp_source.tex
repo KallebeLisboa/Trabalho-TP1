@@ -1,0 +1,57 @@
+\doxysection{hotel.\+hpp}
+\hypertarget{hotel_8hpp_source}{}\label{hotel_8hpp_source}\index{header entidades/hotel.hpp@{header entidades/hotel.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HOTEL\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HOTEL\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Inclusão\ das\ classes\ de\ domínio\ que\ serão\ atributos}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/nome.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/endereco.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/telefone.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../header\ dominios/codigo.hpp"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_hotel_ae55db07cb9beb9b8203a6edd1dc41584}{Hotel}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Atributos\ são\ instâncias\ das\ classes\ de\ Domínio}}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ nome;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_endereco}{Endereco}}\ endereco;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_telefone}{Telefone}}\ telefone;}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_codigo}{Codigo}}\ codigo;\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Construtor}}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_hotel_ae55db07cb9beb9b8203a6edd1dc41584}{Hotel}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_nome}{Nome}}\&\ nome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_endereco}{Endereco}}\&\ endereco,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_telefone}{Telefone}}\&\ telefone,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_codigo}{Codigo}}\&\ codigo);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Get\ (Para\ acesso\ aos\ atributos)}}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ \mbox{\hyperlink{class_hotel_ad7eb16a9ab0d22a5fb911495a41f385a}{getNome}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_endereco}{Endereco}}\ \mbox{\hyperlink{class_hotel_a09c6c2d88c68d7c006e32a21396d5df4}{getEndereco}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_telefone}{Telefone}}\ \mbox{\hyperlink{class_hotel_aaf1d3bfef2f6aa48be7e5d2541bc5e76}{getTelefone}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_codigo}{Codigo}}\ \mbox{\hyperlink{class_hotel_a076508ceddd66b732d6519e46ce6c22c}{getCodigo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ Métodos\ Set\ (Para\ modificar\ os\ atributos)}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ Não\ é\ possível\ editar\ dado\ que\ identifica\ registro\ (chave\ primária).}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_hotel_adbd1aeab16980b9f68b5b1852e9911b1}{setNome}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_nome}{Nome}}\&\ nome);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_hotel_a00c33280db89adb722fdaea5ea8c0224}{setEndereco}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_endereco}{Endereco}}\&\ endereco);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_hotel_a283b0ed77e46b0fe5310c13a23b74f5b}{setTelefone}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_telefone}{Telefone}}\&\ telefone);}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HOTEL\_HPP}}
+
+\end{DoxyCode}

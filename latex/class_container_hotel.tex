@@ -1,0 +1,171 @@
+\doxysection{Container\+Hotel Class Reference}
+\hypertarget{class_container_hotel}{}\label{class_container_hotel}\index{ContainerHotel@{ContainerHotel}}
+
+
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_hotel}{Hotel}.  
+
+
+
+
+{\ttfamily \#include $<$container\+\_\+hotel.\+hpp$>$}
+
+Inheritance diagram for Container\+Hotel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_container_hotel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_container_hotel_a06091fa4e6174d1695776b5b507fa480}{\texorpdfstring{$\sim$}{\string~}\+Container\+Hotel}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_hotel_a59e9b0938bb5e67e8623ba6ec42a6811}{criar\+Hotel}} (string codigo, string nome, string endereco, string telefone)
+\begin{DoxyCompactList}\small\item\em Cria um novo hotel e o armazena no container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hotel}{Hotel}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_container_hotel_ab2452e6a9622824f7cbbea3c58cac648}{pesquisar\+Hotel}} (string codigo)
+\begin{DoxyCompactList}\small\item\em Pesquisa um hotel no container pelo código. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{class_hotel}{Hotel}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_container_hotel_a2d5ba3509d71dc462fe13a0f3db2a60f}{listar\+Hoteis}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a lista completa de hotéis cadastrados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_hotel_aa4841f7ae7c5dfe5c9b189b764b4a149}{atualizar\+Hotel}} (string codigo, string novo\+Nome, string novo\+Endereco, string novo\+Telefone)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um hotel existente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_hotel_a14cee8c4544f99296f35eb7585f8e598}{excluir\+Hotel}} (string codigo)
+\begin{DoxyCompactList}\small\item\em Remove um hotel do container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_hotel}{Hotel}. 
+
+Esta classe implementa o padrão Container, atuando como um banco de dados em memória (usando std\+::map). Ela é responsável por gerenciar o ciclo de vida (CRUD) das instâncias da entidade \doxylink{class_hotel}{Hotel}. 
+
+\label{doc-constructors}
+\Hypertarget{class_container_hotel_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_container_hotel_a06091fa4e6174d1695776b5b507fa480}\index{ContainerHotel@{ContainerHotel}!````~ContainerHotel@{\texorpdfstring{$\sim$}{\string~}ContainerHotel}}
+\index{````~ContainerHotel@{\texorpdfstring{$\sim$}{\string~}ContainerHotel}!ContainerHotel@{ContainerHotel}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ContainerHotel()}{\string~ContainerHotel()}}
+{\footnotesize\ttfamily \label{class_container_hotel_a06091fa4e6174d1695776b5b507fa480} 
+Container\+Hotel\+::\texorpdfstring{$\sim$}{\string~}\+Container\+Hotel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe. 
+
+Responsável por liberar a memória alocada para os objetos \doxylink{class_hotel}{Hotel} armazenados. 
+
+\label{doc-func-members}
+\Hypertarget{class_container_hotel_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_container_hotel_aa4841f7ae7c5dfe5c9b189b764b4a149}\index{ContainerHotel@{ContainerHotel}!atualizarHotel@{atualizarHotel}}
+\index{atualizarHotel@{atualizarHotel}!ContainerHotel@{ContainerHotel}}
+\doxysubsubsection{\texorpdfstring{atualizarHotel()}{atualizarHotel()}}
+{\footnotesize\ttfamily \label{class_container_hotel_aa4841f7ae7c5dfe5c9b189b764b4a149} 
+void Container\+Hotel\+::atualizar\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo}{, }\item[{string}]{novo\+Nome}{, }\item[{string}]{novo\+Endereco}{, }\item[{string}]{novo\+Telefone}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Atualiza os dados de um hotel existente. 
+
+O código (PK) não pode ser alterado, apenas os outros atributos. 
+\begin{DoxyParams}{Parameters}
+{\em codigo} & O código do hotel a ser atualizado (usado para busca). \\
+\hline
+{\em novo\+Nome} & O novo nome a ser definido. \\
+\hline
+{\em novo\+Endereco} & O novo endereço a ser definido. \\
+\hline
+{\em novo\+Telefone} & O novo telefone a ser definido. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hotel}{IServico\+Hotel}}.
+
+\Hypertarget{class_container_hotel_a59e9b0938bb5e67e8623ba6ec42a6811}\index{ContainerHotel@{ContainerHotel}!criarHotel@{criarHotel}}
+\index{criarHotel@{criarHotel}!ContainerHotel@{ContainerHotel}}
+\doxysubsubsection{\texorpdfstring{criarHotel()}{criarHotel()}}
+{\footnotesize\ttfamily \label{class_container_hotel_a59e9b0938bb5e67e8623ba6ec42a6811} 
+void Container\+Hotel\+::criar\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo}{, }\item[{string}]{nome}{, }\item[{string}]{endereco}{, }\item[{string}]{telefone}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cria um novo hotel e o armazena no container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & String representando o código do hotel (chave primária). \\
+\hline
+{\em nome} & String representando o nome do hotel. \\
+\hline
+{\em endereco} & String representando o endereço. \\
+\hline
+{\em telefone} & String representando o telefone. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hotel}{IServico\+Hotel}}.
+
+\Hypertarget{class_container_hotel_a14cee8c4544f99296f35eb7585f8e598}\index{ContainerHotel@{ContainerHotel}!excluirHotel@{excluirHotel}}
+\index{excluirHotel@{excluirHotel}!ContainerHotel@{ContainerHotel}}
+\doxysubsubsection{\texorpdfstring{excluirHotel()}{excluirHotel()}}
+{\footnotesize\ttfamily \label{class_container_hotel_a14cee8c4544f99296f35eb7585f8e598} 
+void Container\+Hotel\+::excluir\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove um hotel do container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & O código do hotel a ser removido. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hotel}{IServico\+Hotel}}.
+
+\Hypertarget{class_container_hotel_a2d5ba3509d71dc462fe13a0f3db2a60f}\index{ContainerHotel@{ContainerHotel}!listarHoteis@{listarHoteis}}
+\index{listarHoteis@{listarHoteis}!ContainerHotel@{ContainerHotel}}
+\doxysubsubsection{\texorpdfstring{listarHoteis()}{listarHoteis()}}
+{\footnotesize\ttfamily \label{class_container_hotel_a2d5ba3509d71dc462fe13a0f3db2a60f} 
+map$<$ string, \mbox{\hyperlink{class_hotel}{Hotel}} \texorpdfstring{$\ast$}{*} $>$ Container\+Hotel\+::listar\+Hoteis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retorna a lista completa de hotéis cadastrados. 
+
+\begin{DoxyReturn}{Returns}
+Um mapa contendo todos os hotéis (chave\+: código, valor\+: objeto \doxylink{class_hotel}{Hotel}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hotel}{IServico\+Hotel}}.
+
+\Hypertarget{class_container_hotel_ab2452e6a9622824f7cbbea3c58cac648}\index{ContainerHotel@{ContainerHotel}!pesquisarHotel@{pesquisarHotel}}
+\index{pesquisarHotel@{pesquisarHotel}!ContainerHotel@{ContainerHotel}}
+\doxysubsubsection{\texorpdfstring{pesquisarHotel()}{pesquisarHotel()}}
+{\footnotesize\ttfamily \label{class_container_hotel_ab2452e6a9622824f7cbbea3c58cac648} 
+\mbox{\hyperlink{class_hotel}{Hotel}} \texorpdfstring{$\ast$}{*} Container\+Hotel\+::pesquisar\+Hotel (\begin{DoxyParamCaption}\item[{string}]{codigo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pesquisa um hotel no container pelo código. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & O código do hotel a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o objeto \doxylink{class_hotel}{Hotel} encontrado, ou nullptr se não existir. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hotel}{IServico\+Hotel}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header servicos/container\+\_\+hotel.\+hpp\item 
+sources servicos/container\+\_\+hotel.\+cpp\end{DoxyCompactItemize}

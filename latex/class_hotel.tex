@@ -1,0 +1,169 @@
+\doxysection{Hotel Class Reference}
+\hypertarget{class_hotel}{}\label{class_hotel}\index{Hotel@{Hotel}}
+
+
+Entidade que representa um \doxylink{class_hotel}{Hotel} no sistema.  
+
+
+
+
+{\ttfamily \#include $<$hotel.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hotel_ae55db07cb9beb9b8203a6edd1dc41584}{Hotel}} (const \mbox{\hyperlink{class_nome}{Nome}} \&nome, const \mbox{\hyperlink{class_endereco}{Endereco}} \&endereco, const \mbox{\hyperlink{class_telefone}{Telefone}} \&telefone, const \mbox{\hyperlink{class_codigo}{Codigo}} \&codigo)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa um \doxylink{class_hotel}{Hotel} com todos os seus dados. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_nome}{Nome}} \mbox{\hyperlink{class_hotel_ad7eb16a9ab0d22a5fb911495a41f385a}{get\+Nome}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o nome do hotel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_endereco}{Endereco}} \mbox{\hyperlink{class_hotel_a09c6c2d88c68d7c006e32a21396d5df4}{get\+Endereco}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o endereço do hotel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_telefone}{Telefone}} \mbox{\hyperlink{class_hotel_aaf1d3bfef2f6aa48be7e5d2541bc5e76}{get\+Telefone}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o telefone de contato do hotel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_codigo}{Codigo}} \mbox{\hyperlink{class_hotel_a076508ceddd66b732d6519e46ce6c22c}{get\+Codigo}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o código identificador do hotel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hotel_adbd1aeab16980b9f68b5b1852e9911b1}{set\+Nome}} (const \mbox{\hyperlink{class_nome}{Nome}} \&nome)
+\begin{DoxyCompactList}\small\item\em Define um novo nome para o hotel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hotel_a00c33280db89adb722fdaea5ea8c0224}{set\+Endereco}} (const \mbox{\hyperlink{class_endereco}{Endereco}} \&endereco)
+\begin{DoxyCompactList}\small\item\em Define um novo endereço para o hotel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hotel_a283b0ed77e46b0fe5310c13a23b74f5b}{set\+Telefone}} (const \mbox{\hyperlink{class_telefone}{Telefone}} \&telefone)
+\begin{DoxyCompactList}\small\item\em Define um novo telefone para o hotel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entidade que representa um \doxylink{class_hotel}{Hotel} no sistema. 
+
+A classe \doxylink{class_hotel}{Hotel} agrupa os domínios que caracterizam um estabelecimento. Ela contém informações de identificação (Código), localização (Endereço) e contato (\doxylink{class_telefone}{Telefone}). O Código atua como chave primária (PK) e não pode ser alterado após a criação\mbox{[}cite\+: 18, 21\mbox{]}. 
+
+\label{doc-constructors}
+\Hypertarget{class_hotel_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_hotel_ae55db07cb9beb9b8203a6edd1dc41584}\index{Hotel@{Hotel}!Hotel@{Hotel}}
+\index{Hotel@{Hotel}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{Hotel()}{Hotel()}}
+{\footnotesize\ttfamily \label{class_hotel_ae55db07cb9beb9b8203a6edd1dc41584} 
+Hotel\+::\+Hotel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_nome}{Nome}} \&}]{nome}{, }\item[{const \mbox{\hyperlink{class_endereco}{Endereco}} \&}]{endereco}{, }\item[{const \mbox{\hyperlink{class_telefone}{Telefone}} \&}]{telefone}{, }\item[{const \mbox{\hyperlink{class_codigo}{Codigo}} \&}]{codigo}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa um \doxylink{class_hotel}{Hotel} com todos os seus dados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & Objeto do domínio \doxylink{class_nome}{Nome}. \\
+\hline
+{\em endereco} & Objeto do domínio Endereço. \\
+\hline
+{\em telefone} & Objeto do domínio \doxylink{class_telefone}{Telefone}. \\
+\hline
+{\em codigo} & Objeto do domínio Código (identificador único). \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_hotel_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_hotel_a076508ceddd66b732d6519e46ce6c22c}\index{Hotel@{Hotel}!getCodigo@{getCodigo}}
+\index{getCodigo@{getCodigo}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{getCodigo()}{getCodigo()}}
+{\footnotesize\ttfamily \label{class_hotel_a076508ceddd66b732d6519e46ce6c22c} 
+\mbox{\hyperlink{class_codigo}{Codigo}} Hotel\+::get\+Codigo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o código identificador do hotel. 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio Código. 
+\end{DoxyReturn}
+\Hypertarget{class_hotel_a09c6c2d88c68d7c006e32a21396d5df4}\index{Hotel@{Hotel}!getEndereco@{getEndereco}}
+\index{getEndereco@{getEndereco}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{getEndereco()}{getEndereco()}}
+{\footnotesize\ttfamily \label{class_hotel_a09c6c2d88c68d7c006e32a21396d5df4} 
+\mbox{\hyperlink{class_endereco}{Endereco}} Hotel\+::get\+Endereco (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o endereço do hotel. 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio Endereço. 
+\end{DoxyReturn}
+\Hypertarget{class_hotel_ad7eb16a9ab0d22a5fb911495a41f385a}\index{Hotel@{Hotel}!getNome@{getNome}}
+\index{getNome@{getNome}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily \label{class_hotel_ad7eb16a9ab0d22a5fb911495a41f385a} 
+\mbox{\hyperlink{class_nome}{Nome}} Hotel\+::get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o nome do hotel. 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio \doxylink{class_nome}{Nome}. 
+\end{DoxyReturn}
+\Hypertarget{class_hotel_aaf1d3bfef2f6aa48be7e5d2541bc5e76}\index{Hotel@{Hotel}!getTelefone@{getTelefone}}
+\index{getTelefone@{getTelefone}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{getTelefone()}{getTelefone()}}
+{\footnotesize\ttfamily \label{class_hotel_aaf1d3bfef2f6aa48be7e5d2541bc5e76} 
+\mbox{\hyperlink{class_telefone}{Telefone}} Hotel\+::get\+Telefone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o telefone de contato do hotel. 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio \doxylink{class_telefone}{Telefone}. 
+\end{DoxyReturn}
+\Hypertarget{class_hotel_a00c33280db89adb722fdaea5ea8c0224}\index{Hotel@{Hotel}!setEndereco@{setEndereco}}
+\index{setEndereco@{setEndereco}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{setEndereco()}{setEndereco()}}
+{\footnotesize\ttfamily \label{class_hotel_a00c33280db89adb722fdaea5ea8c0224} 
+void Hotel\+::set\+Endereco (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_endereco}{Endereco}} \&}]{endereco}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo endereço para o hotel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em endereco} & Novo objeto do domínio Endereço. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_hotel_adbd1aeab16980b9f68b5b1852e9911b1}\index{Hotel@{Hotel}!setNome@{setNome}}
+\index{setNome@{setNome}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily \label{class_hotel_adbd1aeab16980b9f68b5b1852e9911b1} 
+void Hotel\+::set\+Nome (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_nome}{Nome}} \&}]{nome}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo nome para o hotel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & Novo objeto do domínio \doxylink{class_nome}{Nome}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_hotel_a283b0ed77e46b0fe5310c13a23b74f5b}\index{Hotel@{Hotel}!setTelefone@{setTelefone}}
+\index{setTelefone@{setTelefone}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{setTelefone()}{setTelefone()}}
+{\footnotesize\ttfamily \label{class_hotel_a283b0ed77e46b0fe5310c13a23b74f5b} 
+void Hotel\+::set\+Telefone (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_telefone}{Telefone}} \&}]{telefone}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo telefone para o hotel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em telefone} & Novo objeto do domínio \doxylink{class_telefone}{Telefone}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header entidades/hotel.\+hpp\item 
+sources entidades/hotel.\+cpp\end{DoxyCompactItemize}

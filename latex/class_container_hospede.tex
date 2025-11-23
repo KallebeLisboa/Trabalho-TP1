@@ -1,0 +1,171 @@
+\doxysection{Container\+Hospede Class Reference}
+\hypertarget{class_container_hospede}{}\label{class_container_hospede}\index{ContainerHospede@{ContainerHospede}}
+
+
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_hospede}{Hospede}.  
+
+
+
+
+{\ttfamily \#include $<$container\+\_\+hospede.\+hpp$>$}
+
+Inheritance diagram for Container\+Hospede\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_container_hospede}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_container_hospede_a64c69904603aa24321ec06eaf145d350}{\texorpdfstring{$\sim$}{\string~}\+Container\+Hospede}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_hospede_a0a7fa7018b7cb3669cb8768f936c2c87}{criar\+Hospede}} (string nome, string email, string endereco, string cartao)
+\begin{DoxyCompactList}\small\item\em Cadastra um novo hóspede no container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hospede}{Hospede}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_container_hospede_ad3ca7d815a2fa3f55b1efb7fdb7f75bb}{pesquisar\+Hospede}} (string email)
+\begin{DoxyCompactList}\small\item\em Pesquisa um hóspede no container pelo email. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{class_hospede}{Hospede}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_container_hospede_aaad9ba52159109e4135c0ab51dbfa5ba}{listar\+Hospedes}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a lista completa de hóspedes cadastrados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_hospede_a46fa70475647390990d4724e09dfeed9}{atualizar\+Hospede}} (string email, string novo\+Nome, string novo\+Endereco, string novo\+Cartao)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um hóspede existente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_hospede_ad4e6b49320f2fa6045028ef1f0dc18a2}{excluir\+Hospede}} (string email)
+\begin{DoxyCompactList}\small\item\em Remove um hóspede do container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável pelo armazenamento e gestão em memória de objetos \doxylink{class_hospede}{Hospede}. 
+
+Esta classe implementa o padrão Container, atuando como um banco de dados em memória (usando std\+::map). Ela é responsável por criar, recuperar, atualizar, e remover instâncias da entidade \doxylink{class_hospede}{Hospede}. 
+
+\label{doc-constructors}
+\Hypertarget{class_container_hospede_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_container_hospede_a64c69904603aa24321ec06eaf145d350}\index{ContainerHospede@{ContainerHospede}!````~ContainerHospede@{\texorpdfstring{$\sim$}{\string~}ContainerHospede}}
+\index{````~ContainerHospede@{\texorpdfstring{$\sim$}{\string~}ContainerHospede}!ContainerHospede@{ContainerHospede}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ContainerHospede()}{\string~ContainerHospede()}}
+{\footnotesize\ttfamily \label{class_container_hospede_a64c69904603aa24321ec06eaf145d350} 
+Container\+Hospede\+::\texorpdfstring{$\sim$}{\string~}\+Container\+Hospede (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe. 
+
+Responsável por liberar a memória alocada para os objetos \doxylink{class_hospede}{Hospede} armazenados. 
+
+\label{doc-func-members}
+\Hypertarget{class_container_hospede_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_container_hospede_a46fa70475647390990d4724e09dfeed9}\index{ContainerHospede@{ContainerHospede}!atualizarHospede@{atualizarHospede}}
+\index{atualizarHospede@{atualizarHospede}!ContainerHospede@{ContainerHospede}}
+\doxysubsubsection{\texorpdfstring{atualizarHospede()}{atualizarHospede()}}
+{\footnotesize\ttfamily \label{class_container_hospede_a46fa70475647390990d4724e09dfeed9} 
+void Container\+Hospede\+::atualizar\+Hospede (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{novo\+Nome}{, }\item[{string}]{novo\+Endereco}{, }\item[{string}]{novo\+Cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Atualiza os dados de um hóspede existente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & O email do hóspede a ser atualizado (usado para busca). \\
+\hline
+{\em novo\+Nome} & O novo nome a ser definido. \\
+\hline
+{\em novo\+Endereco} & O novo endereço a ser definido. \\
+\hline
+{\em novo\+Cartao} & O novo cartão a ser definido. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hospede}{IServico\+Hospede}}.
+
+\Hypertarget{class_container_hospede_a0a7fa7018b7cb3669cb8768f936c2c87}\index{ContainerHospede@{ContainerHospede}!criarHospede@{criarHospede}}
+\index{criarHospede@{criarHospede}!ContainerHospede@{ContainerHospede}}
+\doxysubsubsection{\texorpdfstring{criarHospede()}{criarHospede()}}
+{\footnotesize\ttfamily \label{class_container_hospede_a0a7fa7018b7cb3669cb8768f936c2c87} 
+void Container\+Hospede\+::criar\+Hospede (\begin{DoxyParamCaption}\item[{string}]{nome}{, }\item[{string}]{email}{, }\item[{string}]{endereco}{, }\item[{string}]{cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cadastra um novo hóspede no container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & String representando o nome do hóspede. \\
+\hline
+{\em email} & String representando o email (chave primária). \\
+\hline
+{\em endereco} & String representando o endereço. \\
+\hline
+{\em cartao} & String representando o número do cartão. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hospede}{IServico\+Hospede}}.
+
+\Hypertarget{class_container_hospede_ad4e6b49320f2fa6045028ef1f0dc18a2}\index{ContainerHospede@{ContainerHospede}!excluirHospede@{excluirHospede}}
+\index{excluirHospede@{excluirHospede}!ContainerHospede@{ContainerHospede}}
+\doxysubsubsection{\texorpdfstring{excluirHospede()}{excluirHospede()}}
+{\footnotesize\ttfamily \label{class_container_hospede_ad4e6b49320f2fa6045028ef1f0dc18a2} 
+void Container\+Hospede\+::excluir\+Hospede (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove um hóspede do container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & O email do hóspede a ser removido. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hospede}{IServico\+Hospede}}.
+
+\Hypertarget{class_container_hospede_aaad9ba52159109e4135c0ab51dbfa5ba}\index{ContainerHospede@{ContainerHospede}!listarHospedes@{listarHospedes}}
+\index{listarHospedes@{listarHospedes}!ContainerHospede@{ContainerHospede}}
+\doxysubsubsection{\texorpdfstring{listarHospedes()}{listarHospedes()}}
+{\footnotesize\ttfamily \label{class_container_hospede_aaad9ba52159109e4135c0ab51dbfa5ba} 
+map$<$ string, \mbox{\hyperlink{class_hospede}{Hospede}} \texorpdfstring{$\ast$}{*} $>$ Container\+Hospede\+::listar\+Hospedes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retorna a lista completa de hóspedes cadastrados. 
+
+\begin{DoxyReturn}{Returns}
+Um mapa contendo todos os hóspedes (chave\+: email, valor\+: objeto \doxylink{class_hospede}{Hospede}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hospede}{IServico\+Hospede}}.
+
+\Hypertarget{class_container_hospede_ad3ca7d815a2fa3f55b1efb7fdb7f75bb}\index{ContainerHospede@{ContainerHospede}!pesquisarHospede@{pesquisarHospede}}
+\index{pesquisarHospede@{pesquisarHospede}!ContainerHospede@{ContainerHospede}}
+\doxysubsubsection{\texorpdfstring{pesquisarHospede()}{pesquisarHospede()}}
+{\footnotesize\ttfamily \label{class_container_hospede_ad3ca7d815a2fa3f55b1efb7fdb7f75bb} 
+\mbox{\hyperlink{class_hospede}{Hospede}} \texorpdfstring{$\ast$}{*} Container\+Hospede\+::pesquisar\+Hospede (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pesquisa um hóspede no container pelo email. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & O email do hóspede a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o objeto \doxylink{class_hospede}{Hospede} encontrado, ou nullptr/exceção se não existir. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_servico_hospede}{IServico\+Hospede}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header servicos/container\+\_\+hospede.\+hpp\item 
+sources servicos/container\+\_\+hospede.\+cpp\end{DoxyCompactItemize}

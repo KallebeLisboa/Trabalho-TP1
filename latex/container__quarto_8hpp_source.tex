@@ -1,0 +1,61 @@
+\doxysection{container\+\_\+quarto.\+hpp}
+\hypertarget{container__quarto_8hpp_source}{}\label{container__quarto_8hpp_source}\index{header servicos/container\_quarto.hpp@{header servicos/container\_quarto.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTAINER\_QUARTO\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTAINER\_QUARTO\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}header\ entidades/quarto.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../header\ interface/IServicoQuarto.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Includes\ dos\ domínios\ necessários\ para\ instanciar\ no\ .cpp}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/numero.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/capacidade.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/dinheiro.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/ramal.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/codigo.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_container_quarto}{ContainerQuarto}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_servico_quarto}{IServicoQuarto}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Chave:\ "{}CODIGOHOTEL\_NUMERO"{}}}
+\DoxyCodeLine{00037\ \ \ \ \ map<string,\ Quarto*>\ bancoDeQuartos;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Helper\ para\ gerar\ chave\ composta}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{string}\ gerarChave(\textcolor{keywordtype}{string}\ codigoHotel,\ \textcolor{keywordtype}{string}\ numeroQuarto)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ codigoHotel\ +\ \textcolor{stringliteral}{"{}\_"{}}\ +\ numeroQuarto;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_container_quarto_ab418053430ad301ffe7631910eb867ce}{\string~ContainerQuarto}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_quarto_a15dec4e3a27acdd7267c0c2c72da4c11}{criarQuarto}}(\textcolor{keywordtype}{string}\ codigoHotel,\ \textcolor{keywordtype}{string}\ numero,\ \textcolor{keywordtype}{int}\ capacidade,\ \textcolor{keywordtype}{double}\ valorDiaria,\ \textcolor{keywordtype}{string}\ ramal);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ NOVO\ MÉTODO\ DECLARADO\ -\/-\/-\/}}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_quarto}{Quarto}}*\ \mbox{\hyperlink{class_container_quarto_a2c1bfdb92da616d5f465d3098f960978}{pesquisarQuarto}}(\textcolor{keywordtype}{string}\ codigoHotel,\ \textcolor{keywordtype}{string}\ numero);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ map<string,\ Quarto*>\ listarQuartosDoHotel(\textcolor{keywordtype}{string}\ codigoHotel);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_quarto_a9ca3a4dc2c2cdeba9f1cab93a24fd0df}{atualizarQuarto}}(\textcolor{keywordtype}{string}\ codigoHotel,\ \textcolor{keywordtype}{string}\ numero,\ \textcolor{keywordtype}{int}\ novaCapacidade,\ \textcolor{keywordtype}{double}\ novoValor,\ \textcolor{keywordtype}{string}\ novoRamal);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_quarto_a58840249da6737ff4032dd572a59e5b0}{excluirQuarto}}(\textcolor{keywordtype}{string}\ codigoHotel,\ \textcolor{keywordtype}{string}\ numero);}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

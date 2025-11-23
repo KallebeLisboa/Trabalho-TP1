@@ -1,0 +1,54 @@
+\doxysection{container\+\_\+hospede.\+hpp}
+\hypertarget{container__hospede_8hpp_source}{}\label{container__hospede_8hpp_source}\index{header servicos/container\_hospede.hpp@{header servicos/container\_hospede.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTAINER\_HOSPEDE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTAINER\_HOSPEDE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}header\ entidades/hospede.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../header\ interface/IServicoHospede.hpp"{}}\ \textcolor{comment}{//\ <-\/-\/-\/\ ADICIONE}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Outros\ includes\ de\ domínios...}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/nome.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/email.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/endereco.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/cartao.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ ADICIONE\ A\ HERANÇA}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_container_hospede}{ContainerHospede}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_servico_hospede}{IServicoHospede}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ map<string,\ Hospede*>\ bancoDeHospedes;\ \textcolor{comment}{//\ Chave:\ Email}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_container_hospede_a64c69904603aa24321ec06eaf145d350}{\string~ContainerHospede}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ Métodos\ (já devem\ estar\ iguais\ aos\ da\ interface)}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_hospede_a0a7fa7018b7cb3669cb8768f936c2c87}{criarHospede}}(\textcolor{keywordtype}{string}\ nome,\ \textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ endereco,\ \textcolor{keywordtype}{string}\ cartao);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_hospede}{Hospede}}*\ \mbox{\hyperlink{class_container_hospede_ad3ca7d815a2fa3f55b1efb7fdb7f75bb}{pesquisarHospede}}(\textcolor{keywordtype}{string}\ email);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ map<string,\ Hospede*>\ \mbox{\hyperlink{class_container_hospede_aaad9ba52159109e4135c0ab51dbfa5ba}{listarHospedes}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_hospede_a46fa70475647390990d4724e09dfeed9}{atualizarHospede}}(\textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ novoNome,\ \textcolor{keywordtype}{string}\ novoEndereco,\ \textcolor{keywordtype}{string}\ novoCartao);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_hospede_ad4e6b49320f2fa6045028ef1f0dc18a2}{excluirHospede}}(\textcolor{keywordtype}{string}\ email);}
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

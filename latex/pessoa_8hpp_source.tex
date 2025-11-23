@@ -1,0 +1,35 @@
+\doxysection{pessoa.\+hpp}
+\hypertarget{pessoa_8hpp_source}{}\label{pessoa_8hpp_source}\index{header entidades/pessoa.hpp@{header entidades/pessoa.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PESSOA\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PESSOA\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/nome.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}header\ dominios/email.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//Classe\ Entidade\ que\ representa\ uma\ Pessoa\ no\ sistema.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//É\ a\ classe\ base\ para\ as\ Entidades\ Gerente\ e\ Hóspede\ (Herança).\ A\ chave\ primária\ (PK)\ é\ o\ atributo\ 'email'.}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pessoa_a8fd24888a05bec10fec9f49d026782bb}{Pessoa}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Atributos\ são\ instâncias\ das\ classes\ de\ Domínio}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ nome;\ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_email}{Email}}\ email;\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_pessoa_a8fd24888a05bec10fec9f49d026782bb}{Pessoa}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_nome}{Nome}}\&\ nome,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_email}{Email}}\&\ email);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ \mbox{\hyperlink{class_pessoa_ad0c0448768ca2f5b5dfca86f156cdfe9}{getNome}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_email}{Email}}\ \mbox{\hyperlink{class_pessoa_a137a2a665a10ffa4880d1f7d726b07c7}{getEmail}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pessoa_afddbfe1fabc8e39b53f9b59b24702591}{setNome}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_nome}{Nome}}\&\ nome);}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PESSOA\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,271 @@
+\doxysection{Reserva Class Reference}
+\hypertarget{class_reserva}{}\label{class_reserva}\index{Reserva@{Reserva}}
+
+
+Entidade que representa uma \doxylink{class_reserva}{Reserva} no sistema.  
+
+
+
+
+{\ttfamily \#include $<$reserva.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reserva_af5df2e5269dec303ec01dda9316d5941}{Reserva}} (const \mbox{\hyperlink{class_data}{Data}} \&chegada, const \mbox{\hyperlink{class_data}{Data}} \&partida, const \mbox{\hyperlink{class_dinheiro}{Dinheiro}} \&valor, const \mbox{\hyperlink{class_codigo}{Codigo}} \&codigo, const \mbox{\hyperlink{class_email}{Email}} \&email\+Hospede, const \mbox{\hyperlink{class_numero}{Numero}} \&numero\+Quarto, const \mbox{\hyperlink{class_codigo}{Codigo}} \&codigo\+Hotel)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa uma \doxylink{class_reserva}{Reserva} com todos os seus dados e relacionamentos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_data}{Data}} \mbox{\hyperlink{class_reserva_ab96dfd41e5b4ca147e96823c90ed6bec}{get\+Chegada}} () const
+\begin{DoxyCompactList}\small\item\em Recupera a data de chegada (check-\/in). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_data}{Data}} \mbox{\hyperlink{class_reserva_a05963c2846cd197fae4d4fb5f4f619d8}{get\+Partida}} () const
+\begin{DoxyCompactList}\small\item\em Recupera a data de partida (check-\/out). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dinheiro}{Dinheiro}} \mbox{\hyperlink{class_reserva_a0b363cbcb3d270f4a46b7c01335bd75f}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o valor total da reserva. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_codigo}{Codigo}} \mbox{\hyperlink{class_reserva_a52478720a38b71f6d04cc154c7dbd5e4}{get\+Codigo}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o código identificador da reserva. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_email}{Email}} \mbox{\hyperlink{class_reserva_a0e51e70b8e54cdf58e1592c89f0a8f6f}{get\+Email\+Hospede}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o email do hóspede titular da reserva. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_numero}{Numero}} \mbox{\hyperlink{class_reserva_af46274d27ca74315854df73f5ce5c60c}{get\+Numero\+Quarto}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o número do quarto reservado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_codigo}{Codigo}} \mbox{\hyperlink{class_reserva_a1df2c3bbaea9651b86e5d789f9212a18}{get\+Codigo\+Hotel}} () const
+\begin{DoxyCompactList}\small\item\em Recupera o código do hotel da reserva. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reserva_a41d1ef1f231c05eef6a0f0a89630fac1}{set\+Chegada}} (const \mbox{\hyperlink{class_data}{Data}} \&chegada)
+\begin{DoxyCompactList}\small\item\em Define uma nova data de chegada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reserva_a232027478d6dc5701c27a93e585e27cd}{set\+Partida}} (const \mbox{\hyperlink{class_data}{Data}} \&partida)
+\begin{DoxyCompactList}\small\item\em Define uma nova data de partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reserva_a2225385e126526bfcf89f58827d1ff79}{set\+Valor}} (const \mbox{\hyperlink{class_dinheiro}{Dinheiro}} \&valor)
+\begin{DoxyCompactList}\small\item\em Define um novo valor total para a reserva. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reserva_ae61167253128a29a237e60ebeb9941e9}{set\+Email\+Hospede}} (const \mbox{\hyperlink{class_email}{Email}} \&email\+Hospede)
+\begin{DoxyCompactList}\small\item\em Define o hóspede titular da reserva. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reserva_a9a34b4f9d47730b53ae60aeba7534f9b}{set\+Numero\+Quarto}} (const \mbox{\hyperlink{class_numero}{Numero}} \&numero\+Quarto)
+\begin{DoxyCompactList}\small\item\em Define o número do quarto reservado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_reserva_ac98a39626663a6e87d2335ad79e52ad9}{set\+Codigo\+Hotel}} (const \mbox{\hyperlink{class_codigo}{Codigo}} \&codigo\+Hotel)
+\begin{DoxyCompactList}\small\item\em Define o hotel da reserva. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entidade que representa uma \doxylink{class_reserva}{Reserva} no sistema. 
+
+A classe \doxylink{class_reserva}{Reserva} é responsável por vincular um Hóspede a um \doxylink{class_quarto}{Quarto} em um determinado período. Ela armazena as datas de chegada e partida, o valor total e o código único da reserva (PK). Além disso, mantém as Chaves Estrangeiras (FK) para relacionar a reserva ao Hóspede (\doxylink{class_email}{Email}), ao \doxylink{class_quarto}{Quarto} (Número) e ao \doxylink{class_hotel}{Hotel} (Código do \doxylink{class_hotel}{Hotel}) correspondentes. 
+
+\label{doc-constructors}
+\Hypertarget{class_reserva_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_reserva_af5df2e5269dec303ec01dda9316d5941}\index{Reserva@{Reserva}!Reserva@{Reserva}}
+\index{Reserva@{Reserva}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{Reserva()}{Reserva()}}
+{\footnotesize\ttfamily \label{class_reserva_af5df2e5269dec303ec01dda9316d5941} 
+Reserva\+::\+Reserva (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{chegada}{, }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{partida}{, }\item[{const \mbox{\hyperlink{class_dinheiro}{Dinheiro}} \&}]{valor}{, }\item[{const \mbox{\hyperlink{class_codigo}{Codigo}} \&}]{codigo}{, }\item[{const \mbox{\hyperlink{class_email}{Email}} \&}]{email\+Hospede}{, }\item[{const \mbox{\hyperlink{class_numero}{Numero}} \&}]{numero\+Quarto}{, }\item[{const \mbox{\hyperlink{class_codigo}{Codigo}} \&}]{codigo\+Hotel}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa uma \doxylink{class_reserva}{Reserva} com todos os seus dados e relacionamentos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chegada} & \doxylink{class_data}{Data} de início da estadia. \\
+\hline
+{\em partida} & \doxylink{class_data}{Data} de término da estadia. \\
+\hline
+{\em valor} & Valor monetário total da reserva. \\
+\hline
+{\em codigo} & Código único identificador da reserva. \\
+\hline
+{\em email\+Hospede} & \doxylink{class_email}{Email} do hóspede responsável. \\
+\hline
+{\em numero\+Quarto} & Número do quarto reservado. \\
+\hline
+{\em codigo\+Hotel} & Código do hotel onde está o quarto. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_reserva_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_reserva_ab96dfd41e5b4ca147e96823c90ed6bec}\index{Reserva@{Reserva}!getChegada@{getChegada}}
+\index{getChegada@{getChegada}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{getChegada()}{getChegada()}}
+{\footnotesize\ttfamily \label{class_reserva_ab96dfd41e5b4ca147e96823c90ed6bec} 
+\mbox{\hyperlink{class_data}{Data}} Reserva\+::get\+Chegada (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera a data de chegada (check-\/in). 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio \doxylink{class_data}{Data}. 
+\end{DoxyReturn}
+\Hypertarget{class_reserva_a52478720a38b71f6d04cc154c7dbd5e4}\index{Reserva@{Reserva}!getCodigo@{getCodigo}}
+\index{getCodigo@{getCodigo}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{getCodigo()}{getCodigo()}}
+{\footnotesize\ttfamily \label{class_reserva_a52478720a38b71f6d04cc154c7dbd5e4} 
+\mbox{\hyperlink{class_codigo}{Codigo}} Reserva\+::get\+Codigo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o código identificador da reserva. 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio Código. 
+\end{DoxyReturn}
+\Hypertarget{class_reserva_a1df2c3bbaea9651b86e5d789f9212a18}\index{Reserva@{Reserva}!getCodigoHotel@{getCodigoHotel}}
+\index{getCodigoHotel@{getCodigoHotel}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{getCodigoHotel()}{getCodigoHotel()}}
+{\footnotesize\ttfamily \label{class_reserva_a1df2c3bbaea9651b86e5d789f9212a18} 
+\mbox{\hyperlink{class_codigo}{Codigo}} Reserva\+::get\+Codigo\+Hotel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o código do hotel da reserva. 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio Código. 
+\end{DoxyReturn}
+\Hypertarget{class_reserva_a0e51e70b8e54cdf58e1592c89f0a8f6f}\index{Reserva@{Reserva}!getEmailHospede@{getEmailHospede}}
+\index{getEmailHospede@{getEmailHospede}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{getEmailHospede()}{getEmailHospede()}}
+{\footnotesize\ttfamily \label{class_reserva_a0e51e70b8e54cdf58e1592c89f0a8f6f} 
+\mbox{\hyperlink{class_email}{Email}} Reserva\+::get\+Email\+Hospede (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o email do hóspede titular da reserva. 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio \doxylink{class_email}{Email}. 
+\end{DoxyReturn}
+\Hypertarget{class_reserva_af46274d27ca74315854df73f5ce5c60c}\index{Reserva@{Reserva}!getNumeroQuarto@{getNumeroQuarto}}
+\index{getNumeroQuarto@{getNumeroQuarto}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{getNumeroQuarto()}{getNumeroQuarto()}}
+{\footnotesize\ttfamily \label{class_reserva_af46274d27ca74315854df73f5ce5c60c} 
+\mbox{\hyperlink{class_numero}{Numero}} Reserva\+::get\+Numero\+Quarto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o número do quarto reservado. 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio Número. 
+\end{DoxyReturn}
+\Hypertarget{class_reserva_a05963c2846cd197fae4d4fb5f4f619d8}\index{Reserva@{Reserva}!getPartida@{getPartida}}
+\index{getPartida@{getPartida}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{getPartida()}{getPartida()}}
+{\footnotesize\ttfamily \label{class_reserva_a05963c2846cd197fae4d4fb5f4f619d8} 
+\mbox{\hyperlink{class_data}{Data}} Reserva\+::get\+Partida (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera a data de partida (check-\/out). 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio \doxylink{class_data}{Data}. 
+\end{DoxyReturn}
+\Hypertarget{class_reserva_a0b363cbcb3d270f4a46b7c01335bd75f}\index{Reserva@{Reserva}!getValor@{getValor}}
+\index{getValor@{getValor}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily \label{class_reserva_a0b363cbcb3d270f4a46b7c01335bd75f} 
+\mbox{\hyperlink{class_dinheiro}{Dinheiro}} Reserva\+::get\+Valor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Recupera o valor total da reserva. 
+
+\begin{DoxyReturn}{Returns}
+Objeto do domínio \doxylink{class_dinheiro}{Dinheiro}. 
+\end{DoxyReturn}
+\Hypertarget{class_reserva_a41d1ef1f231c05eef6a0f0a89630fac1}\index{Reserva@{Reserva}!setChegada@{setChegada}}
+\index{setChegada@{setChegada}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{setChegada()}{setChegada()}}
+{\footnotesize\ttfamily \label{class_reserva_a41d1ef1f231c05eef6a0f0a89630fac1} 
+void Reserva\+::set\+Chegada (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{chegada}{}\end{DoxyParamCaption})}
+
+
+
+Define uma nova data de chegada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chegada} & Novo objeto do domínio \doxylink{class_data}{Data}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_reserva_ac98a39626663a6e87d2335ad79e52ad9}\index{Reserva@{Reserva}!setCodigoHotel@{setCodigoHotel}}
+\index{setCodigoHotel@{setCodigoHotel}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{setCodigoHotel()}{setCodigoHotel()}}
+{\footnotesize\ttfamily \label{class_reserva_ac98a39626663a6e87d2335ad79e52ad9} 
+void Reserva\+::set\+Codigo\+Hotel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_codigo}{Codigo}} \&}]{codigo\+Hotel}{}\end{DoxyParamCaption})}
+
+
+
+Define o hotel da reserva. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo\+Hotel} & Novo objeto do domínio Código. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_reserva_ae61167253128a29a237e60ebeb9941e9}\index{Reserva@{Reserva}!setEmailHospede@{setEmailHospede}}
+\index{setEmailHospede@{setEmailHospede}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{setEmailHospede()}{setEmailHospede()}}
+{\footnotesize\ttfamily \label{class_reserva_ae61167253128a29a237e60ebeb9941e9} 
+void Reserva\+::set\+Email\+Hospede (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_email}{Email}} \&}]{email\+Hospede}{}\end{DoxyParamCaption})}
+
+
+
+Define o hóspede titular da reserva. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email\+Hospede} & Novo objeto do domínio \doxylink{class_email}{Email}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_reserva_a9a34b4f9d47730b53ae60aeba7534f9b}\index{Reserva@{Reserva}!setNumeroQuarto@{setNumeroQuarto}}
+\index{setNumeroQuarto@{setNumeroQuarto}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{setNumeroQuarto()}{setNumeroQuarto()}}
+{\footnotesize\ttfamily \label{class_reserva_a9a34b4f9d47730b53ae60aeba7534f9b} 
+void Reserva\+::set\+Numero\+Quarto (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_numero}{Numero}} \&}]{numero\+Quarto}{}\end{DoxyParamCaption})}
+
+
+
+Define o número do quarto reservado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero\+Quarto} & Novo objeto do domínio Número. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_reserva_a232027478d6dc5701c27a93e585e27cd}\index{Reserva@{Reserva}!setPartida@{setPartida}}
+\index{setPartida@{setPartida}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{setPartida()}{setPartida()}}
+{\footnotesize\ttfamily \label{class_reserva_a232027478d6dc5701c27a93e585e27cd} 
+void Reserva\+::set\+Partida (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{partida}{}\end{DoxyParamCaption})}
+
+
+
+Define uma nova data de partida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em partida} & Novo objeto do domínio \doxylink{class_data}{Data}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_reserva_a2225385e126526bfcf89f58827d1ff79}\index{Reserva@{Reserva}!setValor@{setValor}}
+\index{setValor@{setValor}!Reserva@{Reserva}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily \label{class_reserva_a2225385e126526bfcf89f58827d1ff79} 
+void Reserva\+::set\+Valor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dinheiro}{Dinheiro}} \&}]{valor}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo valor total para a reserva. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & Novo objeto do domínio \doxylink{class_dinheiro}{Dinheiro}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header entidades/reserva.\+hpp\item 
+sources entidades/reserva.\+cpp\end{DoxyCompactItemize}

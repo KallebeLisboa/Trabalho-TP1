@@ -1,0 +1,104 @@
+\doxysection{Nome Class Reference}
+\hypertarget{class_nome}{}\label{class_nome}\index{Nome@{Nome}}
+
+
+Representa o domínio de \doxylink{class_nome}{Nome} no sistema.  
+
+
+
+
+{\ttfamily \#include $<$nome.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_nome_aac2695c7f8ca0e5c023b37b780bc85a5}{Nome}} (std\+::string nome)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o nome com um valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nome_ace4eb721626c520a31a99cf771373c7c}{set\+Nome}} (std\+::string nome)
+\begin{DoxyCompactList}\small\item\em Define um novo nome. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_nome_acf79d4d5c223cf2bb3ddb2dae57ced9f}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Recupera o nome armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de \doxylink{class_nome}{Nome} no sistema. 
+
+Esta classe armazena e valida uma string de nome. Regras de validação\+:
+\begin{DoxyEnumerate}
+\item Tamanho\+: 5 a 20 caracteres.
+\item Caracteres permitidos\+: Letras (A-\/Z, a-\/z) e espaço em branco.
+\item Formatação\+:
+\begin{DoxyItemize}
+\item O primeiro caractere de cada termo deve ser letra maiúscula (A-\/Z).
+\item Espaços em branco devem ser seguidos por uma letra (não podem ser seguidos por outro espaço ou estar no fim).
+\item O último caractere não pode ser espaço. 
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_nome_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_nome_aac2695c7f8ca0e5c023b37b780bc85a5}\index{Nome@{Nome}!Nome@{Nome}}
+\index{Nome@{Nome}!Nome@{Nome}}
+\doxysubsubsection{\texorpdfstring{Nome()}{Nome()}}
+{\footnotesize\ttfamily \label{class_nome_aac2695c7f8ca0e5c023b37b780bc85a5} 
+Nome\+::\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{nome}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa o nome com um valor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & String contendo o nome. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o nome fornecido for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_nome_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_nome_acf79d4d5c223cf2bb3ddb2dae57ced9f}\index{Nome@{Nome}!getNome@{getNome}}
+\index{getNome@{getNome}!Nome@{Nome}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily \label{class_nome_acf79d4d5c223cf2bb3ddb2dae57ced9f} 
+std\+::string Nome\+::get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera o nome armazenado. 
+
+\begin{DoxyReturn}{Returns}
+A string contendo o nome. 
+\end{DoxyReturn}
+\Hypertarget{class_nome_ace4eb721626c520a31a99cf771373c7c}\index{Nome@{Nome}!setNome@{setNome}}
+\index{setNome@{setNome}!Nome@{Nome}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily \label{class_nome_ace4eb721626c520a31a99cf771373c7c} 
+void Nome\+::set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{nome}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo nome. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & A nova string de nome. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato do nome for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/nome.\+hpp\item 
+sources dominios/nome.\+cpp\end{DoxyCompactItemize}

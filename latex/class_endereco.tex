@@ -1,0 +1,101 @@
+\doxysection{Endereco Class Reference}
+\hypertarget{class_endereco}{}\label{class_endereco}\index{Endereco@{Endereco}}
+
+
+Representa o domínio de Endereço no sistema.  
+
+
+
+
+{\ttfamily \#include $<$endereco.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_endereco_af68c36b09cb88bc4af2e0c8c7b4e2fe7}{Endereco}} (std\+::string endereco)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o endereço com um valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a2e15a5e7e90acca8967a24ecc62b5a3d}{set\+Endereco}} (std\+::string endereco)
+\begin{DoxyCompactList}\small\item\em Define um novo endereço. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a91ee1b5d83bed079808f0239145ceba5}{get\+Endereco}} ()
+\begin{DoxyCompactList}\small\item\em Recupera o endereço armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o domínio de Endereço no sistema. 
+
+Esta classe armazena e valida uma string de endereço. Regras de validação\+:
+\begin{DoxyEnumerate}
+\item Tamanho\+: 5 a 30 caracteres.
+\item Caracteres permitidos\+: Letras (A-\/Z, a-\/z), dígitos (0-\/9), vírgula, ponto e espaço.
+\item Regras de pontuação\+: Vírgula e ponto não podem ser seguidos por outra pontuação.
+\item Regras de espaço\+: Espaço deve ser seguido por letra ou dígito.
+\item Posição\+: Não pode começar ou terminar com ponto, vírgula ou espaço. 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_endereco_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_endereco_af68c36b09cb88bc4af2e0c8c7b4e2fe7}\index{Endereco@{Endereco}!Endereco@{Endereco}}
+\index{Endereco@{Endereco}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{Endereco()}{Endereco()}}
+{\footnotesize\ttfamily \label{class_endereco_af68c36b09cb88bc4af2e0c8c7b4e2fe7} 
+Endereco\+::\+Endereco (\begin{DoxyParamCaption}\item[{std\+::string}]{endereco}{}\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa o endereço com um valor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em endereco} & String contendo o endereço. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o endereço fornecido for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_endereco_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_endereco_a91ee1b5d83bed079808f0239145ceba5}\index{Endereco@{Endereco}!getEndereco@{getEndereco}}
+\index{getEndereco@{getEndereco}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{getEndereco()}{getEndereco()}}
+{\footnotesize\ttfamily \label{class_endereco_a91ee1b5d83bed079808f0239145ceba5} 
+std\+::string Endereco\+::get\+Endereco (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recupera o endereço armazenado. 
+
+\begin{DoxyReturn}{Returns}
+A string contendo o endereço. 
+\end{DoxyReturn}
+\Hypertarget{class_endereco_a2e15a5e7e90acca8967a24ecc62b5a3d}\index{Endereco@{Endereco}!setEndereco@{setEndereco}}
+\index{setEndereco@{setEndereco}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{setEndereco()}{setEndereco()}}
+{\footnotesize\ttfamily \label{class_endereco_a2e15a5e7e90acca8967a24ecc62b5a3d} 
+void Endereco\+::set\+Endereco (\begin{DoxyParamCaption}\item[{std\+::string}]{endereco}{}\end{DoxyParamCaption})}
+
+
+
+Define um novo endereço. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em endereco} & A nova string de endereço. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o formato do endereço for inválido. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header dominios/endereco.\+hpp\item 
+sources dominios/endereco.\+cpp\end{DoxyCompactItemize}
