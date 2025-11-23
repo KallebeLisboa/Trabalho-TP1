@@ -3,13 +3,13 @@
 
 #include <iostream>
 #include <string>
-#include "IServicoReserva.hpp" // <--- ADICIONE O INCLUDE
+#include "IServicoReserva.hpp"
 
 using namespace std;
 
 class ControladoraReserva {
 private:
-    IServicoReserva* servicoReserva; // <--- ADICIONE O PONTEIRO
+    IServicoReserva* servicoReserva;
 
     void exibirOpcoes();
     void criarReserva();

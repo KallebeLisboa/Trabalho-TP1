@@ -39,7 +39,6 @@ map<string, Hotel*> ContainerHotel::listarHoteis() {
     return bancoDeHoteis;
 }
 
-// AQUI ESTÁ A CORREÇÃO DA LÓGICA DE ATUALIZAÇÃO
 void ContainerHotel::atualizarHotel(string codigo, string novoNome, string novoEndereco, string novoTelefone) {
     if (bancoDeHoteis.count(codigo) == 0) {
         throw runtime_error("Erro: Hotel nao encontrado.");

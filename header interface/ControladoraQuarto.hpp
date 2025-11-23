@@ -3,13 +3,13 @@
 
 #include <iostream>
 #include <string>
-#include "IServicoQuarto.hpp" // <--- ADICIONE O INCLUDE
+#include "IServicoQuarto.hpp"
 
 using namespace std;
 
 class ControladoraQuarto {
 private:
-    IServicoQuarto* servicoQuarto; // <--- ADICIONE O PONTEIRO
+    IServicoQuarto* servicoQuarto;
 
     void exibirOpcoes();
     void criarQuarto();

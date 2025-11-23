@@ -1,6 +1,6 @@
 #include "header dominios/telefone.hpp"
-#include <stdexcept> // Para std::invalid_argument
-#include <cctype>    // Para isdigit
+#include <stdexcept>
+#include <cctype>
 
 // Implementação do método de validação
 void Telefone::validar(std::string const &telefone){

@@ -1,7 +1,6 @@
 #ifndef QUARTO_HPP
 #define QUARTO_HPP
 
-// Inclusão das classes de Domínio necessárias (assumindo o caminho 'header dominios/')
 #include "../header dominios/numero.hpp"
 #include "../header dominios/capacidade.hpp"
 #include "../header dominios/dinheiro.hpp"

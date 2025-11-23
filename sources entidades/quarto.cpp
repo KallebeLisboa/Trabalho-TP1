@@ -1,5 +1,5 @@
 #include "header entidades/quarto.hpp"
-#include <stdexcept> // Para lidar com exceções das classes de Domínio
+#include <stdexcept>
 
 // Construtor
 // Inicializa todos os atributos na lista de inicialização, usando os construtores

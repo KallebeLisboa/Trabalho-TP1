@@ -28,7 +28,7 @@ void ContainerQuarto::criarQuarto(string codigoHotel, string numero, int capacid
 
 map<string, Quarto*> ContainerQuarto::listarQuartosDoHotel(string codigoHotel) {
     map<string, Quarto*> filtro;
-    // Itera sobre todos os quartos e retorna só os do hotel específico
+    // Retorna só os do hotel específico
     for (auto const& par : bancoDeQuartos) {
         if (par.second->getCodigoHotel().getCodigo() == codigoHotel) {
             filtro[par.first] = par.second;
@@ -46,14 +46,12 @@ void ContainerQuarto::atualizarQuarto(string codigoHotel, string numero, int nov
 
     Quarto* q = bancoDeQuartos[chave];
 
-    // Lógica de atualização parcial:
-
     // 1. Capacidade (Só atualiza se for diferente de -1)
     if (novaCapacidade != -1) {
         q->setCapacidade(Capacidade(novaCapacidade));
     }
 
-    // 2. Valor Diária (Só atualiza se for diferente de -1.0)
+    // 2. Valor Diária (Só atualiza se for diferente de -1)
     if (novoValor != -1.0) {
         q->setDiaria(Dinheiro(novoValor));
     }

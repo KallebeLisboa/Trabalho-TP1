@@ -13,8 +13,6 @@ public:
 
     // Métodos
     virtual void criarQuarto(string codigoHotel, string numero, int capacidade, double valorDiaria, string ramal) = 0;
-
-    // --- NOVO MÉTODO ---
     virtual Quarto* pesquisarQuarto(string codigoHotel, string numero) = 0;
 
     virtual map<string, Quarto*> listarQuartosDoHotel(string codigoHotel) = 0;

@@ -9,10 +9,10 @@
 #include "header dominios/capacidade.hpp"
 #include "header dominios/dinheiro.hpp"
 #include "header dominios/ramal.hpp"
-#include "header dominios/codigo.hpp" // <--- Necessário para Código do Hotel
+#include "header dominios/codigo.hpp"
 
 // ENTIDADE
-#include "header entidades/quarto.hpp" // <--- Necessário para ler os dados
+#include "header entidades/quarto.hpp"
 
 using namespace std;
 
@@ -124,7 +124,7 @@ void ControladoraQuarto::criarQuarto() {
         }
     }
 
-    // **INTEGRAÇÃO REAL**
+    // INTEGRAÇÃO
     cout << "Salvando quarto no sistema..." << endl;
     try {
         if (servicoQuarto == nullptr) {
@@ -132,7 +132,7 @@ void ControladoraQuarto::criarQuarto() {
             return;
         }
 
-        // Conversões necessárias antes de enviar para o serviço
+        // Conversões
         int capInt = stoi(textoCapacidade);
 
         size_t virgula = textoDiaria.find(',');
@@ -168,7 +168,7 @@ void ControladoraQuarto::lerQuarto() {
         }
     }
 
-    // 2. Pede o Número do Quarto (Parte 2 da Chave)
+    // 2. Pede o Número do Quarto
     while (true) {
         cout << "Numero do Quarto (001 a 999): ";
         getline(cin, textoNumero);
@@ -196,8 +196,6 @@ void ControladoraQuarto::lerQuarto() {
         cout << "QUARTO ENCONTRADO:" << endl;
         cout << "Hotel:      " << quarto->getCodigoHotel().getCodigo() << endl;
         cout << "Numero:     " << quarto->getNumero().getNumero() << endl;
-        // Capacidade retorna int, Ramal retorna int (no domínio) ou string dependendo da sua implementação final
-        // Assumindo getters padrão:
         cout << "Capacidade: " << quarto->getCapacidade().getCapacidade() << " pessoas" << endl;
         cout << "Diaria:     R$ " << quarto->getDiaria().getDinheiro() << endl; // getDinheiro retorna double
         cout << "Ramal:      " << quarto->getRamal().getRamal() << endl;
@@ -218,14 +216,14 @@ void ControladoraQuarto::editarQuarto() {
     cout << "\n--- EDITAR QUARTO ---" << endl;
     cout << "Identifique o Quarto (Digite -1 para manter as informacoes):" << endl;
 
-    // 1. Identificar Hotel (Parte da PK)
+    // 1. Identificar Hotel
     while (true) {
         cout << "Codigo do Hotel: ";
         getline(cin, textoCodigoHotel);
         try { Codigo c(textoCodigoHotel); break; } catch (const invalid_argument& e) { cout << "Erro: " << e.what() << endl; }
     }
 
-    // 2. Identificar Quarto (Parte da PK)
+    // 2. Identificar Quarto
     while (true) {
         cout << "Numero do Quarto: ";
         getline(cin, textoNumero);
@@ -253,7 +251,7 @@ void ControladoraQuarto::editarQuarto() {
         try {
             int cap = stoi(textoCapacidade);
             Capacidade c(cap); // Apenas valida
-            envioCapacidade = cap; // Se validou, prepara para envio
+            envioCapacidade = cap;
             cout << " - Capacidade validada." << endl;
         } catch (...) {
             cout << "ERRO: Capacidade invalida. A alteracao sera ignorada." << endl;
@@ -269,7 +267,7 @@ void ControladoraQuarto::editarQuarto() {
             if (virgula != string::npos) textoDiaria[virgula] = '.';
             double valor = stod(textoDiaria);
             Dinheiro d(valor); // Apenas valida
-            envioDiaria = valor; // Se validou, prepara para envio
+            envioDiaria = valor;
             cout << " - Diaria validada." << endl;
         } catch (...) {
             cout << "ERRO: Valor invalido. A alteracao sera ignorada." << endl;
@@ -282,14 +280,14 @@ void ControladoraQuarto::editarQuarto() {
     if (!textoRamal.empty()) {
         try {
             Ramal r(textoRamal); // Apenas valida
-            envioRamal = textoRamal; // Se validou, prepara para envio
+            envioRamal = textoRamal;
             cout << " - Ramal validado." << endl;
         } catch (const invalid_argument& e) {
              cout << "ERRO: " << e.what() << ". A alteracao sera ignorada." << endl;
         }
     }
 
-    // **INTEGRAÇÃO REAL**
+    // Integração
     try {
         servicoQuarto->atualizarQuarto(textoCodigoHotel, textoNumero, envioCapacidade, envioDiaria, envioRamal);
     } catch (const runtime_error& e) {
@@ -305,7 +303,7 @@ void ControladoraQuarto::excluirQuarto() {
     cout << "ATENCAO: Esta acao nao pode ser desfeita." << endl;
     cout << "Informe o Hotel e o Numero do Quarto a ser excluido." << endl;
 
-    // 1. Identificar o Hotel (Parte 1 da Chave)
+    // 1. Identificar o Hotel
     while (true) {
         cout << "Codigo do Hotel (10 carac): ";
         getline(cin, textoCodigoHotel);
@@ -317,7 +315,7 @@ void ControladoraQuarto::excluirQuarto() {
         }
     }
 
-    // 2. Identificar o Quarto (Parte 2 da Chave)
+    // 2. Identificar o Quarto
     while (true) {
         cout << "Numero do Quarto (001 a 999): ";
         getline(cin, textoNumero);
@@ -345,7 +343,7 @@ void ControladoraQuarto::excluirQuarto() {
     }
 }
 
-// Implementação: Listar Todos os Quartos de um Hotel
+// Listar Todos os Quartos de um Hotel
 void ControladoraQuarto::listarQuartos() {
     string textoCodigoHotel;
 
@@ -372,7 +370,7 @@ void ControladoraQuarto::listarQuartos() {
 
     cout << "Buscando quartos..." << endl;
 
-    // 3. Busca no Serviço (Retorna um mapa filtrado apenas com quartos daquele hotel)
+    // 3. Busca no Serviço
     map<string, Quarto*> lista = servicoQuarto->listarQuartosDoHotel(textoCodigoHotel);
 
     // 4. Verifica se está vazio

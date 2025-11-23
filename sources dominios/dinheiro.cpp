@@ -1,5 +1,5 @@
 #include "header dominios/dinheiro.hpp"
-#include <stdexcept> // Para std::invalid_argument
+#include <stdexcept>
 
 // Implementao do método de validao
 void Dinheiro::validar(int const &dinheiro){

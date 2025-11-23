@@ -1,4 +1,3 @@
-// container_gerente.cpp
 #include "header servicos\container_gerente.hpp"
 #include <stdexcept>
 #include <iostream>
@@ -28,7 +27,7 @@ void ContainerGerente::criarGerente(string nome, string email, string ramal, str
 bool ContainerGerente::autenticar(string email, string senha) {
     // 1. Verifica se o email existe
     if (bancoDeGerentes.count(email) == 0) {
-        return false; 
+        return false;
     }
 
     // 2. Recupera o gerente
@@ -38,7 +37,7 @@ bool ContainerGerente::autenticar(string email, string senha) {
     if (g->getSenha().getSenha() == senha) {
         return true;
     }
-    
+
     return false;
 }
 
@@ -48,13 +47,24 @@ Gerente* ContainerGerente::pesquisarGerente(string email) {
 }
 
 void ContainerGerente::atualizarGerente(string email, string novoNome, string novoRamal, string novaSenha) {
-    if (bancoDeGerentes.count(email) == 0) throw runtime_error("Erro: Gerente nao encontrado.");
+    if (bancoDeGerentes.count(email) == 0) {
+        throw runtime_error("Erro: Gerente nao encontrado.");
+    }
 
     Gerente* g = bancoDeGerentes[email];
-    
-    g->setNome(Nome(novoNome));
-    g->setRamal(Ramal(novoRamal));
-    g->setSenha(Senha(novaSenha));
+
+    // Só atualiza se o usuário digitou algo
+    if (!novoNome.empty()) {
+        g->setNome(Nome(novoNome));
+    }
+
+    if (!novoRamal.empty()) {
+        g->setRamal(Ramal(novoRamal));
+    }
+
+    if (!novaSenha.empty()) {
+        g->setSenha(Senha(novaSenha));
+    }
 
     cout << " > Sucesso: Dados do gerente atualizados." << endl;
 }

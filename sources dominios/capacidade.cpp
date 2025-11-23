@@ -1,5 +1,5 @@
-#include "header dominios/capacidade.hpp" // Inclui a declaração da classe para poder implementar seus métodos
-#include <stdexcept>      // Necessário para usar a exceção std::invalid_argument
+#include "header dominios/capacidade.hpp"
+#include <stdexcept>
 
 // Implementação do método de validação
 void Capacidade::validar(int const &capacidade) {

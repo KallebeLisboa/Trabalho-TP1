@@ -38,5 +38,3 @@ void Hotel::setTelefone(const Telefone& telefone) {
     this->telefone = telefone;
 }
 
-// Observação sobre a Chave Primária:
-// O método setCodigo() NÃO está implementado, garantindo que a PK não possa ser alterada após a criação

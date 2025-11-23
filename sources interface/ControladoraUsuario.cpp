@@ -1,9 +1,9 @@
-#include "header interface/ControladoraUsuario.hpp" // Assume-se que o compilador acha este header localmente ou via path
+#include "header interface/ControladoraUsuario.hpp"
 #include <iostream>
 #include <string>
-#include <stdexcept> // Para capturar as exceções dos domínios
+#include <stdexcept>
 
-// INCLUDES COM O CAMINHO CORRETO (Baseado na sua imagem)
+// INCLUDES COM O CAMINHO CORRETO
 #include "header dominios/email.hpp"
 #include "header dominios/nome.hpp"
 #include "header dominios/senha.hpp"
@@ -34,7 +34,7 @@ void ControladoraUsuario::executar() {
     } while (opcao != 0);
 }
 
-// Implementacao do menu de opcoes
+// Menu de opcoes
 void ControladoraUsuario::exibirOpcoes() {
     cout << "\n--- GERENCIAMENTO DA SUA CONTA ---" << endl;
     cout << "1. Ler Dados da Conta" << endl;
@@ -43,7 +43,7 @@ void ControladoraUsuario::exibirOpcoes() {
     cout << "0. Voltar ao Menu Principal" << endl;
 }
 
-/// --- INTEGRAÇÃO REAL DO LER CONTA ---
+// LER CONTA
 void ControladoraUsuario::lerConta() {
     string textoEmail;
 
@@ -71,19 +71,19 @@ void ControladoraUsuario::lerConta() {
     if (gerenteEncontrado != nullptr) {
         cout << "-----------------------------" << endl;
         cout << "DADOS ENCONTRADOS:" << endl;
-        // Usamos os métodos get da entidade e depois get do dominio
         cout << "Nome:  " << gerenteEncontrado->getNome().getNome() << endl;
         cout << "Email: " << gerenteEncontrado->getEmail().getEmail() << endl;
-        cout << "Ramal: " << gerenteEncontrado->getRamal().getRamal() << endl;
         cout << "-----------------------------" << endl;
     } else {
         cout << "AVISO: Nenhuma conta encontrada com este email." << endl;
     }
 }
 
-// Implementacao: Editar Nome ou Senha
+//Editar Conta
 void ControladoraUsuario::editarConta() {
     string textoEmail, novoNome, novaSenha;
+    // Criamos uma string vazia para o Ramal, já que não vamos pedir isso agora
+    string novoRamal = "";
 
     cout << "\n--- EDITAR CONTA ---" << endl;
     cout << "Confirme o Email da conta a ser editada (PK): " << endl;
@@ -100,14 +100,28 @@ void ControladoraUsuario::editarConta() {
         }
     }
 
+    // Verificação de segurança antes de continuar
+    if (servicoUsuario == nullptr) {
+        cout << "ERRO CRITICO: Servico de usuario nao conectado." << endl;
+        return;
+    }
+
+    // Verifica se a conta existe antes de pedir os dados novos
+    if (servicoUsuario->pesquisarGerente(textoEmail) == nullptr) {
+        cout << "AVISO: Nenhuma conta encontrada com este email." << endl;
+        return;
+    }
+
+    cout << "Preencha os novos dados (Pressione ENTER para manter o atual):" << endl;
+
     // 2. Valida Novo Nome (Opcional)
-    cout << "Novo Nome (Deixe vazio para nao alterar): ";
+    cout << "Novo Nome: ";
     getline(cin, novoNome);
 
     if (!novoNome.empty()) {
         try {
             Nome nome(novoNome); // Apenas testa se é válido
-            cout << "Nome validado com sucesso." << endl;
+            cout << " - Nome validado." << endl;
         } catch (const invalid_argument& e) {
             cout << "ERRO: O novo nome e invalido (" << e.what() << "). A alteracao sera ignorada." << endl;
             novoNome = ""; // Anula a alteração
@@ -115,26 +129,31 @@ void ControladoraUsuario::editarConta() {
     }
 
     // 3. Valida Nova Senha (Opcional)
-    cout << "Nova Senha (Deixe vazio para nao alterar): ";
+    cout << "Nova Senha: ";
     getline(cin, novaSenha);
 
     if (!novaSenha.empty()) {
         try {
             Senha senha(novaSenha); // Apenas testa se é válido
-            cout << "Senha validada com sucesso." << endl;
+            cout << " - Senha validada." << endl;
         } catch (const invalid_argument& e) {
             cout << "ERRO: A nova senha e invalida (" << e.what() << "). A alteracao sera ignorada." << endl;
             novaSenha = ""; // Anula a alteração
         }
     }
 
-    // **INTEGRACAO FUTURA:**
-    // servicoUsuario->editar(textoEmail, novoNome, novaSenha);
+    // INTEGRAÇÃO
+    try {
+        // Passamos novoRamal como "" para indicar que não queremos alterá-lo
+        servicoUsuario->atualizarGerente(textoEmail, novoNome, novoRamal, novaSenha);
 
-    cout << "Solicitacao de edicao enviada para o sistema." << endl;
+        // O container já imprime mensagem de sucesso, mas se quiser reforçar:
+        // cout << "Sucesso!" << endl;
+    } catch (const runtime_error& e) {
+        cout << "FALHA NA EDICAO: " << e.what() << endl;
+    }
 }
-
-// Implementacao: Excluir Conta
+// Excluir Conta
 void ControladoraUsuario::excluirConta() {
     string textoEmail;
 
@@ -142,7 +161,7 @@ void ControladoraUsuario::excluirConta() {
     cout << "ATENCAO: Esta acao nao pode ser desfeita." << endl;
     cout << "Confirme o Email da conta a ser excluida (PK): " << endl;
 
-    // 1. Validação do Email (Domínio)
+    // 1. Validação do Email
     while (true) {
         cout << "Email: ";
         getline(cin, textoEmail);
@@ -161,11 +180,10 @@ void ControladoraUsuario::excluirConta() {
         // Chama o método do container através da interface
         servicoUsuario->excluirGerente(textoEmail);
 
-        // Se chegou aqui, é porque não deu erro
         cout << "SUCESSO: A conta " << textoEmail << " foi removida do sistema permanentemente." << endl;
 
     } catch (const runtime_error& e) {
-        // Captura o erro lançado pelo Container (ex: "Gerente nao encontrado")
+        // Captura o erro lançado pelo Container
         cout << "FALHA NA EXCLUSAO: " << e.what() << endl;
     }
 }

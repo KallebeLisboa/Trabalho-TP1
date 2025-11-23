@@ -5,8 +5,6 @@
 #include "header dominios/email.hpp"
 
 //Classe Entidade que representa uma Pessoa no sistema.
-//É a classe base para as Entidades Gerente e Hóspede (Herança). A chave primária (PK) é o atributo 'email'.
-
 
 ///
 /// @brief Entidade base que representa uma Pessoa no sistema.

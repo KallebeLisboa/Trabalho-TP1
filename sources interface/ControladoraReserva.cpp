@@ -1,14 +1,14 @@
-#include "header interface/ControladoraReserva.hpp" // Ajuste o caminho se necessario
+#include "header interface/ControladoraReserva.hpp"
 #include <iostream>
 #include <string>
-#include <stdexcept> // Para capturar as excecoes
+#include <stdexcept>
 
 // INCLUDES DOS DOMINIOS NECESSARIOS
-#include "header dominios/codigo.hpp"   // PK da Reserva
-#include "header dominios/data.hpp"     // Chegada e Partida
-#include "header dominios/dinheiro.hpp" // Valor
-#include "header dominios/numero.hpp"   // FK do Quarto
-#include "header dominios/email.hpp"    // FK do Hospede
+#include "header dominios/codigo.hpp"
+#include "header dominios/data.hpp"
+#include "header dominios/dinheiro.hpp"
+#include "header dominios/numero.hpp"
+#include "header dominios/email.hpp"
 
 using namespace std;
 
@@ -49,14 +49,14 @@ void ControladoraReserva::exibirOpcoes() {
     cout << "0. Voltar ao Menu Principal" << endl;
 }
 
-// Implementacao: Criar Nova Reserva
+// Criar Nova Reserva
 void ControladoraReserva::criarReserva() {
     string textoCodigo, textoChegada, textoPartida, textoValor;
     string textoCodigoHotel, textoNumQuarto, textoEmailHospede;
 
     cout << "\n--- CRIAR RESERVA ---" << endl;
 
-    // 1. CODIGO RESERVA (PK)
+    // 1. CODIGO RESERVA
     while (true) {
         cout << "Codigo da Reserva (10 carac): ";
         getline(cin, textoCodigo);
@@ -113,7 +113,7 @@ void ControladoraReserva::criarReserva() {
         try { Email e(textoEmailHospede); break; } catch (const invalid_argument& e) { cout << "Erro: " << e.what() << endl; }
     }
 
-    // **INTEGRAÇÃO REAL**
+    // INTEGRAÇÃO
     cout << "Processando reserva..." << endl;
     try {
         if (servicoReserva == nullptr) {

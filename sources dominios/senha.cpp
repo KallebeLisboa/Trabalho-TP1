@@ -1,6 +1,6 @@
 #include "header dominios/senha.hpp"
-#include <stdexcept> // Para std::invalid_argument
-#include <cctype>    // Para isalpha, isdigit, isupper, islower
+#include <stdexcept>
+#include <cctype>
 
 // Implementação do método de validação
 void Senha::validar(std::string const &senha){

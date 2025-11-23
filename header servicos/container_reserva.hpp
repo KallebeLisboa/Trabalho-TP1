@@ -4,9 +4,9 @@
 #include <map>
 #include <string>
 #include "header entidades/reserva.hpp"
-#include "../header interface/IServicoReserva.hpp" // <--- ADICIONE
+#include "../header interface/IServicoReserva.hpp"
 
-// Domínios
+// Includes Domínios
 #include "header dominios/data.hpp"
 #include "header dominios/dinheiro.hpp"
 #include "header dominios/codigo.hpp"
@@ -24,7 +24,7 @@ using namespace std;
 ///
 
 
-// ADICIONE A HERANÇA
+// HERANÇA
 class ContainerReserva : public IServicoReserva {
 private:
 
@@ -57,7 +57,7 @@ public:
 
     void criarReserva(string codigo, string dataEntrada, string dataSaida, double valor, string emailHospede, string codigoHotel, string numeroQuarto);
 
-    // Adicionaremos a declaração do pesquisar aqui para os próximos passos
+    // Declaração do pesquisar aqui para os próximos passos
     Reserva* pesquisarReserva(string codigo);
 
     ///

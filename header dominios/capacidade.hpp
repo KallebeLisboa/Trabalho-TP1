@@ -13,7 +13,7 @@
 
 class Capacidade {
 private:
-    int capacidade; // O atributo que armazena o valor da capacidade
+    int capacidade; // Armazena o valor da capacidade
 
 
     ///

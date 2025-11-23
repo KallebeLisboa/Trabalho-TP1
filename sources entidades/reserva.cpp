@@ -37,7 +37,7 @@ Codigo Reserva::getCodigoHotel() const {
 }
 
 // Implementação dos Métodos Set
-// Simplesmente atribui a nova instância do Domínio.
+// Atribui a nova instância do Domínio.
 // A validação do formato do valor já ocorreu dentro do construtor
 void Reserva::setChegada(const Data& chegada) {
     this->chegada = chegada;
@@ -63,5 +63,3 @@ void Reserva::setCodigoHotel(const Codigo& codigoHotel) {
     this->codigoHotel = codigoHotel;
 }
 
-// Observação sobre a Chave Primária:
-// O método setCodigo() NÃO está implementado, garantindo que a PK não possa ser alterada após a criação

@@ -7,7 +7,7 @@
 // Includes das controladoras
 #include "ControladoraHotel.hpp"
 #include "ControladoraQuarto.hpp"
-#include "ControladoraReserva.hpp" // Certifique-se que este arquivo existe
+#include "ControladoraReserva.hpp"
 #include "ControladoraHospede.hpp"
 #include "ControladoraUsuario.hpp"
 
@@ -16,7 +16,7 @@
 #include "IServicoHotel.hpp"
 #include "IServicoQuarto.hpp"
 #include "IServicoReserva.hpp"
-#include "IServicoHospede.hpp" // <--- ADICIONADO PARA O COMPILADOR RECONHECER
+#include "IServicoHospede.hpp"
 
 using namespace std;
 

@@ -1,7 +1,6 @@
 #ifndef RESERVA_HPP
 #define RESERVA_HPP
 
-// Inclusão das classes de domínio que serão atributos
 #include "../header dominios/data.hpp"
 #include "../header dominios/dinheiro.hpp"
 #include "../header dominios/codigo.hpp"

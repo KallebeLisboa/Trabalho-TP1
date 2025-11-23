@@ -3,13 +3,13 @@
 
 #include <iostream>
 #include <string>
-#include "IServicoHospede.hpp" // <--- Necessário para a conexão
+#include "IServicoHospede.hpp"
 
 using namespace std;
 
 class ControladoraHospede {
 private:
-    IServicoHospede* servicoHospede; // <--- O Ponteiro para o Banco de Dados
+    IServicoHospede* servicoHospede;
 
     void exibirOpcoes();
     void criarHospede();

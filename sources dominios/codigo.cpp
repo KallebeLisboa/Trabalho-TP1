@@ -1,11 +1,11 @@
 #include "header dominios/codigo.hpp"
-#include <stdexcept> // Para std::invalid_argument
-#include <cctype>    // Para isdigit e islower
+#include <stdexcept>
+#include <cctype>
 
 // Implementação do método de validação
 void Codigo::validar(std::string const &codigo){
 
-    if(!(codigo.length() == 10)){ // Tamanho do código
+    if(!(codigo.length() == 10)){
         throw std::invalid_argument("O código deve ter 10 caracteres.");
     }
     for (char caractere : codigo){

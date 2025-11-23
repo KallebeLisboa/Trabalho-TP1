@@ -3,14 +3,14 @@
 
 #include <iostream>
 #include <string>
-#include "IServicoUsuario.hpp" // <--- ADICIONADO: Inclui a interface
+#include "IServicoUsuario.hpp"
 
 using namespace std;
 
 class ControladoraUsuario {
 private:
     // Ponteiro para a interface do serviço
-    IServicoUsuario* servicoUsuario; // <--- ADICIONADO
+    IServicoUsuario* servicoUsuario;
 
     void exibirOpcoes();
     void lerConta();

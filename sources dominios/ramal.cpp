@@ -1,11 +1,13 @@
 #include "header dominios/ramal.hpp"
-#include <stdexcept> // Para std::invalid_argument
-#include <cctype>    // Para isdigit
-#include <string>    // Para std::stoi
+#include <stdexcept>
+#include <cctype>
+#include <string>
+
+
 
 // Implementação do método de validação
 void Ramal::validar(std::string const &ramal){
-            
+
     if(ramal.length() != 2){ // Primeiro, confirma que é tem 2 caracteres. Ex: 07
         throw std::invalid_argument("O ramal deve conter exatamente 2 dígitos");
     }
@@ -17,10 +19,9 @@ void Ramal::validar(std::string const &ramal){
         }
     }
 
-    // Faria mais sentido ver primeiro se é número, porém, otimiza o programa analisar o if primeiro, pois o erro pode vir no loop for.
 
     int valorNumerico = std::stoi(ramal);
-    if(valorNumerico > 50){ // Por fim, vê se o número está no range (não pode ser maior que 50)
+    if(valorNumerico > 50){ // Vê se o número está no range (não pode ser maior que 50)
         throw std::invalid_argument("O valor do ramal deve ser de 00 a 50");
     }
 }

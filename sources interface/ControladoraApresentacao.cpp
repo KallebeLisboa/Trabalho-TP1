@@ -55,8 +55,7 @@ bool ControladoraApresentacao::criarConta() {
 
     // --- INTEGRAÇÃO REAL COM O SERVIÇO ---
     try {
-        // O Ramal é obrigatório na entidade Gerente, vamos colocar "00" como padrão na criação inicial
-        // ou você poderia pedir para o usuário digitar. Vou usar "00" para simplificar.
+        //"00" como padrão na criação inicial
         servicoUsuario->criarGerente(textoNome, textoEmail, "00", textoSenha);
 
         cout << "\nConta criada com sucesso no Banco de Dados!" << endl;

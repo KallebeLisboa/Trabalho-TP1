@@ -1,7 +1,7 @@
 #include "header dominios/email.hpp"
-#include <stdexcept> // Para std::invalid_argument
-#include <algorithm> // Para std::count
-#include <cctype>    // Para isdigit, islower, etc.
+#include <stdexcept>
+#include <algorithm>
+#include <cctype>
 
 // Implementação do método de validação
 void Email::validar(std::string const &email){
@@ -24,7 +24,7 @@ void Email::validar(std::string const &email){
     if(parteLocal.back() == '-' || parteLocal.back() == '.'){// Hífen ou ponto no último caractere
         throw std::invalid_argument("O último caractere não deve ser hífen ou ponto.");
     };
-    
+
     for (int i = 0; i < parteLocal.length(); i++){
         char caractere = parteLocal[i];
         if(!(isdigit(caractere) || islower(caractere) ||
@@ -34,7 +34,7 @@ void Email::validar(std::string const &email){
         if (i + 1 < parteLocal.length()) {
             if(caractere == '.' || caractere == '-'){
                 if(!(isalpha(parteLocal[i+1]) || isdigit(parteLocal[i+1]))){
-                    throw std::invalid_argument("Hífen ou ponto deve ser seguido de dígito ou letra");  
+                    throw std::invalid_argument("Hífen ou ponto deve ser seguido de dígito ou letra");
                 }
             }
         }
@@ -60,7 +60,7 @@ void Email::validar(std::string const &email){
         if (!(islower(caractere) || isdigit(caractere) || caractere == '.' || caractere == '-')) {
             throw std::invalid_argument("Domínio contém caractere inválido.");
         }
-        
+
         if (i + 1 < dominio.length()) {
             if (caractere == '.') {
                 if (dominio[i+1] == '.' || dominio[i+1] == '-') {

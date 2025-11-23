@@ -1,5 +1,5 @@
 #include "header entidades/gerente.hpp"
-#include <stdexcept> // Para lidar com possíveis exceções das classes de Domínio
+#include <stdexcept>
 
 // Construtor
 // O Gerente recebe todos os parâmetros necessários.

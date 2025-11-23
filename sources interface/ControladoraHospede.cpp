@@ -1,7 +1,7 @@
-#include "../header interface/ControladoraHospede.hpp" // Ajuste o caminho se necessário
+#include "../header interface/ControladoraHospede.hpp"
 #include <iostream>
 #include <string>
-#include <stdexcept> // Para capturar as exceções
+#include <stdexcept>
 
 // INCLUDES DOS DOMÍNIOS NECESSÁRIOS
 #include "../header dominios/nome.hpp"
@@ -101,7 +101,7 @@ void ControladoraHospede::criarHospede() {
         }
     }
 
-    // **INTEGRAÇÃO REAL**
+    // INTEGRAÇÃO
     cout << "Salvando novo hospede..." << endl;
     try {
         // Verificação de segurança
@@ -237,7 +237,7 @@ void ControladoraHospede::editarHospede() {
         }
     }
 
-    // **INTEGRAÇÃO REAL**
+    // INTEGRAÇÃO
     try {
         servicoHospede->atualizarHospede(textoEmail, novoNome, novoEndereco, novoCartao);
     } catch (const runtime_error& e) {
@@ -291,8 +291,6 @@ void ControladoraHospede::listarHospedes() {
     }
 
     // 2. Busca os dados no Serviço
-    // Nota: Listamos todos porque Hóspedes são clientes globais do sistema,
-    // não pertencem a um hotel específico (diferente de Quartos).
     map<string, Hospede*> lista = servicoHospede->listarHospedes();
 
     // 3. Verifica se está vazio

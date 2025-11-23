@@ -1,5 +1,5 @@
 #include "header entidades/hospede.hpp"
-#include <stdexcept> // Para lidar com possíveis exceções das classes de Domínio
+#include <stdexcept>
 
 // Construtor
 // O Hospede recebe todos os parâmetros necessários.

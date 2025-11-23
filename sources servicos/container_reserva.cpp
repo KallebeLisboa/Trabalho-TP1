@@ -36,7 +36,7 @@ map<string, Reserva*> ContainerReserva::listarReservasDoHotel(string codigoHotel
 
         // Verifica se a reserva pertence ao hotel solicitado
         if (r->getCodigoHotel().getCodigo() == codigoHotel) {
-            filtro[par.first] = r; // Adiciona ao mapa de filtro
+            filtro[par.first] = r;
         }
     }
     return filtro;
@@ -59,7 +59,7 @@ void ContainerReserva::atualizarReserva(string codigo, string novaDataEntrada, s
         r->setPartida(Data(novaDataSaida));
     }
 
-    // 3. Atualiza Valor (Se for diferente de -1.0)
+    // 3. Atualiza Valor (Se for diferente de -1)
     if (novoValor != -1.0) {
         r->setValor(Dinheiro(novoValor));
     }

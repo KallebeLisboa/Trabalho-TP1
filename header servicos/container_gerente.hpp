@@ -3,7 +3,7 @@
 
 #include <map>
 #include <string>
-#include "header entidades/gerente.hpp" // Caminho relativo pode variar, mas deve achar o arquivo
+#include "header entidades/gerente.hpp"
 #include "../header interface/IServicoUsuario.hpp"
 #include "header dominios/nome.hpp"
 #include "header dominios/email.hpp"

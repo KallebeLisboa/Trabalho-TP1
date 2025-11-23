@@ -6,7 +6,7 @@
 #include <vector>
 #include <iostream>
 
-// Inclusão das Entidades e Domínios necessários
+// Inclusão das Entidades
 #include "header entidades/hotel.hpp"
 #include "header dominios/codigo.hpp"
 #include "header dominios/nome.hpp"
@@ -57,7 +57,7 @@ public:
     ///
 
 
-    // Métodos CRUD (Apenas declaração, sem código aqui)
+    // Métodos CRUD
     void criarHotel(string codigo, string nome, string endereco, string telefone);
 
     ///

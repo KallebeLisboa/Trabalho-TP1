@@ -9,7 +9,7 @@
 #include "header dominios/endereco.hpp"
 #include "header dominios/telefone.hpp"
 
-// INCLUDE DA ENTIDADE (Fundamental para o pesquisar funcionar)
+// Include Entidades
 #include "header entidades/hotel.hpp"
 
 using namespace std;
@@ -50,7 +50,7 @@ void ControladoraHotel::exibirOpcoes() {
     cout << "0. Voltar ao Menu Principal" << endl;
 }
 
-// --- INTEGRAÇÃO REAL: CRIAR HOTEL ---
+// --- CRIAR HOTEL ---
 void ControladoraHotel::criarHotel() {
     string textoCodigo, textoNome, textoEndereco, textoTelefone;
 
@@ -96,7 +96,7 @@ void ControladoraHotel::criarHotel() {
     }
 }
 
-// --- INTEGRAÇÃO REAL: LER HOTEL ---
+// --- LER HOTEL ---
 void ControladoraHotel::lerHotel() {
     string textoCodigo;
     cout << "\n--- LER HOTEL ---" << endl;
@@ -135,7 +135,7 @@ void ControladoraHotel::editarHotel() {
     cout << "\n--- EDITAR HOTEL ---" << endl;
     cout << "Informe o Codigo do Hotel que deseja alterar (PK): " << endl;
 
-    // 1. Identificar o Hotel (PK) - Validação Obrigatória
+    // 1. Identificar o Hotel (PK)
     while (true) {
         cout << "Codigo: ";
         getline(cin, textoCodigo);
@@ -196,9 +196,8 @@ void ControladoraHotel::editarHotel() {
 
     // 5. Integração com o Serviço
     try {
-        // Envia os dados. O container saberá que string vazia = não alterar.
+        // Envia os dados. String vazia = não alterar.
         servicoHotel->atualizarHotel(textoCodigo, novoNome, novoEndereco, novoTelefone);
-        // O container geralmente já imprime uma mensagem de sucesso, mas se quiser pode por aqui também.
     } catch (const runtime_error& e) {
         cout << "FALHA NA EDICAO: " << e.what() << endl;
     }

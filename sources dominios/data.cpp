@@ -1,8 +1,8 @@
 #include "header dominios/data.hpp"
-#include <stdexcept>   // Para std::invalid_argument
-#include <string>      // Para std::stoi e outras funçães de string
-#include <algorithm>   // Para std::count e std::find
-#include <iterator>    // Para std::begin e std::end
+#include <stdexcept>
+#include <string>
+#include <algorithm>
+#include <iterator>
 
 // Implementação do método privado para verificar ano bissexto
 bool Data::anoBissexto(int ano){
@@ -38,7 +38,7 @@ void Data::validar(std::string const &data) {
     std::string ano = data.substr(hifen2+1);
 
     // 2. Validar o ano.
-    
+
     int ano_int = std::stoi(ano);
     if(ano_int < 2000 || ano_int > 2999){
         throw std::invalid_argument("Ano deve estar no intervalo 2000 - 2999");
@@ -100,7 +100,7 @@ Data::Data(std::string data){
 
 void Data::setData(std::string data){
     validar(data);
-    this->data=data;  
+    this->data=data;
 };
 
 std::string Data::getData(){

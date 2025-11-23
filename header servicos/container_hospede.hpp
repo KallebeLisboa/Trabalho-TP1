@@ -4,7 +4,7 @@
 #include <map>
 #include <string>
 #include "header entidades/hospede.hpp"
-#include "../header interface/IServicoHospede.hpp" // <--- ADICIONE
+#include "../header interface/IServicoHospede.hpp"
 
 // Outros includes de domínios...
 #include "header dominios/nome.hpp"
@@ -51,7 +51,7 @@ public:
     /// @param cartao String representando o número do cartão.
     ///
 
-    // Métodos (já devem estar iguais aos da interface)
+    // Métodos
     void criarHospede(string nome, string email, string endereco, string cartao);
 
     ///

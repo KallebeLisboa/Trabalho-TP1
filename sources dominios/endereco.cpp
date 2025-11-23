@@ -1,6 +1,6 @@
 #include "header dominios/endereco.hpp"
-#include <stdexcept> // Para std::invalid_argument
-#include <cctype>    // Para isalpha, isdigit
+#include <stdexcept>
+#include <cctype>
 
 // Implementação do método de validação
 void Endereco::validar(std::string const &endereco){
@@ -17,24 +17,24 @@ void Endereco::validar(std::string const &endereco){
 
     for(int i = 0; i < endereco.length();i++){
         char caractere = endereco[i];
-            
+
             if(!((isalpha(caractere)) || (isdigit(caractere) || (caractere == ' ') || (caractere == ',') || (caractere == '.')))){
                 throw std::invalid_argument("Caracter pode ser letra (a-z ou A-Z), dígito (0-9), vírgula, ponto ou espaço  em branco");
             };
             if (i + 1 < endereco.length()) {
                 if(caractere == ' '){
                     if(!(isalpha(endereco[i+1]) || isdigit(endereco[i+1]))){
-                        throw std::invalid_argument("Espaço deve ser seguido de dígito ou letra");  
+                        throw std::invalid_argument("Espaço deve ser seguido de dígito ou letra");
                     };
                 };
                 if(caractere == ','){
                     if(endereco[i+1] == ',' || endereco[i+1] == '.'){
-                        throw std::invalid_argument("Vírgula não pode ser seguida por vírgula ou ponto");  
+                        throw std::invalid_argument("Vírgula não pode ser seguida por vírgula ou ponto");
                     };
                 };
                 if(caractere == '.'){
                     if(endereco[i+1] == ',' || endereco[i+1] == '.'){
-                        throw std::invalid_argument("Ponto não pode ser seguida por vírgula ou ponto");  
+                        throw std::invalid_argument("Ponto não pode ser seguida por vírgula ou ponto");
                     };
                 };
             };

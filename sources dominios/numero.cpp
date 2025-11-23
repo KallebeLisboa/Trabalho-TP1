@@ -1,11 +1,11 @@
 #include "header dominios/numero.hpp"
-#include <stdexcept> // Para std::invalid_argument
-#include <cctype>    // Para isdigit
-#include <string>    // Para std::stoi
+#include <stdexcept>
+#include <cctype>
+#include <string>
 
 // Implementação do método de validação
 void Numero::validar(std::string const &numero){
-            
+
     if(numero.length() != 3){ // Primeiro, confirma que é tem 3 caracteres. Ex: 007
         throw std::invalid_argument("O número deve conter exatamente 3 dígitos");
     }
@@ -17,10 +17,9 @@ void Numero::validar(std::string const &numero){
         }
     }
 
-    // Faria mais sentido ver primeiro se é número, porém, otimiza o programa analisar o if primeiro, pois o erro pode vir no loop for.
 
     int valorNumerico = std::stoi(numero);
-    if(valorNumerico < 1){ // Por fim, vê se o número está no range (não pode ser 000)
+    if(valorNumerico < 1){ // Vê se o número está no range (não pode ser 000)
         throw std::invalid_argument("O valor do número deve ser de 001 a 999");
     }
 }

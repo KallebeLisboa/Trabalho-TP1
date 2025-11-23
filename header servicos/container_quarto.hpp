@@ -6,7 +6,7 @@
 #include "header entidades/quarto.hpp"
 #include "../header interface/IServicoQuarto.hpp"
 
-// Includes dos domínios necessários para instanciar no .cpp
+// Includes dos domínios
 #include "header dominios/numero.hpp"
 #include "header dominios/capacidade.hpp"
 #include "header dominios/dinheiro.hpp"
@@ -33,7 +33,7 @@ private:
     /// @details A chave é uma string composta gerada pelo método gerarChave (ex: "HOTEL1_101").
     ///
 
-    // Chave: "CODIGOHOTEL_NUMERO"
+    // Chave
     map<string, Quarto*> bancoDeQuartos;
 
     ///
@@ -77,7 +77,6 @@ public:
     ///
 
 
-    // --- NOVO MÉTODO DECLARADO ---
     Quarto* pesquisarQuarto(string codigoHotel, string numero);
 
     map<string, Quarto*> listarQuartosDoHotel(string codigoHotel);

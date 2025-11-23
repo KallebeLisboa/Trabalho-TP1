@@ -1,4 +1,4 @@
-#include "header dominios/cartao.hpp" // Inclui a declaração da classe
+#include "header dominios/cartao.hpp"
 
 // Passo 1. Dobre cada segundo dígito da direita para esquerda.
     // 1.1. Se o número dobrado tem 2 dígitos, divida-os
