@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Trabalho_Hotel" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Trabalho_Hotel" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Trabalho_Hotel" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="Headers" />
+		</Compiler>
+		<Unit filename="Headers/header dominios/capacidade.hpp" />
+		<Unit filename="Headers/header dominios/cartao.hpp" />
+		<Unit filename="Headers/header dominios/codigo.hpp" />
+		<Unit filename="Headers/header dominios/data.hpp" />
+		<Unit filename="Headers/header dominios/dinheiro.hpp" />
+		<Unit filename="Headers/header dominios/email.hpp" />
+		<Unit filename="Headers/header dominios/endereco.hpp" />
+		<Unit filename="Headers/header dominios/nome.hpp" />
+		<Unit filename="Headers/header dominios/numero.hpp" />
+		<Unit filename="Headers/header dominios/ramal.hpp" />
+		<Unit filename="Headers/header dominios/senha.hpp" />
+		<Unit filename="Headers/header dominios/telefone.hpp" />
+		<Unit filename="header dominios/capacidade.hpp" />
+		<Unit filename="header dominios/cartao.hpp" />
+		<Unit filename="header dominios/codigo.hpp" />
+		<Unit filename="header dominios/data.hpp" />
+		<Unit filename="header dominios/dinheiro.hpp" />
+		<Unit filename="header dominios/email.hpp" />
+		<Unit filename="header dominios/endereco.hpp" />
+		<Unit filename="header dominios/nome.hpp" />
+		<Unit filename="header dominios/numero.hpp" />
+		<Unit filename="header dominios/ramal.hpp" />
+		<Unit filename="header dominios/senha.hpp" />
+		<Unit filename="header dominios/telefone.hpp" />
+		<Unit filename="header entidades/gerente.hpp" />
+		<Unit filename="header entidades/hospede.hpp" />
+		<Unit filename="header entidades/hotel.hpp" />
+		<Unit filename="header entidades/pessoa.hpp" />
+		<Unit filename="header entidades/quarto.hpp" />
+		<Unit filename="header entidades/reserva.hpp" />
+		<Unit filename="header interface/ControladoraApresentacao.hpp" />
+		<Unit filename="header interface/ControladoraHospede.hpp" />
+		<Unit filename="header interface/ControladoraHotel.hpp" />
+		<Unit filename="header interface/ControladoraQuarto.hpp" />
+		<Unit filename="header interface/ControladoraReserva.hpp" />
+		<Unit filename="header interface/ControladoraUsuario.hpp" />
+		<Unit filename="header servicos/container_gerente.hpp" />
+		<Unit filename="header servicos/container_hospede.hpp" />
+		<Unit filename="header servicos/container_hotel.hpp" />
+		<Unit filename="header servicos/container_quarto.hpp" />
+		<Unit filename="header servicos/container_reserva.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="sources dominios/capacidade.cpp" />
+		<Unit filename="sources dominios/cartao.cpp" />
+		<Unit filename="sources dominios/codigo.cpp" />
+		<Unit filename="sources dominios/data.cpp" />
+		<Unit filename="sources dominios/dinheiro.cpp" />
+		<Unit filename="sources dominios/email.cpp" />
+		<Unit filename="sources dominios/endereco.cpp" />
+		<Unit filename="sources dominios/nome.cpp" />
+		<Unit filename="sources dominios/numero.cpp" />
+		<Unit filename="sources dominios/ramal.cpp" />
+		<Unit filename="sources dominios/senha.cpp" />
+		<Unit filename="sources dominios/telefone.cpp" />
+		<Unit filename="sources entidades/gerente.cpp" />
+		<Unit filename="sources entidades/hospede.cpp" />
+		<Unit filename="sources entidades/hotel.cpp" />
+		<Unit filename="sources entidades/pessoa.cpp" />
+		<Unit filename="sources entidades/quarto.cpp" />
+		<Unit filename="sources entidades/reserva.cpp" />
+		<Unit filename="sources interface/ControladoraApresentacao.cpp" />
+		<Unit filename="sources interface/ControladoraHospede.cpp" />
+		<Unit filename="sources interface/ControladoraHotel.cpp" />
+		<Unit filename="sources interface/ControladoraQuarto.cpp" />
+		<Unit filename="sources interface/ControladoraReserva.cpp" />
+		<Unit filename="sources interface/ControladoraUsuario.cpp" />
+		<Unit filename="sources servicos/container_gerente.cpp" />
+		<Unit filename="sources servicos/container_hospede.cpp" />
+		<Unit filename="sources servicos/container_hotel.cpp" />
+		<Unit filename="sources servicos/container_quarto.cpp" />
+		<Unit filename="sources servicos/container_reserva.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
