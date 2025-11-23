@@ -3,13 +3,13 @@
 
 #include <iostream>
 #include <string>
+#include "IServicoQuarto.hpp" // <--- ADICIONE O INCLUDE
 
 using namespace std;
 
 class ControladoraQuarto {
 private:
-    // **INTEGRAÇÃO FUTURA:**
-    // I_ServicoQuarto* servicoQuarto; // Interface do Módulo de Serviço de Quarto
+    IServicoQuarto* servicoQuarto; // <--- ADICIONE O PONTEIRO
 
     void exibirOpcoes();
     void criarQuarto();
@@ -19,7 +19,10 @@ private:
     void listarQuartos();
 
 public:
-    void executar(); // Método principal chamado pelo Menu Principal
+    // Adicione o Setter
+    void setServicoQuarto(IServicoQuarto* s) { servicoQuarto = s; }
+
+    void executar();
 };
 
 #endif // CONTROLADORAQUARTO_HPP_INCLUDED

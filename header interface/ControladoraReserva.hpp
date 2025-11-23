@@ -3,13 +3,13 @@
 
 #include <iostream>
 #include <string>
+#include "IServicoReserva.hpp" // <--- ADICIONE O INCLUDE
 
 using namespace std;
 
 class ControladoraReserva {
 private:
-    // **INTEGRAÇÃO FUTURA:**
-    // I_ServicoReserva* servicoReserva; // Interface do Módulo de Serviço de Reserva
+    IServicoReserva* servicoReserva; // <--- ADICIONE O PONTEIRO
 
     void exibirOpcoes();
     void criarReserva();
@@ -19,7 +19,10 @@ private:
     void listarReservas();
 
 public:
-    void executar(); // Método principal chamado pelo Menu Principal
+    // Adicione o Setter
+    void setServicoReserva(IServicoReserva* s) { servicoReserva = s; }
+
+    void executar();
 };
 
 #endif // CONTROLADORARESERVA_HPP_INCLUDED

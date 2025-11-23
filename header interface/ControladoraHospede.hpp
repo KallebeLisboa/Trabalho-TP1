@@ -3,13 +3,13 @@
 
 #include <iostream>
 #include <string>
+#include "IServicoHospede.hpp" // <--- Necessário para a conexão
 
 using namespace std;
 
 class ControladoraHospede {
 private:
-    // **INTEGRACAO FUTURA:**
-    // I_ServicoHospede* servicoHospede; // Interface do Modulo de Servico de Hospede
+    IServicoHospede* servicoHospede; // <--- O Ponteiro para o Banco de Dados
 
     void exibirOpcoes();
     void criarHospede();
@@ -19,7 +19,10 @@ private:
     void listarHospedes();
 
 public:
-    void executar(); // Metodo principal chamado pelo Menu Principal
+    // Setter para ligar o serviço
+    void setServicoHospede(IServicoHospede* s) { servicoHospede = s; }
+
+    void executar();
 };
 
 #endif // CONTROLADORAHOSPEDE_HPP_INCLUDED
