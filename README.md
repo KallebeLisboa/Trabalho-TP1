@@ -16,8 +16,8 @@ Trabalho Técnicas de Programação
 
 
 
-Grupo:
+Grupo: <br>
 
-Rian Kallebe da SIlva Lisbôa - 242012000
-Paulo Miguel Paes Ribeiro de Souza - 242012065
-Arthur Martins
+Rian Kallebe da SIlva Lisbôa - 242012000 <br>
+Paulo Miguel Paes Ribeiro de Souza - 242012065 <br>
+Arthur Martins Pereira de Souza - 241004499 <br>
