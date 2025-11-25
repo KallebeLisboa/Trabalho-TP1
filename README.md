@@ -1,5 +1,5 @@
-# Trabalho TP1
-Trabalho Técnicas de Programação
+<h1> <strong>Trabalho TP1 </strong> </h1>
+<h3>Trabalho Técnicas de Programação </h3>
 
  O sistema de software visa facilitar a gestão de pequenos hotéis. Para usar o sistema, o gerente deve  criar uma conta. Após
  criar uma conta, deve ser autenticado informando o seu email e a sua senha. Após ser autenticado, o gerente pode acessar os
